@@ -54,11 +54,15 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -101,11 +105,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.buttonDelete);
             this.tabPage1.Controls.Add(this.buttonEdit);
             this.tabPage1.Controls.Add(this.dataGridViewProductos);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.comboBoxCategorias);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -118,9 +121,9 @@
             // buttonDelete
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Location = new System.Drawing.Point(359, 390);
+            this.buttonDelete.Location = new System.Drawing.Point(359, 377);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(130, 24);
+            this.buttonDelete.Size = new System.Drawing.Size(130, 37);
             this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "Borrar";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -129,9 +132,9 @@
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(495, 390);
+            this.buttonEdit.Location = new System.Drawing.Point(495, 377);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(136, 24);
+            this.buttonEdit.Size = new System.Drawing.Size(136, 37);
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.Text = "Editar";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -148,20 +151,20 @@
             this.dataGridViewProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProductos.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.dataGridViewProductos.Location = new System.Drawing.Point(359, 56);
+            this.dataGridViewProductos.Location = new System.Drawing.Point(359, 7);
             this.dataGridViewProductos.MultiSelect = false;
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.ReadOnly = true;
             this.dataGridViewProductos.RowHeadersVisible = false;
             this.dataGridViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewProductos.ShowEditingIcon = false;
-            this.dataGridViewProductos.Size = new System.Drawing.Size(272, 328);
+            this.dataGridViewProductos.Size = new System.Drawing.Size(272, 364);
             this.dataGridViewProductos.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(360, 6);
+            this.label1.Location = new System.Drawing.Point(272, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 2;
@@ -170,16 +173,14 @@
             // comboBoxCategorias
             // 
             this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(359, 28);
+            this.comboBoxCategorias.Location = new System.Drawing.Point(6, 42);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(272, 21);
+            this.comboBoxCategorias.Size = new System.Drawing.Size(248, 21);
             this.comboBoxCategorias.TabIndex = 1;
             this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.buttonNewItem);
             this.groupBox1.Controls.Add(this.checkBoxEditMode);
             this.groupBox1.Controls.Add(this.buttonSaveItem);
@@ -194,7 +195,7 @@
             this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.tbBarcode);
             this.groupBox1.Controls.Add(this.tbPLU);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(6, 82);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(347, 209);
             this.groupBox1.TabIndex = 0;
@@ -324,6 +325,36 @@
             this.tbPLU.Size = new System.Drawing.Size(242, 20);
             this.tbPLU.TabIndex = 0;
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
+            this.textBoxSearch.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(260, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.comboBoxCategorias);
+            this.groupBox2.Controls.Add(this.textBoxSearch);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(6, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(341, 69);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Busqueda";
+            // 
             // manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,10 +371,11 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +408,8 @@
         private System.Windows.Forms.Button buttonSaveItem;
         private System.Windows.Forms.CheckBox checkBoxEditMode;
         private System.Windows.Forms.Button buttonNewItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

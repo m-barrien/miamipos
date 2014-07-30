@@ -155,6 +155,23 @@ namespace miamiPOS
         private void checkBoxEditMode_CheckedChanged(object sender, EventArgs e)
         {
             tbPLU.ReadOnly = checkBoxEditMode.Checked; //si esta en modo editar el textbox del plu se bloquea
+            tbBarcode.ReadOnly = checkBoxEditMode.Checked;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var id = textBoxSearch.Text;
+            if (id.Length <= 5)
+            {
+                Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=" + id, ref tablaProductos);
+            }
+            else
+            {
+                Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where barcode='" + id +"'", ref tablaProductos);
+            }
+            dataGridViewProductos.DataSource = tablaProductos;
+
+            dataGridViewProductos.Columns["id_categoria"].Visible = false;
         }
     }
 }

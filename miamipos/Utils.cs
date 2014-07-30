@@ -47,7 +47,7 @@ namespace miamiPOS
             }
             if (barcode.Length <= 5)
             {
-                this.barcode = "NULL"; //digitos menores que cinco cuentan como un PLU en el programa
+                this.barcode = "NULL"; //digitos menores que cinco cuentan como un PLU en el programa, asi mejor se borra el codigo de barras invalido
             }
             else
             {

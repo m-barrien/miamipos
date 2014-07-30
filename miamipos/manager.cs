@@ -63,6 +63,25 @@ namespace miamiPOS
             }
         }
 
+        //Esta funcion rellena las textbox de modo editar
+        private void fillEditor(int plu, string barcode, string name, int price,int id_categoria, bool pesable)
+        {
+            tbPLU.Text = plu.ToString();
+            tbBarcode.Text = barcode.ToString();
+            tbName.Text = name.ToString();
+            tbPrice.Text = price.ToString();
+            checkBoxPesable.Checked = pesable;
+
+            // Siguiente foreach para dejar la categoria del item seleccionada en modo editar
+            foreach (ComboboxItem cbItem in this.cbCategoria.Items)
+            {
+                if (cbItem.Value == id_categoria)
+                {
+                    this.cbCategoria.SelectedItem = cbItem;
+                }
+            }
+        }
+
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             try
@@ -77,26 +96,15 @@ namespace miamiPOS
                 var pesable = Convert.ToBoolean (selectedRow.Cells["pesable"].Value );
                 var id_categoria = selectedRow.Cells["id_categoria"].Value;
 
-                tbPLU.Text = plu.ToString();
-                tbBarcode.Text = barcode.ToString();
-                tbName.Text = nombre.ToString();
-                tbPrice.Text = precio.ToString();
-                checkBoxPesable.Checked = pesable;
 
-                // Siguiente foreach para dejar la categoria del item seleccionada en modo editar
-                foreach(ComboboxItem cbItem in cbCategoria.Items){
-                    if(cbItem.Value == (int)id_categoria)
-                    {
-                        cbCategoria.SelectedItem = cbItem;
-                    }
-                }
+                fillEditor((int)plu, barcode.ToString() , (string)nombre, Convert.ToInt32(precio), (int)id_categoria, (bool)pesable);
 
                 checkBoxEditMode.Checked = true; //activar modo editar
               
             }
-            catch
+            catch(Exception E)
             {
-                Console.WriteLine("Nada que Editar");
+                Console.WriteLine("Nada que Editar \r catch: " + E.Message);
             }
         }
 

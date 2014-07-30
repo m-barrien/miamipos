@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonNewItem = new System.Windows.Forms.Button();
+            this.checkBoxEditMode = new System.Windows.Forms.CheckBox();
             this.buttonSaveItem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -51,8 +54,6 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
-            this.checkBoxEditMode = new System.Windows.Forms.CheckBox();
-            this.buttonNewItem = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -200,6 +201,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Producto";
             // 
+            // buttonNewItem
+            // 
+            this.buttonNewItem.Location = new System.Drawing.Point(185, 178);
+            this.buttonNewItem.Name = "buttonNewItem";
+            this.buttonNewItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewItem.TabIndex = 14;
+            this.buttonNewItem.Text = "Nuevo";
+            this.buttonNewItem.UseVisualStyleBackColor = true;
+            this.buttonNewItem.Click += new System.EventHandler(this.buttonNewItem_Click);
+            // 
+            // checkBoxEditMode
+            // 
+            this.checkBoxEditMode.AutoSize = true;
+            this.checkBoxEditMode.BackColor = System.Drawing.Color.Gold;
+            this.checkBoxEditMode.Location = new System.Drawing.Point(6, 178);
+            this.checkBoxEditMode.Name = "checkBoxEditMode";
+            this.checkBoxEditMode.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxEditMode.TabIndex = 13;
+            this.checkBoxEditMode.Text = "MODO EDITAR";
+            this.checkBoxEditMode.UseVisualStyleBackColor = false;
+            this.checkBoxEditMode.CheckedChanged += new System.EventHandler(this.checkBoxEditMode_CheckedChanged);
+            // 
             // buttonSaveItem
             // 
             this.buttonSaveItem.Location = new System.Drawing.Point(266, 178);
@@ -301,28 +324,6 @@
             this.tbPLU.Size = new System.Drawing.Size(242, 20);
             this.tbPLU.TabIndex = 0;
             // 
-            // checkBoxEditMode
-            // 
-            this.checkBoxEditMode.AutoSize = true;
-            this.checkBoxEditMode.BackColor = System.Drawing.Color.Gold;
-            this.checkBoxEditMode.Location = new System.Drawing.Point(6, 178);
-            this.checkBoxEditMode.Name = "checkBoxEditMode";
-            this.checkBoxEditMode.Size = new System.Drawing.Size(102, 17);
-            this.checkBoxEditMode.TabIndex = 13;
-            this.checkBoxEditMode.Text = "MODO EDITAR";
-            this.checkBoxEditMode.UseVisualStyleBackColor = false;
-            this.checkBoxEditMode.CheckedChanged += new System.EventHandler(this.checkBoxEditMode_CheckedChanged);
-            // 
-            // buttonNewItem
-            // 
-            this.buttonNewItem.Location = new System.Drawing.Point(185, 178);
-            this.buttonNewItem.Name = "buttonNewItem";
-            this.buttonNewItem.Size = new System.Drawing.Size(75, 23);
-            this.buttonNewItem.TabIndex = 14;
-            this.buttonNewItem.Text = "Nuevo";
-            this.buttonNewItem.UseVisualStyleBackColor = true;
-            this.buttonNewItem.Click += new System.EventHandler(this.buttonNewItem_Click);
-            // 
             // manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,9 +331,10 @@
             this.ClientSize = new System.Drawing.Size(669, 485);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "manager";
-            this.Text = "manager";
+            this.Text = "Administrador de miamiPOS";
             this.Load += new System.EventHandler(this.manager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

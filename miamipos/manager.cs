@@ -139,7 +139,11 @@ namespace miamiPOS
             try
             {
                 Producto productoAEditar = getFromEditor();
-                MessageBox.Show(productoAEditar.toSQL(checkBoxEditMode.Checked));
+                Console.WriteLine(productoAEditar.toSQL(checkBoxEditMode.Checked));
+
+                Psql.execScalar(productoAEditar.toSQL(checkBoxEditMode.Checked));
+                buttonNewItem_Click(null,null);
+                comboBoxCategorias_SelectedIndexChanged(null, null);
             }
             catch (Exception E)
             {

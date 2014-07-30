@@ -51,7 +51,7 @@ namespace miamiPOS
             }
             else
             {
-                this.barcode = "'" + this.barcode + "'";
+                this.barcode = "\'" + this.barcode + "\'";
             }
             if (!editar)
             {
@@ -61,7 +61,7 @@ namespace miamiPOS
             }
             else
             {
-                string output = String.Format("UPDATE producto SET barcode={1}, nombre='{2}', precio={3}, id_categoria={4}, pesable={5}, last_change=now() WHERE plu={0}",
+                string output = String.Format("UPDATE producto SET (barcode, nombre, precio, id_categoria, pesable)=({1},'{2}',{3},{4},{5}) WHERE plu={0}",
                               this.plu, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
                 return output;
             }

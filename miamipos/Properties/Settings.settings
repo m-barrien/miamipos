@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="miamiPOS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="serverIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">192.168.1.152</Value>
+    </Setting>
+    <Setting Name="port" Type="System.Int16" Scope="Application">
+      <Value Profile="(Default)">5432</Value>
+    </Setting>
+    <Setting Name="dbUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">marcelo</Value>
+    </Setting>
+    <Setting Name="dbPass" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">marcelo</Value>
+    </Setting>
+    <Setting Name="dbName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">panaderia</Value>
+    </Setting>
+    <Setting Name="masterSet" Type="System.Data.DataSet" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="lastUpdate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2014-06-01</Value>
+    </Setting>
+    <Setting Name="backColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightSkyBlue</Value>
+    </Setting>
+    <Setting Name="idCajero" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="nombreCajero" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="admin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="cajaInicial" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="idTurno" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="serverRemote" Type="System.String" Scope="User">
+      <Value Profile="(Default)">blanco.mbarrien.com</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

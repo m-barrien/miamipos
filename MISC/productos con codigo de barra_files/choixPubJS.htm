@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+	
+	
+
+
+  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function beead_upload(){
+	
+	return true;
+}
+
+function beead_hasNoAds(){
+		if(typeof(BeeadAds)!='undefined' && typeof(BeeadAds.onNoAds)!='undefined')
+			BeeadAds.onNoAds();	
+		if(typeof(beead_noAds)!='undefined')	
+			beead_noAds();
+		return false;		
+}
+function beead_hasAds(){
+		if(typeof(BeeadAds)!='undefined' && typeof(BeeadAds["onAds"])!='undefined')
+				BeeadAds.onAds();
+		if(typeof(this["beead_activeAds"])!='undefined')
+				beead_activeAds();
+}	
+function beead_failed(){
+	beead_upload();
+	
+	
+	
+	return false;
+} 
+
+ 
+
+function beead_show(){
+	beead_failed();
+	return false;
+}
+beead_hasNoAds();
+

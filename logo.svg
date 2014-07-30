@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   enable-background="new"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.48.4 r9939"
+   version="1.1"
+   id="svg2"
+   height="600"
+   width="800"
+   inkscape:export-filename="/home/marcelo/Dropbox/Proyects/miamiPOS/logo.png"
+   inkscape:export-xdpi="146.19"
+   inkscape:export-ydpi="146.19">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4121445"
+     inkscape:cx="396.06341"
+     inkscape:cy="164.52588"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:object-paths="true" />
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11722">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop11724" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop11726" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11712"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop11714" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop11716" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient11706"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#8cf0ff;stop-opacity:1;"
+         offset="0"
+         id="stop11708" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect11451"
+       is_visible="true"
+       pattern="M 0,0 1,0"
+       copytype="single_stretched"
+       prop_scale="1.02"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="-0.4"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="construct_grid"
+       id="path-effect11445"
+       is_visible="true"
+       nr_x="11"
+       nr_y="5" />
+    <inkscape:path-effect
+       effect="gears"
+       id="path-effect11441"
+       is_visible="true"
+       teeth="22"
+       phi="4.1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect11439"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="envelope"
+       id="path-effect11435"
+       is_visible="true"
+       yy="true"
+       xx="true"
+       bendpath1="m 549.68852,842.88683 191.89513,0"
+       bendpath2="m 741.58365,842.88683 0,82.71846"
+       bendpath3="m 549.68852,925.60529 191.89513,0"
+       bendpath4="m 549.68852,842.88683 0,82.71846" />
+    <linearGradient
+       id="linearGradient7242">
+      <stop
+         style="stop-color:#0ec400;stop-opacity:1;"
+         offset="0"
+         id="stop7244" />
+      <stop
+         style="stop-color:#0eff08;stop-opacity:1;"
+         offset="1"
+         id="stop7246" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient7236"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#2bff63;stop-opacity:1;"
+         offset="0"
+         id="stop7238" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7202">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop7204" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop7206" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5759"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5761" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="39.19598 : 222.91457 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="839.19598 : 222.91457 : 1"
+       inkscape:persp3d-origin="439.19598 : 122.91457 : 1"
+       id="perspective3142" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-37.303994 : 73.442662 : 1"
+       inkscape:vp_y="0 : 1331.0245 : 0"
+       inkscape:vp_z="1013.3447 : 73.442662 : 1"
+       inkscape:persp3d-origin="488.02033 : -59.659787 : 1"
+       id="perspective3142-7" />
+    <filter
+       color-interpolation-filters="sRGB"
+       width="1"
+       height="1"
+       x="0"
+       y="0"
+       inkscape:menu-tooltip="Invert hue, or rotate it"
+       inkscape:menu="Color"
+       inkscape:label="Custom hue"
+       id="filter5988">
+      <feColorMatrix
+         result="fbSourceGraphic"
+         values="180"
+         type="hueRotate"
+         id="feColorMatrix5990" />
+      <feColorMatrix
+         id="feColorMatrix5992"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feColorMatrix
+         in="fbSourceGraphic"
+         result="result1"
+         values="28.571428571428569"
+         type="hueRotate"
+         id="feColorMatrix5994" />
+      <feBlend
+         in2="result1"
+         id="feBlend6000"
+         blend="normal" />
+    </filter>
+    <filter
+       id="filter6002"
+       inkscape:label="Invert hue"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Invert hue, or rotate it"
+       y="0"
+       x="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix6004"
+         type="hueRotate"
+         values="180"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix6006" />
+      <feColorMatrix
+         id="feColorMatrix6008"
+         type="hueRotate"
+         values="180"
+         result="result1"
+         in="fbSourceGraphic" />
+      <feBlend
+         blend="normal"
+         id="feBlend6010"
+         in2="result1" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7202"
+       id="linearGradient7230"
+       gradientUnits="userSpaceOnUse"
+       x1="324.56744"
+       y1="396.71859"
+       x2="658.93431"
+       y2="396.71859" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11722"
+       id="radialGradient11728"
+       cx="386.69002"
+       cy="458.44255"
+       fx="386.69002"
+       fy="458.44255"
+       r="87.401855"
+       gradientTransform="matrix(1,0,0,1.0392596,0,-17.998278)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Backgorund"
+     style="display:inline">
+    <rect
+       style="opacity:0.90000000000000002;fill:#d8faff;fill-opacity:1;fill-rule:evenodd;stroke:#2118f9;stroke-width:10.80000019000000044;stroke-miterlimit:4;stroke-opacity:0.62181821000000004;stroke-dasharray:none"
+       id="rect11489"
+       width="199.69627"
+       height="218.10803"
+       x="283.13272"
+       y="353.56628" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="spiral" />
+  <g
+     inkscape:label="text"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.36218)"
+     sodipodi:insensitive="true">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3020"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:#321dff;stroke-width:3.0999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="matrix(0.83277352,-0.05712415,-0.05001865,0.88510441,-7.3359324,542.49726)"><flowRegion
+         id="flowRegion3022"
+         style="stroke:url(#linearGradient7230)"><rect
+           id="rect3024"
+           width="467.73871"
+           height="156.78389"
+           x="256.08041"
+           y="364.82413"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;fill:#ffff00;stroke:#321dff;stroke-width:3.0999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+           ry="0" /></flowRegion><flowPara
+         id="flowPara3026"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffff00;stroke:#321dff;stroke-width:3.0999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Purisa;-inkscape-font-specification:Purisa Bold">miami</flowPara></flowRoot>    <g
+       id="g11320"
+       transform="matrix(0.89375882,-0.0876239,0,1.2167544,-192.35749,-79.202744)">
+      <g
+         transform="matrix(1.1692311,-0.02640812,-2.1225311e-4,1.236602,69.915664,395.04044)"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:#321dff;stroke-width:3.0999999;stroke-miterlimit:4;stroke-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+         id="flowRoot3020-7">
+        <g
+           id="g11311">
+          <path
+             inkscape:connector-curvature="0"
+             id="path11305"
+             style="font-size:90px;font-weight:500;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+             d="m 428.05141,374.81511 c 9.05996,6e-5 15.98996,1.65006 20.79,4.95 4.85995,3.30006 7.28994,8.46005 7.29,15.48 -6e-5,3.66004 -0.66006,6.81004 -1.98,9.45 -1.26005,2.58003 -3.12005,4.71003 -5.58,6.39 -2.46005,1.62003 -5.46004,2.82002 -9,3.6 -3.54004,0.78002 -7.59003,1.17002 -12.15,1.17 l -5.67,0 0,21.96 -11.34,0 0,-61.47 c 2.63999,-0.59994 5.54998,-0.98994 8.73,-1.17 3.23998,-0.23994 6.20997,-0.35994 8.91,-0.36 m 0.81,9.81 c -2.88003,5e-5 -5.25002,0.0901 -7.11,0.27 l 0,21.24 5.49,0 c 5.45997,3e-5 9.65996,-0.74997 12.6,-2.25 2.93996,-1.55996 4.40995,-4.46996 4.41,-8.73 -5e-5,-2.03995 -0.39004,-3.74995 -1.17,-5.13 -0.78004,-1.37995 -1.86004,-2.45995 -3.24,-3.24 -1.38004,-0.77995 -3.03004,-1.31995 -4.95,-1.62 -1.86003,-0.35995 -3.87003,-0.53995 -6.03,-0.54" />
+        </g>
+        <g
+           id="g11314">
+          <path
+             inkscape:connector-curvature="0"
+             id="path11307"
+             style="font-size:90px;font-weight:500;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+             d="m 475.75562,406.58511 c -1e-5,3.42003 0.41999,6.54003 1.26,9.36 0.83999,2.76002 2.03998,5.13002 3.60001,7.11 1.61997,1.92001 3.56997,3.42001 5.84999,4.5 2.27998,1.08001 4.85997,1.62001 7.74,1.62 2.81997,10e-6 5.36996,-0.53999 7.65001,-1.62 2.27995,-1.07999 4.19995,-2.57999 5.76,-4.5 1.61994,-1.97998 2.84994,-4.34998 3.69,-7.11 0.83994,-2.81997 1.25994,-5.93997 1.25999,-9.36 -5e-5,-3.41996 -0.42005,-6.50996 -1.25999,-9.27 -0.84006,-2.81996 -2.07006,-5.18995 -3.69,-7.11 -1.56005,-1.97995 -3.48005,-3.50995 -5.76,-4.59 -2.28005,-1.07995 -4.83004,-1.61995 -7.65001,-1.62 -2.88003,5e-5 -5.46002,0.54005 -7.74,1.62 -2.28002,1.08005 -4.23002,2.61005 -5.84999,4.59 -1.56003,1.98005 -2.76002,4.35004 -3.60001,7.11 -0.84001,2.76004 -1.26001,5.85004 -1.26,9.27 m 48.69,0 c -6e-5,5.34003 -0.81006,10.05002 -2.43,14.13 -1.56006,4.08001 -3.72005,7.50001 -6.48,10.26 -2.70005,2.70001 -5.88005,4.74 -9.53999,6.12 -3.66005,1.38 -7.56004,2.07 -11.70001,2.07 -4.14003,0 -8.07002,-0.69 -11.79,-2.07 -3.66001,-1.38 -6.87001,-3.41999 -9.62999,-6.12 -2.70002,-2.75999 -4.86001,-6.17999 -6.48001,-10.26 -1.62,-4.07998 -2.43,-8.78997 -2.43,-14.13 0,-5.33996 0.81,-10.01996 2.43,-14.04 1.62,-4.07995 3.80999,-7.49995 6.57,-10.26 2.81999,-2.75994 6.05998,-4.82994 9.72001,-6.21 3.65997,-1.37994 7.52996,-2.06994 11.60999,-2.07 4.07997,6e-5 7.94996,0.69006 11.61,2.07 3.65995,1.38006 6.83995,3.45006 9.54,6.21 2.75995,2.76005 4.94994,6.18005 6.57,10.26 1.61994,4.02004 2.42994,8.70004 2.43,14.04" />
+        </g>
+        <g
+           id="g11317">
+          <path
+             inkscape:connector-curvature="0"
+             id="path11309"
+             style="font-size:90px;font-weight:500;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+             d="m 551.03922,429.35511 c 4.07997,10e-6 7.04997,-0.68999 8.91,-2.07 1.85997,-1.37999 2.78996,-3.32999 2.79,-5.85 -4e-5,-1.49998 -0.33004,-2.78998 -0.99,-3.87 -0.60003,-1.07998 -1.50003,-2.03998 -2.7,-2.88 -1.14003,-0.89998 -2.55003,-1.70997 -4.23,-2.43 -1.68003,-0.77997 -3.60002,-1.52997 -5.76,-2.25 -2.16002,-0.77997 -4.26002,-1.61997 -6.3,-2.52 -1.98001,-0.95997 -3.75001,-2.12997 -5.31,-3.51 -1.50001,-1.37996 -2.73001,-3.02996 -3.69,-4.95 -0.90001,-1.91996 -1.35001,-4.22996 -1.35,-6.93 -10e-6,-5.63995 1.94999,-10.04994 5.85,-13.23 3.89999,-3.23994 9.20998,-4.85994 15.93,-4.86 3.89997,6e-5 7.34997,0.45006 10.35,1.35 3.05996,0.84006 5.45996,1.77006 7.2,2.79 l -3.51,9.18 c -2.04004,-1.13995 -4.29004,-2.00995 -6.75,-2.61 -2.40003,-0.59995 -4.89003,-0.89995 -7.47,-0.9 -3.06002,5e-5 -5.46002,0.63005 -7.2,1.89 -1.68002,1.26005 -2.52002,3.03005 -2.52,5.31 -2e-5,1.38005 0.26998,2.58005 0.81,3.6 0.59998,0.96004 1.40998,1.83004 2.43,2.61 1.07998,0.78004 2.30998,1.50004 3.69,2.16 1.43997,0.66004 2.99997,1.29004 4.68,1.89 2.93997,1.08004 5.54997,2.19004 7.83,3.33 2.33996,1.08003 4.28996,2.40003 5.85,3.96 1.61996,1.50003 2.84995,3.30003 3.69,5.4 0.83995,2.04002 1.25995,4.53002 1.26,7.47 -5e-5,5.64001 -2.01005,10.02001 -6.03,13.14 -3.96004,3.06 -9.78003,4.59 -17.46,4.59 -2.58002,0 -4.95002,-0.18 -7.11,-0.54 -2.10001,-0.3 -3.99001,-0.69 -5.67,-1.17 -1.62001,-0.48 -3.03001,-0.96 -4.23,-1.44 -1.20001,-0.54 -2.16,-1.02 -2.88,-1.44 l 3.33,-9.27 c 1.61999,0.90001 3.80999,1.80001 6.57,2.7 2.75998,0.90001 6.08998,1.35001 9.99,1.35" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -81,7 +81,19 @@ namespace miamiPOS
                 }
             }
         }
-
+        //Esta funcion retorna un objeto Producto con los valores obtenidos desde las textbox
+        private Producto getFromEditor()
+        {
+            try
+            {
+                Int32 idCategoria = Convert.ToInt32((comboBoxCategorias.SelectedItem as ComboboxItem).Value);
+                return new Producto(Convert.ToInt32(tbPLU.Text), tbBarcode.Text, tbName.Text, Convert.ToInt32(tbPrice.Text), idCategoria, checkBoxPesable.Checked);
+            }
+            catch
+            {
+                throw new Exception("Producto en Editor no respeta la estructura deseada");
+            }
+        }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             try
@@ -124,8 +136,15 @@ namespace miamiPOS
 
         private void buttonSaveItem_Click(object sender, EventArgs e)
         {
-            var plu = tbPLU.Text;
-            var barcode = tbBarcode.Text;
+            try
+            {
+                Producto productoAEditar = getFromEditor();
+                MessageBox.Show(productoAEditar.toSQL(checkBoxEditMode.Checked));
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("ERROR AL ACTUALIZAR :\r" + E.Message);
+            }
 
         }
 

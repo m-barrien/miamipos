@@ -61,8 +61,8 @@ namespace miamiPOS
             }
             else
             {
-                string output = String.Format("UPDATE producto SET (barcode, nombre, precio, id_categoria, pesable)=({1},'{2}',{3},{4},{5}) WHERE plu={0}",
-                              this.plu, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
+                string output = String.Format("UPDATE producto SET (nombre, precio, id_categoria, pesable)=('{1}',{2},{3},{4}) WHERE plu={0}",
+                              this.plu, this.name,this.price,this.id_categoria,pesableSQL);
                 return output;
             }
         }

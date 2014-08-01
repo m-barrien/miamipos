@@ -21,6 +21,8 @@ namespace miamiPOS
     {
         public static float Gramos { get; set; }
     }
+
+
     public class Producto
     {
         int plu;

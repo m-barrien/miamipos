@@ -16,14 +16,11 @@ namespace miamiPOS
         {
             InitializeComponent();
             BackColor=miamiPOS.Properties.Settings.Default.backColor;
-            //this.AcceptButton = button1;
-
-            labelNew.Text = "NUEVO \r -Se muestra la Z al final del turno \r -Se puede resumir el turno en caso de reinicio";
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            textBoxServer.Text = miamiPOS.Properties.Settings.Default.serverIP;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +79,13 @@ namespace miamiPOS
             {
                 SendKeys.Send("{TAB}");
             }
+        }
+
+        private void textBoxServer_Leave(object sender, EventArgs e)
+        {
+            Psql.updateHost(textBoxServer.Text);
+            miamiPOS.Properties.Settings.Default.serverIP = textBoxServer.Text;
+            miamiPOS.Properties.Settings.Default.Save();
         }
 
     }

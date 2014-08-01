@@ -192,5 +192,10 @@ namespace miamiPOS
 
             dataGridViewProductos.Columns["id_categoria"].Visible = false;
         }
+
+        private void coneccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

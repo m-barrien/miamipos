@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="miamiPOS.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="serverIP" Type="System.String" Scope="Application">
+    <Setting Name="serverIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.1.152</Value>
     </Setting>
     <Setting Name="port" Type="System.Int16" Scope="Application">

@@ -25,8 +25,6 @@ namespace miamiPOS
             {
                 MessageBox.Show(E.Message);
             }
-            // borrar
-            Application.Run(new manager());
 
             if (miamiPOS.Properties.Settings.Default.idTurno != 0)
             {
@@ -43,7 +41,14 @@ namespace miamiPOS
             else
             {
                 Application.Run(new Login());
-                miamiDB.beginTurno();
+                if(miamiPOS.Properties.Settings.Default.admin)
+                {
+                    Application.Run(new manager());
+                    miamiPOS.Properties.Settings.Default.idCajero = 0;
+                    miamiPOS.Properties.Settings.Default.Save();
+                }
+                    // Sino es administrador no se abre un turno
+                else miamiDB.beginTurno();
             }
             if (miamiPOS.Properties.Settings.Default.idCajero != 0)
             {

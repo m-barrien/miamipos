@@ -8,6 +8,12 @@ CREATE TABLE categoria(
 	id INTEGER PRIMARY KEY,
 	nombre_categoria VARCHAR
 );
+CREATE TABLE colacion(
+	id_cajero INTEGER REFERENCES cajero(id),
+	total INTEGER NOT NULL,
+	fecha TIMESTAMP,
+	PRIMARY KEY(id_cajero, fecha)
+);
 CREATE TABLE producto(
 	plu SERIAL PRIMARY KEY,
 	barcode VARCHAR ,
@@ -56,3 +62,4 @@ CREATE TABLE factura(
 	fecha TIMESTAMP NOT NULL,
 	total INTEGER NOT NULL
 );
+

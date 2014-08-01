@@ -357,7 +357,8 @@ namespace miamiPOS
 
         private void colacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            iColacion formColacion = new iColacion();
+            formColacion.ShowDialog();
         }
 
 

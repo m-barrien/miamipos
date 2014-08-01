@@ -49,20 +49,21 @@ namespace miamiPOS
             {
                 this.barcode = "NULL"; //digitos menores que cinco cuentan como un PLU en el programa, asi mejor se borra el codigo de barras invalido
             }
-            else
-            {
-                this.barcode = "\'" + this.barcode + "\'";
-            }
+
             if (!editar)
             {
-                string output = String.Format("INSERT INTO producto (plu, barcode, nombre, precio, id_categoria, pesable) VALUES ({0},{1},'{2}',{3},{4},{5})",
+                string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}','{1}',{3},{4},{5})";
+                if (this.barcode == "NULL") { query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}',{1},{3},{4},{5})"; }
+                string output = String.Format(query,
                               this.plu, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
                 return output;
             }
             else
             {
-                string output = String.Format("UPDATE producto SET (nombre, precio, id_categoria, pesable)=('{1}',{2},{3},{4}) WHERE plu={0}",
-                              this.plu, this.name,this.price,this.id_categoria,pesableSQL);
+                string query ="UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode)=('{1}',{2},{3},{4},'{5}') WHERE plu={0}";
+                if (this.barcode == "NULL") { query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode)=('{1}',{2},{3},{4},{5}) WHERE plu={0}"; }
+                string output = String.Format(query,
+                              this.plu, this.name,this.price,this.id_categoria,pesableSQL,this.barcode);
                 return output;
             }
         }

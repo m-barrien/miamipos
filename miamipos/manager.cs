@@ -86,7 +86,7 @@ namespace miamiPOS
         {
             try
             {
-                Int32 idCategoria = Convert.ToInt32((comboBoxCategorias.SelectedItem as ComboboxItem).Value);
+                Int32 idCategoria = Convert.ToInt32((cbCategoria.SelectedItem as ComboboxItem).Value);
                 return new Producto(Convert.ToInt32(tbPLU.Text), tbBarcode.Text, tbName.Text, Convert.ToInt32(tbPrice.Text), idCategoria, checkBoxPesable.Checked);
             }
             catch
@@ -133,6 +133,19 @@ namespace miamiPOS
             cbCategoria.SelectedItem = null;
             tbPLU.Focus();
         }
+        private void newItem()
+        {
+            foreach (Control x in this.groupBox1.Controls)
+            {
+                if (x is TextBox)
+                {
+                    ((TextBox)x).Clear();
+                }
+            }
+            checkBoxEditMode.Checked = false;
+            cbCategoria.SelectedItem = null;
+            tbPLU.Focus();
+        }
 
         private void buttonSaveItem_Click(object sender, EventArgs e)
         {
@@ -141,9 +154,15 @@ namespace miamiPOS
                 Producto productoAEditar = getFromEditor();
                 Console.WriteLine(productoAEditar.toSQL(checkBoxEditMode.Checked));
 
-                Psql.execScalar(productoAEditar.toSQL(checkBoxEditMode.Checked));
-                buttonNewItem_Click(null,null);
-                comboBoxCategorias_SelectedIndexChanged(null, null);
+                Psql.execInsert(productoAEditar.toSQL(checkBoxEditMode.Checked));
+
+                // Buscar producto editado o creado
+                textBoxSearch.Text = tbPLU.Text;
+                button1_Click(buttonSearch, EventArgs.Empty);
+
+                newItem();
+
+                MessageBox.Show("EXITO");
             }
             catch (Exception E)
             {
@@ -155,7 +174,7 @@ namespace miamiPOS
         private void checkBoxEditMode_CheckedChanged(object sender, EventArgs e)
         {
             tbPLU.ReadOnly = checkBoxEditMode.Checked; //si esta en modo editar el textbox del plu se bloquea
-            tbBarcode.ReadOnly = checkBoxEditMode.Checked;
+            //tbBarcode.ReadOnly = checkBoxEditMode.Checked;
         }
 
         private void button1_Click(object sender, EventArgs e)

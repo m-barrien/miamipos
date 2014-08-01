@@ -27,7 +27,16 @@ namespace miamiPOS
                                            "Database="+dbName+";"
                                            ;
         private static NpgsqlConnection conn = new NpgsqlConnection(connString);
-
+        public static void updateHost(string serverAddress)
+        {
+            connString = "Server="+serverAddress+";"+
+                        "Port="+port+";"+
+                        "User Id="+dbUser+";"+
+                        "Password="+dbPass+";"+
+                        "Database="+dbName+";"
+                        ;
+            conn = new NpgsqlConnection(connString);
+        }
         public static void testConnection()
         {
             try

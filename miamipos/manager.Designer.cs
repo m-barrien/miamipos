@@ -34,11 +34,14 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.dataGridViewProductos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonNewItem = new System.Windows.Forms.Button();
             this.checkBoxEditMode = new System.Windows.Forms.CheckBox();
@@ -54,15 +57,12 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -118,6 +118,54 @@
             this.tabPage1.Text = "Productos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonSearch);
+            this.groupBox2.Controls.Add(this.comboBoxCategorias);
+            this.groupBox2.Controls.Add(this.textBoxSearch);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(6, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(341, 69);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Busqueda";
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(260, 17);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 8;
+            this.buttonSearch.Text = "Buscar";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxCategorias
+            // 
+            this.comboBoxCategorias.FormattingEnabled = true;
+            this.comboBoxCategorias.Location = new System.Drawing.Point(6, 42);
+            this.comboBoxCategorias.Name = "comboBoxCategorias";
+            this.comboBoxCategorias.Size = new System.Drawing.Size(248, 21);
+            this.comboBoxCategorias.TabIndex = 1;
+            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
+            this.textBoxSearch.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(272, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Categoria";
+            // 
             // buttonDelete
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -160,24 +208,6 @@
             this.dataGridViewProductos.ShowEditingIcon = false;
             this.dataGridViewProductos.Size = new System.Drawing.Size(272, 364);
             this.dataGridViewProductos.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Categoria";
-            // 
-            // comboBoxCategorias
-            // 
-            this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(6, 42);
-            this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(248, 21);
-            this.comboBoxCategorias.TabIndex = 1;
-            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -325,36 +355,6 @@
             this.tbPLU.Size = new System.Drawing.Size(242, 20);
             this.tbPLU.TabIndex = 0;
             // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(6, 19);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
-            this.textBoxSearch.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(260, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.comboBoxCategorias);
-            this.groupBox2.Controls.Add(this.textBoxSearch);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 7);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 69);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Busqueda";
-            // 
             // manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,11 +371,11 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,7 +408,7 @@
         private System.Windows.Forms.Button buttonSaveItem;
         private System.Windows.Forms.CheckBox checkBoxEditMode;
         private System.Windows.Forms.Button buttonNewItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.GroupBox groupBox2;
     }

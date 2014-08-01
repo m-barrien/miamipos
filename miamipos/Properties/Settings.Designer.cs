@@ -25,7 +25,7 @@ namespace miamiPOS.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.152")]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
         public string serverIP {
             get {
                 return ((string)(this["serverIP"]));

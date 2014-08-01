@@ -54,16 +54,16 @@ namespace miamiPOS
 
             if (!editar)
             {
-                string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}','{1}',{3},{4},{5})";
-                if (this.barcode == "NULL") { query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}',{1},{3},{4},{5})"; }
+                string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable,last_change) VALUES ({0},'{2}','{1}',{3},{4},{5},now())";
+                if (this.barcode == "NULL") { query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable,last_change) VALUES ({0},'{2}',{1},{3},{4},{5},now())"; }
                 string output = String.Format(query,
                               this.plu, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
                 return output;
             }
             else
             {
-                string query ="UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode)=('{1}',{2},{3},{4},'{5}') WHERE plu={0}";
-                if (this.barcode == "NULL") { query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode)=('{1}',{2},{3},{4},{5}) WHERE plu={0}"; }
+                string query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode,last_change)=('{1}',{2},{3},{4},'{5}',now()) WHERE plu={0}";
+                if (this.barcode == "NULL") { query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode,last_change)=('{1}',{2},{3},{4},{5},now()) WHERE plu={0}"; }
                 string output = String.Format(query,
                               this.plu, this.name,this.price,this.id_categoria,pesableSQL,this.barcode);
                 return output;

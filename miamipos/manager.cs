@@ -16,6 +16,10 @@ namespace miamiPOS
         {
             InitializeComponent();
             dataGridViewProductos.DataSource = tablaProductos;
+
+            // Para la pestaña de anticipos
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "MM - yyyy";
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

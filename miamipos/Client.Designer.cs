@@ -81,6 +81,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.timerActualizar = new System.Windows.Forms.Timer(this.components);
+            this.colacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             groupBox4 = new System.Windows.Forms.GroupBox();
             groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -232,7 +233,8 @@
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empezarTurnoToolStripMenuItem,
-            this.anticipoToolStripMenuItem});
+            this.anticipoToolStripMenuItem,
+            this.colacionToolStripMenuItem});
             this.informesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
@@ -692,6 +694,13 @@
             this.timerActualizar.Interval = 3600000;
             this.timerActualizar.Tick += new System.EventHandler(this.timerActualizar_Tick);
             // 
+            // colacionToolStripMenuItem
+            // 
+            this.colacionToolStripMenuItem.Name = "colacionToolStripMenuItem";
+            this.colacionToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.colacionToolStripMenuItem.Text = "Colacion";
+            this.colacionToolStripMenuItem.Click += new System.EventHandler(this.colacionToolStripMenuItem_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -780,6 +789,7 @@
         private System.Windows.Forms.ToolStripMenuItem anticipoToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox msgBox;
+        private System.Windows.Forms.ToolStripMenuItem colacionToolStripMenuItem;
 
     }
 }

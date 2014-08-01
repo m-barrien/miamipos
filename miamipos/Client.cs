@@ -355,6 +355,11 @@ namespace miamiPOS
 
         }
 
+        private void colacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

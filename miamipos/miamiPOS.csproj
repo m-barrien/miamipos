@@ -26,7 +26,7 @@
     <UpdateUrl>http://www.mbarrien.com/miamipos/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>0.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -106,6 +106,12 @@
     <Compile Include="iAnticipo.Designer.cs">
       <DependentUpon>iAnticipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="iColacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iColacion.Designer.cs">
+      <DependentUpon>iColacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="iInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="iAnticipo.resx">
       <DependentUpon>iAnticipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iColacion.resx">
+      <DependentUpon>iColacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="iInventario.resx">
       <DependentUpon>iInventario.cs</DependentUpon>

@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miamiPOS", "miamiPOS\miamiPOS.csproj", "{1F7A7A72-B2CB-41EC-8423-F28E6378D9CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C53AD94-39C0-456E-AE65-6F885AD66190} = {6C53AD94-39C0-456E-AE65-6F885AD66190}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPrinter", "..\..\Dropbox\Proyects\SerialPrinter\SerialCommunication\SerialPrinter.csproj", "{6C53AD94-39C0-456E-AE65-6F885AD66190}"
 EndProject

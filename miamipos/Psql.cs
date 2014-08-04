@@ -5,6 +5,8 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Npgsql;
+using SerialCOM;
+
 
 namespace miamiPOS
 {
@@ -480,6 +482,8 @@ namespace miamiPOS
     {
         private static DataTable carro;
         private static Int32 total=0;
+        private static ESCPrinter myPrinter = new ESCPrinter();
+
         public Carrito()
         {
             carro = new DataTable("carrito");
@@ -491,6 +495,26 @@ namespace miamiPOS
 
             DataColumn[] carro_key = { carro.Columns["plu"] };
             carro.PrimaryKey = carro_key;
+        }
+        internal void printReceipt(string portName)
+        {
+            myPrinter.open(portName);
+            myPrinter.initialize();           
+            myPrinter.justification('c');
+            myPrinter.WriteLine("Sandwiches y Comidas MIAMI");
+
+            foreach (DataRow row in carro.Rows)
+            {
+                myPrinter.justification('l');
+                myPrinter.WriteLine(row["nombre"].ToString());
+
+                myPrinter.justification('r');
+                myPrinter.WriteLine(row["cantidad"].ToString() + "\t");
+                myPrinter.WriteLine(row["total"].ToString());
+
+            }
+            myPrinter.autoCutter();
+            myPrinter.close();
         }
         public void addItem(Int64 plu, Int32 cantidad)
         {
@@ -636,6 +660,8 @@ namespace miamiPOS
                 throw new Exception("Error al ingresar venta");
             }
         }
+
+
     }
 
 }

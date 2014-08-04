@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+using SerialCOM;
 /*
 // ejemplo para hacer evento cada tanto tiempo
 public main_form()
@@ -38,6 +39,8 @@ namespace miamiPOS
     public partial class mainForm : Form
     {
         Carrito Carro = new Carrito();
+        public static ESCPrinter myPrinter = new ESCPrinter();
+
         public mainForm()
         {
             InitializeComponent();
@@ -231,9 +234,17 @@ namespace miamiPOS
             {
                 try
                 {
-                    iMonederoForm monedero = new iMonederoForm(Carro.subTotal().ToString());
-                    monedero.ShowDialog();
-                    while (monedero.IsAccessible) { System.Threading.Thread.Sleep(1000); }
+                    //Modo sanguchero
+                    if (activePrinter.Checked)
+                    {
+                        Carro.printReceipt(comboBoxPrinterPorts.ComboBox.SelectedText);
+                    }
+                    else
+                    {
+                        iMonederoForm monedero = new iMonederoForm(Carro.subTotal().ToString());
+                        monedero.ShowDialog();
+                        while (monedero.IsAccessible) { System.Threading.Thread.Sleep(1000); }
+                    }
                     Carro.sendToDB();
                 }
                 catch (Exception E)
@@ -370,8 +381,24 @@ namespace miamiPOS
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            activePrinter.Checked = !activePrinter.Checked;
-            this.BackColor = miamiPOS.Properties.Settings.Default.sangucheColor;
+            if (activePrinter.Checked)
+            {
+                activePrinter.Checked = false;
+                this.BackColor = miamiPOS.Properties.Settings.Default.backColor;
+                this.Text = "PAN Y PASTELES MIAMI";
+            }
+            else
+            {
+                activePrinter.Checked = true;
+                this.BackColor = miamiPOS.Properties.Settings.Default.sangucheColor;
+                this.Text = "COMIDAS Y SANDWICHES MIAMI";
+            }
+        }
+
+        private void comboBoxPrinterPorts_Click(object sender, EventArgs e)
+        {
+            //quizas guardad puerto en settings
+            
         }
 
 

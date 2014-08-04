@@ -228,6 +228,12 @@
     <Content Include="miamiIcon.ico" />
     <None Include="Resources\miamilogin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dropbox\Proyects\SerialPrinter\SerialCommunication\SerialPrinter.csproj">
+      <Project>{6c53ad94-39c0-456e-ae65-6f885ad66190}</Project>
+      <Name>SerialPrinter</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

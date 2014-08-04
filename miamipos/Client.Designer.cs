@@ -246,6 +246,7 @@
             // 
             this.comboBoxPrinterPorts.Name = "comboBoxPrinterPorts";
             this.comboBoxPrinterPorts.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxPrinterPorts.Click += new System.EventHandler(this.comboBoxPrinterPorts_Click);
             // 
             // salirToolStripMenuItem
             // 

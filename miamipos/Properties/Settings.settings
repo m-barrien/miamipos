@@ -44,5 +44,8 @@
     <Setting Name="serverRemote" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://mbarrien.com/mypos/</Value>
     </Setting>
+    <Setting Name="sangucheColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">255, 128, 0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

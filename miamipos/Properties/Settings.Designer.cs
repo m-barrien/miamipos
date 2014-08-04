@@ -174,5 +174,14 @@ namespace miamiPOS.Properties {
                 this["serverRemote"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("255, 128, 0")]
+        public global::System.Drawing.Color sangucheColor {
+            get {
+                return ((global::System.Drawing.Color)(this["sangucheColor"]));
+            }
+        }
     }
 }

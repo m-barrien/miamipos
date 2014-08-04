@@ -45,10 +45,14 @@
             this.actualizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incrementalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.impresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activePrinter = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxPrinterPorts = new System.Windows.Forms.ToolStripComboBox();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empezarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anticipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dEBUGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +85,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.timerActualizar = new System.Windows.Forms.Timer(this.components);
-            this.colacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             groupBox4 = new System.Windows.Forms.GroupBox();
             groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -193,7 +196,8 @@
             // conectarToolStripMenuItem
             // 
             this.conectarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizarProductosToolStripMenuItem});
+            this.actualizarProductosToolStripMenuItem,
+            this.impresoraToolStripMenuItem});
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
             this.conectarToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.conectarToolStripMenuItem.Text = "Conectar";
@@ -221,6 +225,27 @@
             this.totalToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
             this.totalToolStripMenuItem.Text = "Total";
             this.totalToolStripMenuItem.Click += new System.EventHandler(this.totalToolStripMenuItem_Click);
+            // 
+            // impresoraToolStripMenuItem
+            // 
+            this.impresoraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activePrinter,
+            this.comboBoxPrinterPorts});
+            this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
+            this.impresoraToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.impresoraToolStripMenuItem.Text = "Impresora";
+            // 
+            // activePrinter
+            // 
+            this.activePrinter.Name = "activePrinter";
+            this.activePrinter.Size = new System.Drawing.Size(294, 30);
+            this.activePrinter.Text = "Activa-ModoSanguchero";
+            this.activePrinter.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // comboBoxPrinterPorts
+            // 
+            this.comboBoxPrinterPorts.Name = "comboBoxPrinterPorts";
+            this.comboBoxPrinterPorts.Size = new System.Drawing.Size(121, 23);
             // 
             // salirToolStripMenuItem
             // 
@@ -253,6 +278,13 @@
             this.anticipoToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
             this.anticipoToolStripMenuItem.Text = "Anticipo";
             this.anticipoToolStripMenuItem.Click += new System.EventHandler(this.anticipoToolStripMenuItem_Click);
+            // 
+            // colacionToolStripMenuItem
+            // 
+            this.colacionToolStripMenuItem.Name = "colacionToolStripMenuItem";
+            this.colacionToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.colacionToolStripMenuItem.Text = "Colacion";
+            this.colacionToolStripMenuItem.Click += new System.EventHandler(this.colacionToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -694,13 +726,6 @@
             this.timerActualizar.Interval = 3600000;
             this.timerActualizar.Tick += new System.EventHandler(this.timerActualizar_Tick);
             // 
-            // colacionToolStripMenuItem
-            // 
-            this.colacionToolStripMenuItem.Name = "colacionToolStripMenuItem";
-            this.colacionToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
-            this.colacionToolStripMenuItem.Text = "Colacion";
-            this.colacionToolStripMenuItem.Click += new System.EventHandler(this.colacionToolStripMenuItem_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -790,6 +815,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox msgBox;
         private System.Windows.Forms.ToolStripMenuItem colacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impresoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox comboBoxPrinterPorts;
+        private System.Windows.Forms.ToolStripMenuItem activePrinter;
 
     }
 }

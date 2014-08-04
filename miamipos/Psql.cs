@@ -88,7 +88,7 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                throw new Exception("Sin conexion \r" + e.Message);
+                throw e;
             }
 
             finally
@@ -110,7 +110,7 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                throw new Exception("Sin conexion \r" + e.Message);
+                throw e;
             }
             finally
             {

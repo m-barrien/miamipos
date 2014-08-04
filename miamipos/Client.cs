@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.IO;
+using System.IO.Ports;
 /*
 // ejemplo para hacer evento cada tanto tiempo
 public main_form()
@@ -52,6 +53,12 @@ namespace miamiPOS
         }
         private void mainForm_Load(object sender, EventArgs e)
         {
+            //Seccion para cargar puertos seriales de impresora
+            var nameArray = SerialPort.GetPortNames();
+            Array.Sort(nameArray);
+            comboBoxPrinterPorts.ComboBox.DataSource = nameArray;
+            //fin impresora
+
             miamiDB.initialize();
             try
             {
@@ -359,6 +366,12 @@ namespace miamiPOS
         {
             iColacion formColacion = new iColacion();
             formColacion.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            activePrinter.Checked = !activePrinter.Checked;
+            this.BackColor = miamiPOS.Properties.Settings.Default.sangucheColor;
         }
 
 

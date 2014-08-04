@@ -165,7 +165,7 @@ namespace miamiPOS.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("blanco.mbarrien.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://mbarrien.com/mypos/")]
         public string serverRemote {
             get {
                 return ((string)(this["serverRemote"]));

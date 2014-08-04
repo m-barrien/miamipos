@@ -42,30 +42,35 @@ namespace miamiPOS
         }
         public string toSQL(bool editar)
         {
-            string pesableSQL="FALSE";
+            string pesableSQL="FALSE",pluSQL="DEFAULT";
+
+            if (plu > 0) pluSQL = plu.ToString();
+
             if(pesable)
             {
                 pesableSQL="TRUE";
             }
-            if (barcode.Length <= 5)
+            if (this.barcode.Length <= 5)
             {
                 this.barcode = "NULL"; //digitos menores que cinco cuentan como un PLU en el programa, asi mejor se borra el codigo de barras invalido
             }
 
             if (!editar)
             {
-                string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable,last_change) VALUES ({0},'{2}','{1}',{3},{4},{5},now())";
-                if (this.barcode == "NULL") { query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable,last_change) VALUES ({0},'{2}',{1},{3},{4},{5},now())"; }
+                System.Threading.Thread.Sleep(4000);
+                string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}','{1}',{3},{4},{5})";
+                if (this.barcode == "NULL") query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}',NULL,{3},{4},{5})"; 
+
                 string output = String.Format(query,
-                              this.plu, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
+                              pluSQL, this.barcode,this.name,this.price,this.id_categoria,pesableSQL);
                 return output;
             }
             else
             {
                 string query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode,last_change)=('{1}',{2},{3},{4},'{5}',now()) WHERE plu={0}";
-                if (this.barcode == "NULL") { query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode,last_change)=('{1}',{2},{3},{4},{5},now()) WHERE plu={0}"; }
+                if (this.barcode == "NULL")  query = "UPDATE producto SET (nombre, precio, id_categoria, pesable, barcode,last_change)=('{1}',{2},{3},{4},{5},now()) WHERE plu={0}"; 
                 string output = String.Format(query,
-                              this.plu, this.name,this.price,this.id_categoria,pesableSQL,this.barcode);
+                              this.plu, this.name, this.price, this.id_categoria, pesableSQL, this.barcode);
                 return output;
             }
         }

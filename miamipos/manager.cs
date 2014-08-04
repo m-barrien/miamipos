@@ -90,8 +90,12 @@ namespace miamiPOS
         {
             try
             {
+                int plu;
+                if (tbPLU.Text.Length < 1) plu = 0;
+                else plu = Convert.ToInt32(tbPLU.Text);
+
                 Int32 idCategoria = Convert.ToInt32((cbCategoria.SelectedItem as ComboboxItem).Value);
-                return new Producto(Convert.ToInt32(tbPLU.Text), tbBarcode.Text, tbName.Text, Convert.ToInt32(tbPrice.Text), idCategoria, checkBoxPesable.Checked);
+                return new Producto(plu, tbBarcode.Text, tbName.Text, Convert.ToInt32(tbPrice.Text), idCategoria, checkBoxPesable.Checked);
             }
             catch
             {
@@ -178,28 +182,33 @@ namespace miamiPOS
         private void checkBoxEditMode_CheckedChanged(object sender, EventArgs e)
         {
             tbPLU.ReadOnly = checkBoxEditMode.Checked; //si esta en modo editar el textbox del plu se bloquea
-            //tbBarcode.ReadOnly = checkBoxEditMode.Checked;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var id = textBoxSearch.Text;
-            if (id.Length <= 5)
-            {
-                Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=" + id, ref tablaProductos);
-            }
-            else
-            {
-                Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where barcode='" + id +"'", ref tablaProductos);
-            }
+            if (id.Length < 1)          Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=(select last_value from producto_plu_seq)", ref tablaProductos); 
+            else if (id.Length <= 5)    Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=" + id, ref tablaProductos);
+            else                        Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where barcode='" + id + "'", ref tablaProductos);
             dataGridViewProductos.DataSource = tablaProductos;
-
             dataGridViewProductos.Columns["id_categoria"].Visible = false;
         }
 
         private void coneccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start(miamiPOS.Properties.Settings.Default.serverRemote);
+        }
 
+
+        /*
+         * Bloque para la pestaña pagos que incluye colaciones anticipos y facturas
+         * 
+         * 
+         */
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            // dateTimePicker.Value.Month
         }
     }
 }

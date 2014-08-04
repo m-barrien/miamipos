@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coneccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -57,7 +58,6 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
-            this.coneccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
@@ -88,6 +88,13 @@
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
+            // 
+            // coneccionToolStripMenuItem
+            // 
+            this.coneccionToolStripMenuItem.Name = "coneccionToolStripMenuItem";
+            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.coneccionToolStripMenuItem.Text = "PaginaWeb";
+            this.coneccionToolStripMenuItem.Click += new System.EventHandler(this.coneccionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -361,13 +368,6 @@
             this.tbPLU.Size = new System.Drawing.Size(242, 20);
             this.tbPLU.TabIndex = 0;
             // 
-            // coneccionToolStripMenuItem
-            // 
-            this.coneccionToolStripMenuItem.Name = "coneccionToolStripMenuItem";
-            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.coneccionToolStripMenuItem.Text = "Coneccion...";
-            this.coneccionToolStripMenuItem.Click += new System.EventHandler(this.coneccionToolStripMenuItem_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dateTimePicker);
@@ -385,9 +385,10 @@
             this.dateTimePicker.MinDate = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.RightToLeftLayout = true;
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(202, 20);
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
+            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // manager
             // 

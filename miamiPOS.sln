@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miamiPOS", "miamiPOS\miamiPOS.csproj", "{1F7A7A72-B2CB-41EC-8423-F28E6378D9CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPrinter", "..\..\Dropbox\Proyects\SerialPrinter\SerialCommunication\SerialPrinter.csproj", "{6C53AD94-39C0-456E-AE65-6F885AD66190}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{1F7A7A72-B2CB-41EC-8423-F28E6378D9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F7A7A72-B2CB-41EC-8423-F28E6378D9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F7A7A72-B2CB-41EC-8423-F28E6378D9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C53AD94-39C0-456E-AE65-6F885AD66190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C53AD94-39C0-456E-AE65-6F885AD66190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C53AD94-39C0-456E-AE65-6F885AD66190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C53AD94-39C0-456E-AE65-6F885AD66190}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

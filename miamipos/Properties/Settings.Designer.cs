@@ -183,5 +183,17 @@ namespace miamiPOS.Properties {
                 return ((global::System.Drawing.Color)(this["sangucheColor"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string printerPortName {
+            get {
+                return ((string)(this["printerPortName"]));
+            }
+            set {
+                this["printerPortName"] = value;
+            }
+        }
     }
 }

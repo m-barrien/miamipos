@@ -39,7 +39,6 @@ namespace miamiPOS
     public partial class mainForm : Form
     {
         Carrito Carro = new Carrito();
-        public static ESCPrinter myPrinter = new ESCPrinter();
 
         public mainForm()
         {
@@ -56,12 +55,6 @@ namespace miamiPOS
         }
         private void mainForm_Load(object sender, EventArgs e)
         {
-            //Seccion para cargar puertos seriales de impresora
-            var nameArray = SerialPort.GetPortNames();
-            Array.Sort(nameArray);
-            comboBoxPrinterPorts.ComboBox.DataSource = nameArray;
-            //fin impresora
-
             miamiDB.initialize();
             try
             {
@@ -237,7 +230,7 @@ namespace miamiPOS
                     //Modo sanguchero
                     if (activePrinter.Checked)
                     {
-                        Carro.printReceipt(comboBoxPrinterPorts.ComboBox.SelectedText);
+                        Carro.printReceipt(miamiPOS.Properties.Settings.Default.printerPortName);
                     }
                     else
                     {
@@ -398,6 +391,11 @@ namespace miamiPOS
         private void comboBoxPrinterPorts_Click(object sender, EventArgs e)
         {
             //quizas guardad puerto en settings
+            
+        }
+
+        private void impresoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             
         }
 

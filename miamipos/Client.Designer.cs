@@ -47,7 +47,6 @@
             this.totalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.impresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activePrinter = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBoxPrinterPorts = new System.Windows.Forms.ToolStripComboBox();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empezarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,11 +228,11 @@
             // impresoraToolStripMenuItem
             // 
             this.impresoraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.activePrinter,
-            this.comboBoxPrinterPorts});
+            this.activePrinter});
             this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
             this.impresoraToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
             this.impresoraToolStripMenuItem.Text = "Impresora";
+            this.impresoraToolStripMenuItem.Click += new System.EventHandler(this.impresoraToolStripMenuItem_Click);
             // 
             // activePrinter
             // 
@@ -241,12 +240,6 @@
             this.activePrinter.Size = new System.Drawing.Size(294, 30);
             this.activePrinter.Text = "Activa-ModoSanguchero";
             this.activePrinter.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // comboBoxPrinterPorts
-            // 
-            this.comboBoxPrinterPorts.Name = "comboBoxPrinterPorts";
-            this.comboBoxPrinterPorts.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxPrinterPorts.Click += new System.EventHandler(this.comboBoxPrinterPorts_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -817,7 +810,6 @@
         private System.Windows.Forms.TextBox msgBox;
         private System.Windows.Forms.ToolStripMenuItem colacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem impresoraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox comboBoxPrinterPorts;
         private System.Windows.Forms.ToolStripMenuItem activePrinter;
 
     }

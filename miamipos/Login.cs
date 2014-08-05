@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Deployment.Application.Manifest;
+using System.IO.Ports;
 
 namespace miamiPOS
 {
@@ -21,6 +22,11 @@ namespace miamiPOS
         private void Form2_Load(object sender, EventArgs e)
         {
             textBoxServer.Text = miamiPOS.Properties.Settings.Default.serverIP;
+
+            string[] nameArray = null;
+            nameArray = SerialPort.GetPortNames();
+            Array.Sort(nameArray);
+            comboBoxPort.DataSource = nameArray;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +39,7 @@ namespace miamiPOS
             try
             {
                 Psql.execQuery(query, ref results);
-                MessageBox.Show("BIENVENIDA " + results.Rows[0][1]);
+                MessageBox.Show("BIENVENID@ " + results.Rows[0][1]);
 
                 miamiPOS.Properties.Settings.Default.idCajero = (Int32)results.Rows[0][0];
                 miamiPOS.Properties.Settings.Default.nombreCajero = (String)results.Rows[0][1];
@@ -85,6 +91,12 @@ namespace miamiPOS
         {
             Psql.updateHost(textBoxServer.Text);
             miamiPOS.Properties.Settings.Default.serverIP = textBoxServer.Text;
+            miamiPOS.Properties.Settings.Default.Save();
+        }
+
+        private void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            miamiPOS.Properties.Settings.Default.printerPortName = comboBoxPort.SelectedValue.ToString();
             miamiPOS.Properties.Settings.Default.Save();
         }
 

@@ -499,20 +499,30 @@ namespace miamiPOS
         internal void printReceipt(string portName)
         {
             myPrinter.open(portName);
-            myPrinter.initialize();           
+            myPrinter.initialize();
+            myPrinter.lineSpacing(120);
+            myPrinter.printMode((byte)(ESCPrinter.DHEIGHT | ESCPrinter.EMPH | ESCPrinter.UNDER));
             myPrinter.justification('c');
             myPrinter.WriteLine("Sandwiches y Comidas MIAMI");
+            myPrinter.justification('l');
+            myPrinter.printMode((byte)(ESCPrinter.EMPH | ESCPrinter.UNDER));
+            string producto = String.Format("{0,-5}{1,-20}{2,-5} ${3,5}"
+                    , "Plu","Nombre","#","Total");
+            myPrinter.WriteLine(producto);
+
+            myPrinter.printMode(0);
 
             foreach (DataRow row in carro.Rows)
             {
-                myPrinter.justification('l');
-                myPrinter.WriteLine(row["nombre"].ToString());
-
-                myPrinter.justification('r');
-                myPrinter.WriteLine(row["cantidad"].ToString() + "\t");
-                myPrinter.WriteLine(row["total"].ToString());
-
+                producto = String.Format("{0,-5}{1,-20}{2,-5}${3,5}"
+                    , row["plu"].ToString(), row["nombre"].ToString(), row["cantidad"].ToString(), row["total"].ToString());
+                myPrinter.WriteLine(producto);
             }
+            myPrinter.printMode((byte)(ESCPrinter.DHEIGHT | ESCPrinter.EMPH));
+            myPrinter.justification('r');
+            myPrinter.WriteLine("TOTAL : " + this.subTotal().ToString());
+            myPrinter.lineFeed();
+            myPrinter.lineFeed();
             myPrinter.autoCutter();
             myPrinter.close();
         }

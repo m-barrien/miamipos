@@ -39,6 +39,7 @@ namespace miamiPOS
     public partial class mainForm : Form
     {
         Carrito Carro = new Carrito();
+        pleaseWait loadingForm = new pleaseWait();
 
         public mainForm()
         {
@@ -302,20 +303,47 @@ namespace miamiPOS
             }
         }
 
+        // funcion que ejecuta la actualizacion de fondo
         private void incrementalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Int32 actualizados =0;
+            // Configure a BackgroundWorker to perform your long running operation.
+            BackgroundWorker bg = new BackgroundWorker();
+            bg.DoWork += new DoWorkEventHandler(actualizarIncrementalThread);
+            bg.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bg_RunWorkerCompleted);
+
+            // Start the worker.
+            bg.RunWorkerAsync();
+
+            // Display the loading form.
+            
+            loadingForm.ShowDialog();
+
+        }
+        private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Retrieve the result pass from bg_DoWork() if any.
+            // Note, you may need to cast it to the desired data type.
+            object result = e.Result;
+
+            // Close the loading form.
+            loadingForm.Close();
+
+            // Update any other UI controls that may need to be updated.
+            msgBox.Text = "Se actualizaron " + ((int)result).ToString() + " productos";
+        }
+
+        //Funcion que ejecuta la actualizacion en si
+        private void actualizarIncrementalThread(object sender, DoWorkEventArgs e)
         {
             try
             {
-                 var actualizados =miamiDB.loadProductsIncremental();
-                 if (actualizados > 0)
-                 {
-                     msgBox.Text = "Se actualizaron " + actualizados + " productos";
-                 }
-                 else msgBox.Text = "Nada que actualizar";
+                e.Result = miamiDB.loadProductsIncremental();
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Console.WriteLine(E.Message);
+                e.Result = 0;
             }
         }
 

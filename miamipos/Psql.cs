@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using System.ComponentModel;
 using System.Windows.Forms;
 using Npgsql;
 using SerialCOM;
@@ -236,6 +237,7 @@ namespace miamiPOS
         }
         public static int loadProductsIncremental()
         {
+
             DataTable producto=null;
             if (dt == null || dt.Tables["producto"] == null || !isInitialized)
             {
@@ -247,7 +249,6 @@ namespace miamiPOS
                 if (found == "0")
                 {
                     Console.WriteLine("NADA QUE ACTUALIZAR");
-                    return 0;
                 }
                 else
                 {

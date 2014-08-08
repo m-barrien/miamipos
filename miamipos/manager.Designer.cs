@@ -60,6 +60,8 @@
             this.tbPLU = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxPesableventa = new System.Windows.Forms.CheckBox();
+            this.dataGridViewVentas = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,14 +95,14 @@
             // coneccionToolStripMenuItem
             // 
             this.coneccionToolStripMenuItem.Name = "coneccionToolStripMenuItem";
-            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.coneccionToolStripMenuItem.Text = "PaginaWeb";
             this.coneccionToolStripMenuItem.Click += new System.EventHandler(this.coneccionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -370,13 +373,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridViewVentas);
+            this.tabPage2.Controls.Add(this.checkBoxPesableventa);
             this.tabPage2.Controls.Add(this.dateTimePicker);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(637, 420);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pagos";
+            this.tabPage2.Text = "Ventas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker
@@ -389,6 +394,28 @@
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
+            // 
+            // checkBoxPesableventa
+            // 
+            this.checkBoxPesableventa.AutoSize = true;
+            this.checkBoxPesableventa.Location = new System.Drawing.Point(214, 6);
+            this.checkBoxPesableventa.Name = "checkBoxPesableventa";
+            this.checkBoxPesableventa.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxPesableventa.TabIndex = 11;
+            this.checkBoxPesableventa.Text = "¿Pesable?";
+            this.checkBoxPesableventa.UseVisualStyleBackColor = true;
+            this.checkBoxPesableventa.CheckedChanged += new System.EventHandler(this.checkBoxPesableventa_CheckedChanged);
+            // 
+            // dataGridViewVentas
+            // 
+            this.dataGridViewVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVentas.Location = new System.Drawing.Point(6, 32);
+            this.dataGridViewVentas.MultiSelect = false;
+            this.dataGridViewVentas.Name = "dataGridViewVentas";
+            this.dataGridViewVentas.ReadOnly = true;
+            this.dataGridViewVentas.Size = new System.Drawing.Size(625, 382);
+            this.dataGridViewVentas.TabIndex = 12;
             // 
             // manager
             // 
@@ -412,6 +439,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,5 +479,7 @@
         private System.Windows.Forms.ToolStripMenuItem coneccionToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DataGridView dataGridViewVentas;
+        private System.Windows.Forms.CheckBox checkBoxPesableventa;
     }
 }

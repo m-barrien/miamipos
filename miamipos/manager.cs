@@ -12,14 +12,15 @@ namespace miamiPOS
     public partial class manager : Form
     {
         DataTable tablaProductos = null;
+        DataTable tablaVentas = null;
         public manager()
         {
             InitializeComponent();
             dataGridViewProductos.DataSource = tablaProductos;
 
             // Para la pestaña de anticipos
-            dateTimePicker.Format = DateTimePickerFormat.Custom;
-            dateTimePicker.CustomFormat = "MM - yyyy";
+            //dateTimePicker.Format = DateTimePickerFormat.Custom;
+            //dateTimePicker.CustomFormat = "MM - yyyy";
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,6 +197,7 @@ namespace miamiPOS
 
         private void coneccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Abre la pagina web de la interfaz guardada en las settings serverRemote
             System.Diagnostics.Process.Start(miamiPOS.Properties.Settings.Default.serverRemote);
         }
 
@@ -209,6 +211,19 @@ namespace miamiPOS
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             // dateTimePicker.Value.Month
+            int doy = dateTimePicker.Value.DayOfYear;
+            int year = dateTimePicker.Value.Year;
+            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from fecha)={1} and extract(doy from fecha)={2} group by nombre order by Dinero DESC"
+                ,checkBoxPesableventa.Checked.ToString(),year,doy);
+            Psql.execQuery(query, ref tablaVentas);
+            dataGridViewVentas.DataSource = tablaVentas;
+
+            //dataGridViewProductos.Columns["id_categoria"].Visible = false;
+        }
+
+        private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker_ValueChanged(sender, e);
         }
     }
 }

@@ -187,10 +187,29 @@ namespace miamiPOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var id = textBoxSearch.Text;
-            if (id.Length < 1)          Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=(select last_value from producto_plu_seq)", ref tablaProductos); 
-            else if (id.Length <= 5)    Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where plu=" + id, ref tablaProductos);
-            else                        Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where barcode='" + id + "'", ref tablaProductos);
+            int id;
+            string query = "select  plu, barcode, nombre, precio, pesable, id_categoria from producto ";
+            string whereCond = "";
+            //Si la busqueda esta vacia
+            if (textBoxSearch.Text.Length < 1)          whereCond ="where plu=(select last_value from producto_plu_seq)";
+            // Si la busqueda no esta vacia
+            else
+            {
+                try
+                { //Si el campo es numerico
+                    id = Convert.ToInt32(textBoxSearch.Text);
+                    // Si es un plu
+                    if (textBoxSearch.Text.Length <= 5)    whereCond ="where plu="+ id;
+                    //si es un codigo de barras
+                    else                        whereCond =String.Format("where barcode='{0}'" , id);
+                }
+                catch(Exception E)
+                { // Si el campo no es numerico
+                    whereCond = String.Format("where upper(nombre) LIKE upper('%{0}%')", textBoxSearch.Text);
+                }
+            }
+
+            Psql.execQuery(query + whereCond, ref tablaProductos);
             dataGridViewProductos.DataSource = tablaProductos;
             dataGridViewProductos.Columns["id_categoria"].Visible = false;
         }
@@ -218,12 +237,23 @@ namespace miamiPOS
             Psql.execQuery(query, ref tablaVentas);
             dataGridViewVentas.DataSource = tablaVentas;
 
+            dataGridViewVentas.Columns["dinero"].DefaultCellStyle.Format = "$##,###,###";
             //dataGridViewProductos.Columns["id_categoria"].Visible = false;
         }
 
         private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)
         {
             dateTimePicker_ValueChanged(sender, e);
+        }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (e.KeyChar == (char)13)
+                {
+                    button1_Click(sender, new EventArgs());
+                }
+            }
         }
     }
 }

@@ -59,9 +59,9 @@
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxPesableventa = new System.Windows.Forms.CheckBox();
             this.dataGridViewVentas = new System.Windows.Forms.DataGridView();
+            this.checkBoxPesableventa = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -172,6 +172,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
             this.textBoxSearch.TabIndex = 7;
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // label1
             // 
@@ -384,6 +385,34 @@
             this.tabPage2.Text = "Ventas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewVentas
+            // 
+            this.dataGridViewVentas.AllowUserToAddRows = false;
+            this.dataGridViewVentas.AllowUserToDeleteRows = false;
+            this.dataGridViewVentas.AllowUserToResizeRows = false;
+            this.dataGridViewVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVentas.Location = new System.Drawing.Point(6, 32);
+            this.dataGridViewVentas.MultiSelect = false;
+            this.dataGridViewVentas.Name = "dataGridViewVentas";
+            this.dataGridViewVentas.ReadOnly = true;
+            this.dataGridViewVentas.Size = new System.Drawing.Size(625, 382);
+            this.dataGridViewVentas.TabIndex = 12;
+            // 
+            // checkBoxPesableventa
+            // 
+            this.checkBoxPesableventa.AutoSize = true;
+            this.checkBoxPesableventa.Location = new System.Drawing.Point(214, 8);
+            this.checkBoxPesableventa.Name = "checkBoxPesableventa";
+            this.checkBoxPesableventa.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxPesableventa.TabIndex = 11;
+            this.checkBoxPesableventa.Text = "¿Pesable?";
+            this.checkBoxPesableventa.UseVisualStyleBackColor = true;
+            this.checkBoxPesableventa.CheckedChanged += new System.EventHandler(this.checkBoxPesableventa_CheckedChanged);
+            // 
             // dateTimePicker
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(6, 6);
@@ -394,28 +423,6 @@
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
-            // 
-            // checkBoxPesableventa
-            // 
-            this.checkBoxPesableventa.AutoSize = true;
-            this.checkBoxPesableventa.Location = new System.Drawing.Point(214, 6);
-            this.checkBoxPesableventa.Name = "checkBoxPesableventa";
-            this.checkBoxPesableventa.Size = new System.Drawing.Size(76, 17);
-            this.checkBoxPesableventa.TabIndex = 11;
-            this.checkBoxPesableventa.Text = "¿Pesable?";
-            this.checkBoxPesableventa.UseVisualStyleBackColor = true;
-            this.checkBoxPesableventa.CheckedChanged += new System.EventHandler(this.checkBoxPesableventa_CheckedChanged);
-            // 
-            // dataGridViewVentas
-            // 
-            this.dataGridViewVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVentas.Location = new System.Drawing.Point(6, 32);
-            this.dataGridViewVentas.MultiSelect = false;
-            this.dataGridViewVentas.Name = "dataGridViewVentas";
-            this.dataGridViewVentas.ReadOnly = true;
-            this.dataGridViewVentas.Size = new System.Drawing.Size(625, 382);
-            this.dataGridViewVentas.TabIndex = 12;
             // 
             // manager
             // 

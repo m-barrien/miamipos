@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace miamiPOS
 {
+    
     public partial class manager : Form
     {
+       
         DataTable tablaProductos = null;
         DataTable tablaVentas = null;
         public manager()

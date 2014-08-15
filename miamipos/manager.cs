@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace miamiPOS
@@ -197,18 +198,8 @@ namespace miamiPOS
             // Si la busqueda no esta vacia
             else
             {
-                try
-                { //Si el campo es numerico
-                    id = Convert.ToInt32(textBoxSearch.Text);
-                    // Si es un plu
-                    if (textBoxSearch.Text.Length <= 5)    whereCond ="where plu="+ id;
-                    //si es un codigo de barras
-                    else                        whereCond =String.Format("where barcode='{0}'" , id);
-                }
-                catch(Exception E)
-                { // Si el campo no es numerico
-                    whereCond = String.Format("where upper(nombre) LIKE upper('%{0}%')", textBoxSearch.Text);
-                }
+                // Todas las busquedas en una
+                whereCond = String.Format("where plu={0} OR barcode='{0}' OR upper(nombre) LIKE upper('%{0}%')", textBoxSearch.Text);
             }
 
             Psql.execQuery(query + whereCond, ref tablaProductos);

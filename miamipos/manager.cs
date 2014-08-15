@@ -198,8 +198,13 @@ namespace miamiPOS
             // Si la busqueda no esta vacia
             else
             {
-                // Todas las busquedas en una
-                whereCond = String.Format("where plu={0} OR barcode='{0}' OR upper(nombre) LIKE upper('%{0}%')", textBoxSearch.Text);
+                // Todas las busquedas de digitos
+                var m =Regex.IsMatch(textBoxSearch.Text, @"^\d+");
+                if (m)
+                {
+                    whereCond = String.Format("where plu={0} OR barcode='{0}'", textBoxSearch.Text);
+                }
+                else whereCond = String.Format("where upper(nombre) LIKE upper('%{0}%')", textBoxSearch.Text);
             }
 
             Psql.execQuery(query + whereCond, ref tablaProductos);

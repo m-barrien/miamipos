@@ -133,7 +133,7 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                throw new Exception("Sin conexion \r" + e.Message);
+                throw new Exception("ERROR SQL \r" + e.Message);
             }
             finally
             {

@@ -212,7 +212,15 @@ namespace miamiPOS
             // Abre la pagina web de la interfaz guardada en las settings serverRemote
             System.Diagnostics.Process.Start(miamiPOS.Properties.Settings.Default.serverRemote);
         }
-
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (e.KeyChar == (char)13)
+                {
+                    button1_Click(sender, new EventArgs());
+                }
+            }
+        }
 
         /*
          * Bloque para la pestaña pagos que incluye colaciones anticipos y facturas
@@ -239,14 +247,6 @@ namespace miamiPOS
             dateTimePicker_ValueChanged(sender, e);
         }
 
-        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            {
-                if (e.KeyChar == (char)13)
-                {
-                    button1_Click(sender, new EventArgs());
-                }
-            }
-        }
+
     }
 }

@@ -76,6 +76,8 @@ namespace miamiPOS
                 
                 }
         }
+            miamiPOS.Properties.Settings.Default.admin = false;
+            miamiPOS.Properties.Settings.Default.Save();
         }
     }
 }

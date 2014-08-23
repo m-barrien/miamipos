@@ -168,10 +168,6 @@ namespace miamiPOS
 
                 Psql.execInsert(productoAEditar.toSQL(checkBoxEditMode.Checked));
 
-                // Buscar producto editado o creado
-                textBoxSearch.Text = tbPLU.Text;
-                button1_Click(buttonSearch, EventArgs.Empty);
-
                 newItem();
 
                 MessageBox.Show("EXITO");
@@ -190,11 +186,10 @@ namespace miamiPOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id;
             string query = "select  plu, barcode, nombre, precio, pesable, id_categoria from producto ";
             string whereCond = "";
             //Si la busqueda esta vacia
-            if (textBoxSearch.Text.Length < 1)          whereCond ="where plu=(select last_value from producto_plu_seq)";
+            if (textBoxSearch.Text.Length < 1)          whereCond ="ORDER BY last_change DESC LIMIT 30";
             // Si la busqueda no esta vacia
             else
             {

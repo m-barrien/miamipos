@@ -195,5 +195,17 @@ namespace miamiPOS.Properties {
                 this["printerPortName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string id_sucursal {
+            get {
+                return ((string)(this["id_sucursal"]));
+            }
+            set {
+                this["id_sucursal"] = value;
+            }
+        }
     }
 }

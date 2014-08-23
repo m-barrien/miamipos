@@ -67,7 +67,7 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                throw new Exception("Sin conexion \r" + e.Message);
+                throw new Exception("ERROR SQL \r" + e.Message);
             }
             finally
             {
@@ -430,8 +430,9 @@ namespace miamiPOS
         public static void beginTurno()
         {
             Int32 id_cajero = miamiPOS.Properties.Settings.Default.idCajero;
+            string id_sucursal = miamiPOS.Properties.Settings.Default.id_sucursal;
             Int32 id_turno_actual = Convert.ToInt32(Psql.execScalar("select nextval('turno_id_seq')"));
-            Int32 rowsAffected = Psql.execInsert("insert into turno(id,id_cajero,fecha,caja_inicial) VALUES (" + id_turno_actual + "," + id_cajero + ",now(),"+miamiPOS.Properties.Settings.Default.cajaInicial+")");
+            Int32 rowsAffected = Psql.execInsert("insert into turno(id,id_cajero,fecha,caja_inicial,sucursal) VALUES (" + id_turno_actual + "," + id_cajero + ",now(),"+miamiPOS.Properties.Settings.Default.cajaInicial+","+id_sucursal+")");
             if (rowsAffected == 1)
             {
                 id_turno = id_turno_actual;

@@ -40,6 +40,8 @@
             this.labelServer = new System.Windows.Forms.Label();
             this.comboBoxPort = new System.Windows.Forms.ComboBox();
             this.labelPort = new System.Windows.Forms.Label();
+            this.labelSucursal = new System.Windows.Forms.Label();
+            this.textBoxSucursal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +142,7 @@
             // comboBoxPort
             // 
             this.comboBoxPort.FormattingEnabled = true;
-            this.comboBoxPort.Location = new System.Drawing.Point(244, 11);
+            this.comboBoxPort.Location = new System.Drawing.Point(285, 11);
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPort.TabIndex = 5;
@@ -149,17 +151,37 @@
             // labelPort
             // 
             this.labelPort.AutoSize = true;
-            this.labelPort.Location = new System.Drawing.Point(176, 15);
+            this.labelPort.Location = new System.Drawing.Point(217, 15);
             this.labelPort.Name = "labelPort";
             this.labelPort.Size = new System.Drawing.Size(62, 13);
             this.labelPort.TabIndex = 6;
             this.labelPort.Text = "PuertoCOM";
+            // 
+            // labelSucursal
+            // 
+            this.labelSucursal.AutoSize = true;
+            this.labelSucursal.Location = new System.Drawing.Point(11, 15);
+            this.labelSucursal.Name = "labelSucursal";
+            this.labelSucursal.Size = new System.Drawing.Size(48, 13);
+            this.labelSucursal.TabIndex = 7;
+            this.labelSucursal.Text = "Sucursal";
+            // 
+            // textBoxSucursal
+            // 
+            this.textBoxSucursal.Location = new System.Drawing.Point(65, 12);
+            this.textBoxSucursal.Name = "textBoxSucursal";
+            this.textBoxSucursal.Size = new System.Drawing.Size(50, 20);
+            this.textBoxSucursal.TabIndex = 8;
+            this.textBoxSucursal.TabStop = false;
+            this.textBoxSucursal.Leave += new System.EventHandler(this.textBoxSucursal_Leave);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 461);
+            this.Controls.Add(this.labelSucursal);
+            this.Controls.Add(this.textBoxSucursal);
             this.Controls.Add(this.labelPort);
             this.Controls.Add(this.comboBoxPort);
             this.Controls.Add(this.labelServer);
@@ -198,5 +220,7 @@
         private System.Windows.Forms.Label labelServer;
         private System.Windows.Forms.ComboBox comboBoxPort;
         private System.Windows.Forms.Label labelPort;
+        private System.Windows.Forms.Label labelSucursal;
+        private System.Windows.Forms.TextBox textBoxSucursal;
     }
 }

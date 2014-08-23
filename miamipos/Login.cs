@@ -22,7 +22,9 @@ namespace miamiPOS
         private void Form2_Load(object sender, EventArgs e)
         {
             textBoxServer.Text = miamiPOS.Properties.Settings.Default.serverIP;
+            textBoxSucursal.Text = miamiPOS.Properties.Settings.Default.id_sucursal;
 
+            // Seccion para obtener los puertos COM para la impresora
             string[] nameArray = null;
             nameArray = SerialPort.GetPortNames();
             Array.Sort(nameArray);
@@ -97,6 +99,12 @@ namespace miamiPOS
         private void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
         {
             miamiPOS.Properties.Settings.Default.printerPortName = comboBoxPort.SelectedValue.ToString();
+            miamiPOS.Properties.Settings.Default.Save();
+        }
+
+        private void textBoxSucursal_Leave(object sender, EventArgs e)
+        {
+            miamiPOS.Properties.Settings.Default.id_sucursal = textBoxSucursal.Text;
             miamiPOS.Properties.Settings.Default.Save();
         }
 

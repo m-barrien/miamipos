@@ -68,7 +68,14 @@ namespace miamiPOS
                         //POS
                         Application.Run(new mainForm());
                         //Panel para finalizar
-                        Application.Run(new FinalizarForm());
+                        if (!miamiPOS.Properties.Settings.Default.modoSanguchero)
+                        {
+                            Application.Run(new FinalizarForm());
+                        }
+                        else
+                        {
+                            miamiDB.printSalesDay();
+                        }
                         //Finalizar turno
                         miamiDB.endTurno();
                     }

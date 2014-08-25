@@ -474,7 +474,49 @@ namespace miamiPOS
             }
             else throw new Exception("Error al salir de sesion , no esta loggeado?");
         }
-        
+
+
+        internal static void printSalesDay()
+        {
+            ESCPrinter myPrinter = new ESCPrinter();
+            var portName = miamiPOS.Properties.Settings.Default.printerPortName;
+            myPrinter.open(portName);
+            myPrinter.initialize();
+            myPrinter.lineSpacing(120);
+            myPrinter.printMode((byte)(ESCPrinter.DHEIGHT | ESCPrinter.EMPH | ESCPrinter.UNDER));
+            myPrinter.justification('c');
+            myPrinter.WriteLine("Sandwiches y Comidas MIAMI");
+            myPrinter.WriteLine("RESUMEN");
+            myPrinter.justification('l');
+            myPrinter.printMode((byte)(ESCPrinter.EMPH | ESCPrinter.UNDER));
+            string producto = String.Format("{0,-39}{1,-4}{2,5} "
+                    ,"Nombre","#","Total");
+            myPrinter.WriteLine(producto);
+
+            myPrinter.printMode(0);
+
+            DataTable tableQuery =null;
+            string query=String.Format("SELECT producto.nombre as nombre, sum(venta_producto.cantidad) as cantidad ,sum(venta_producto.total) as Total  FROM venta,venta_producto,turno,producto WHERE venta.id_turno=turno.id AND venta.id_venta=venta_producto.id_venta AND turno.sucursal=2 AND venta_producto.plu= producto.plu AND turno.id={0} GROUP BY producto.nombre ORDER BY Total DESC",
+                miamiDB.id_turno);
+            Psql.execQuery(query,ref tableQuery );
+            foreach (DataRow row in tableQuery.Rows)
+            {
+                producto = String.Format("{0,-39}{1,-4}{2,5}"
+                    , row["nombre"].ToString(), row["cantidad"].ToString(), row["total"].ToString());
+                myPrinter.WriteLine(producto);
+            }
+            //total en ticket
+            object sumObject;
+            sumObject = tableQuery.Compute("Sum(total)", "");
+
+            myPrinter.printMode((byte)(ESCPrinter.DHEIGHT | ESCPrinter.EMPH));
+            myPrinter.justification('r');
+            myPrinter.WriteLine("TOTAL:" + sumObject.ToString());
+            myPrinter.lineFeed();
+            myPrinter.lineFeed();
+            myPrinter.autoCutter();
+            myPrinter.close();
+        }
     }
     /*
      * Clase para carrito

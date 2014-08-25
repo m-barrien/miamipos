@@ -56,6 +56,11 @@ namespace miamiPOS
         }
         private void mainForm_Load(object sender, EventArgs e)
         {
+            //Activar modo sanguchero si es que estaba guardado
+            activePrinter.Checked = miamiPOS.Properties.Settings.Default.modoSanguchero;
+            toolStripMenuItem1_Click(sender, e);
+
+            //revisar base de datos e iniciar
             miamiDB.initialize();
             try
             {
@@ -306,7 +311,6 @@ namespace miamiPOS
         // funcion que ejecuta la actualizacion de fondo
         private void incrementalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Int32 actualizados =0;
             // Configure a BackgroundWorker to perform your long running operation.
             BackgroundWorker bg = new BackgroundWorker();
             bg.DoWork += new DoWorkEventHandler(actualizarIncrementalThread);
@@ -400,17 +404,16 @@ namespace miamiPOS
             formColacion.ShowDialog();
         }
 
+        // click en activar modo sanguchero
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (activePrinter.Checked)
+            if (!activePrinter.Checked)
             {
-                activePrinter.Checked = false;
                 this.BackColor = miamiPOS.Properties.Settings.Default.backColor;
                 this.Text = "PAN Y PASTELES MIAMI";
             }
             else
             {
-                activePrinter.Checked = true;
                 this.BackColor = miamiPOS.Properties.Settings.Default.sangucheColor;
                 this.Text = "COMIDAS Y SANDWICHES MIAMI";
             }

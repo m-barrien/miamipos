@@ -207,5 +207,17 @@ namespace miamiPOS.Properties {
                 this["id_sucursal"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool modoSanguchero {
+            get {
+                return ((bool)(this["modoSanguchero"]));
+            }
+            set {
+                this["modoSanguchero"] = value;
+            }
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.labelPort = new System.Windows.Forms.Label();
             this.labelSucursal = new System.Windows.Forms.Label();
             this.textBoxSucursal = new System.Windows.Forms.TextBox();
+            this.checkBoxSanguche = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,7 +161,7 @@
             // labelSucursal
             // 
             this.labelSucursal.AutoSize = true;
-            this.labelSucursal.Location = new System.Drawing.Point(11, 15);
+            this.labelSucursal.Location = new System.Drawing.Point(109, 14);
             this.labelSucursal.Name = "labelSucursal";
             this.labelSucursal.Size = new System.Drawing.Size(48, 13);
             this.labelSucursal.TabIndex = 7;
@@ -168,18 +169,31 @@
             // 
             // textBoxSucursal
             // 
-            this.textBoxSucursal.Location = new System.Drawing.Point(65, 12);
+            this.textBoxSucursal.Location = new System.Drawing.Point(163, 11);
             this.textBoxSucursal.Name = "textBoxSucursal";
             this.textBoxSucursal.Size = new System.Drawing.Size(50, 20);
             this.textBoxSucursal.TabIndex = 8;
             this.textBoxSucursal.TabStop = false;
+            this.textBoxSucursal.TextChanged += new System.EventHandler(this.textBoxSucursal_TextChanged);
             this.textBoxSucursal.Leave += new System.EventHandler(this.textBoxSucursal_Leave);
+            // 
+            // checkBoxSanguche
+            // 
+            this.checkBoxSanguche.AutoSize = true;
+            this.checkBoxSanguche.Location = new System.Drawing.Point(13, 14);
+            this.checkBoxSanguche.Name = "checkBoxSanguche";
+            this.checkBoxSanguche.Size = new System.Drawing.Size(84, 17);
+            this.checkBoxSanguche.TabIndex = 9;
+            this.checkBoxSanguche.Text = "Sanguchero";
+            this.checkBoxSanguche.UseVisualStyleBackColor = true;
+            this.checkBoxSanguche.CheckedChanged += new System.EventHandler(this.checkBoxSanguche_CheckedChanged);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 461);
+            this.Controls.Add(this.checkBoxSanguche);
             this.Controls.Add(this.labelSucursal);
             this.Controls.Add(this.textBoxSucursal);
             this.Controls.Add(this.labelPort);
@@ -222,5 +236,6 @@
         private System.Windows.Forms.Label labelPort;
         private System.Windows.Forms.Label labelSucursal;
         private System.Windows.Forms.TextBox textBoxSucursal;
+        private System.Windows.Forms.CheckBox checkBoxSanguche;
     }
 }

@@ -23,6 +23,8 @@ namespace miamiPOS
         {
             textBoxServer.Text = miamiPOS.Properties.Settings.Default.serverIP;
             textBoxSucursal.Text = miamiPOS.Properties.Settings.Default.id_sucursal;
+            checkBoxSanguche.Checked = miamiPOS.Properties.Settings.Default.modoSanguchero;
+            
 
             // Seccion para obtener los puertos COM para la impresora
             string[] nameArray = null;
@@ -103,6 +105,18 @@ namespace miamiPOS
         }
 
         private void textBoxSucursal_Leave(object sender, EventArgs e)
+        {
+            miamiPOS.Properties.Settings.Default.id_sucursal = textBoxSucursal.Text;
+            miamiPOS.Properties.Settings.Default.Save();
+        }
+
+        private void checkBoxSanguche_CheckedChanged(object sender, EventArgs e)
+        {
+            miamiPOS.Properties.Settings.Default.modoSanguchero = checkBoxSanguche.Checked;
+            miamiPOS.Properties.Settings.Default.Save();
+        }
+
+        private void textBoxSucursal_TextChanged(object sender, EventArgs e)
         {
             miamiPOS.Properties.Settings.Default.id_sucursal = textBoxSucursal.Text;
             miamiPOS.Properties.Settings.Default.Save();

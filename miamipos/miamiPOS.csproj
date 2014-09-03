@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <PublishUrl>\\PANADERIA\share\miamiPOS\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
@@ -61,7 +62,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>miamiIcon.ico</ApplicationIcon>
@@ -78,10 +79,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>..\packages\Npgsql.2.1.3\lib\net35\Mono.Security.dll</HintPath>
+      <HintPath>..\packages\Npgsql.2.2.0\lib\net35\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\packages\Npgsql.2.1.3\lib\net35\Npgsql.dll</HintPath>
+      <HintPath>..\packages\Npgsql.2.2.0\lib\net35\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -208,7 +209,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="miamiPOS_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -238,7 +238,7 @@
     <None Include="Resources\miamilogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Dropbox\Proyects\SerialPrinter\SerialCommunication\SerialPrinter.csproj">
+    <ProjectReference Include="..\SerialCommunication\SerialPrinter.csproj">
       <Project>{6c53ad94-39c0-456e-ae65-6f885ad66190}</Project>
       <Name>SerialPrinter</Name>
     </ProjectReference>

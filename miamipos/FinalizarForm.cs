@@ -32,7 +32,7 @@ namespace miamiPOS
                 this.Close();
 
             }
-            catch (Npgsql.NpgsqlException E)
+            catch (Npgsql.NpgsqlException)
             {
                 MessageBox.Show("GRAVE ERROR : No se puede guardar la caja final , llamar a encargado");
             }

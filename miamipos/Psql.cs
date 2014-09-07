@@ -614,7 +614,7 @@ namespace miamiPOS
                     else total_plata -= (total_plata % 10); //operacion para redondear a las decenas 
                     carro.Rows.Add(prod[0], prod[1], (Int32)cantidad, prod[2], total_plata);
                 }
-                catch(Exception e)
+                catch
                 {
                     string query;
                     if (plu.ToString().Length < 7) query = "[plu] = " + plu.ToString();

@@ -489,6 +489,12 @@ namespace miamiPOS
             myPrinter.WriteLine("RESUMEN");
             myPrinter.justification('l');
             myPrinter.printMode((byte)(ESCPrinter.EMPH | ESCPrinter.UNDER));
+
+            var fecha_turno = Psql.execScalar("SELECT turno.fecha FROM turno WHERE turno.id= " + miamiDB.id_turno);
+            myPrinter.WriteLine("ID TURNO: " + miamiDB.id_turno.ToString());
+            myPrinter.WriteLine("Comienzo: " + fecha_turno);
+            myPrinter.WriteLine("Fin:      " + DateTime.Now.ToString());
+
             string producto = String.Format("{0,-39}{1,-4}{2,5} "
                     ,"Nombre","#","Total");
             myPrinter.WriteLine(producto);
@@ -544,15 +550,18 @@ namespace miamiPOS
         {
             myPrinter.open(portName);
             myPrinter.initialize();
-            myPrinter.lineSpacing(120);
+            myPrinter.lineSpacing(150);
             myPrinter.printMode((byte)(ESCPrinter.DHEIGHT | ESCPrinter.EMPH | ESCPrinter.UNDER));
             myPrinter.justification('c');
             myPrinter.WriteLine("Sandwiches y Comidas MIAMI");
             myPrinter.justification('l');
             myPrinter.printMode((byte)(ESCPrinter.EMPH | ESCPrinter.UNDER));
+            myPrinter.WriteLine(DateTime.Now.ToString());
+
             string producto = String.Format("{0,-5}{1,-20}{2,-5} ${3,5}"
                     , "Plu","Nombre","#","Total");
             myPrinter.WriteLine(producto);
+
 
             myPrinter.printMode(0);
 

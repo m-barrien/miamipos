@@ -78,10 +78,10 @@
             this.sistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(669, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(892, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // sistemaToolStripMenuItem
             // 
@@ -89,20 +89,20 @@
             this.coneccionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
             // coneccionToolStripMenuItem
             // 
             this.coneccionToolStripMenuItem.Name = "coneccionToolStripMenuItem";
-            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
             this.coneccionToolStripMenuItem.Text = "PaginaWeb";
             this.coneccionToolStripMenuItem.Click += new System.EventHandler(this.coneccionToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -113,10 +113,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
+            this.tabControl1.Location = new System.Drawing.Point(16, 33);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(645, 446);
+            this.tabControl1.Size = new System.Drawing.Size(860, 549);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -126,32 +127,37 @@
             this.tabPage1.Controls.Add(this.buttonEdit);
             this.tabPage1.Controls.Add(this.dataGridViewProductos);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(637, 420);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(852, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Productos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.buttonSearch);
             this.groupBox2.Controls.Add(this.comboBoxCategorias);
             this.groupBox2.Controls.Add(this.textBoxSearch);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 7);
+            this.groupBox2.Location = new System.Drawing.Point(8, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 69);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(455, 85);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Busqueda";
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(260, 17);
+            this.buttonSearch.Location = new System.Drawing.Point(347, 21);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(100, 28);
             this.buttonSearch.TabIndex = 8;
             this.buttonSearch.Text = "Buscar";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -160,35 +166,39 @@
             // comboBoxCategorias
             // 
             this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(6, 42);
+            this.comboBoxCategorias.Location = new System.Drawing.Point(8, 52);
+            this.comboBoxCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(248, 21);
+            this.comboBoxCategorias.Size = new System.Drawing.Size(329, 24);
             this.comboBoxCategorias.TabIndex = 1;
-            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
+            this.comboBoxCategorias.Leave += new System.EventHandler(this.comboBoxCategorias_Leave);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSearch.Location = new System.Drawing.Point(8, 23);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
             this.textBoxSearch.TabIndex = 7;
             this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 50);
+            this.label1.Location = new System.Drawing.Point(363, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categoria";
             // 
             // buttonDelete
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Location = new System.Drawing.Point(359, 377);
+            this.buttonDelete.Location = new System.Drawing.Point(479, 464);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(130, 37);
+            this.buttonDelete.Size = new System.Drawing.Size(173, 46);
             this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "Borrar";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -197,9 +207,10 @@
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(495, 377);
+            this.buttonEdit.Location = new System.Drawing.Point(660, 464);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(136, 37);
+            this.buttonEdit.Size = new System.Drawing.Size(181, 46);
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.Text = "Editar";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -214,20 +225,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewProductos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProductos.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.dataGridViewProductos.Location = new System.Drawing.Point(359, 7);
+            this.dataGridViewProductos.Location = new System.Drawing.Point(479, 9);
+            this.dataGridViewProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewProductos.MultiSelect = false;
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.ReadOnly = true;
             this.dataGridViewProductos.RowHeadersVisible = false;
             this.dataGridViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewProductos.ShowEditingIcon = false;
-            this.dataGridViewProductos.Size = new System.Drawing.Size(272, 364);
+            this.dataGridViewProductos.Size = new System.Drawing.Size(363, 448);
             this.dataGridViewProductos.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.buttonNewItem);
             this.groupBox1.Controls.Add(this.checkBoxEditMode);
             this.groupBox1.Controls.Add(this.buttonSaveItem);
@@ -242,18 +256,21 @@
             this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.tbBarcode);
             this.groupBox1.Controls.Add(this.tbPLU);
-            this.groupBox1.Location = new System.Drawing.Point(6, 82);
+            this.groupBox1.Location = new System.Drawing.Point(4, 124);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 209);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(463, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Producto";
             // 
             // buttonNewItem
             // 
-            this.buttonNewItem.Location = new System.Drawing.Point(185, 178);
+            this.buttonNewItem.Location = new System.Drawing.Point(247, 219);
+            this.buttonNewItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonNewItem.Name = "buttonNewItem";
-            this.buttonNewItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewItem.Size = new System.Drawing.Size(100, 28);
             this.buttonNewItem.TabIndex = 14;
             this.buttonNewItem.Text = "Nuevo";
             this.buttonNewItem.UseVisualStyleBackColor = true;
@@ -263,9 +280,10 @@
             // 
             this.checkBoxEditMode.AutoSize = true;
             this.checkBoxEditMode.BackColor = System.Drawing.Color.Gold;
-            this.checkBoxEditMode.Location = new System.Drawing.Point(6, 178);
+            this.checkBoxEditMode.Location = new System.Drawing.Point(8, 219);
+            this.checkBoxEditMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxEditMode.Name = "checkBoxEditMode";
-            this.checkBoxEditMode.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxEditMode.Size = new System.Drawing.Size(127, 21);
             this.checkBoxEditMode.TabIndex = 13;
             this.checkBoxEditMode.Text = "MODO EDITAR";
             this.checkBoxEditMode.UseVisualStyleBackColor = false;
@@ -273,9 +291,10 @@
             // 
             // buttonSaveItem
             // 
-            this.buttonSaveItem.Location = new System.Drawing.Point(266, 178);
+            this.buttonSaveItem.Location = new System.Drawing.Point(355, 219);
+            this.buttonSaveItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSaveItem.Name = "buttonSaveItem";
-            this.buttonSaveItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveItem.Size = new System.Drawing.Size(100, 28);
             this.buttonSaveItem.TabIndex = 12;
             this.buttonSaveItem.Text = "Guardar";
             this.buttonSaveItem.UseVisualStyleBackColor = true;
@@ -284,26 +303,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 131);
+            this.label5.Location = new System.Drawing.Point(45, 161);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 11;
             this.label5.Text = "Categoria";
             // 
             // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(99, 128);
+            this.cbCategoria.Location = new System.Drawing.Point(132, 158);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(242, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(321, 24);
             this.cbCategoria.TabIndex = 6;
             // 
             // checkBoxPesable
             // 
             this.checkBoxPesable.AutoSize = true;
-            this.checkBoxPesable.Location = new System.Drawing.Point(265, 155);
+            this.checkBoxPesable.Location = new System.Drawing.Point(353, 191);
+            this.checkBoxPesable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxPesable.Name = "checkBoxPesable";
-            this.checkBoxPesable.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxPesable.Size = new System.Drawing.Size(97, 21);
             this.checkBoxPesable.TabIndex = 10;
             this.checkBoxPesable.Text = "¿Pesable?";
             this.checkBoxPesable.UseVisualStyleBackColor = true;
@@ -311,65 +333,73 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 105);
+            this.label6.Location = new System.Drawing.Point(45, 129);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(66, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Precio($)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 79);
+            this.label4.Location = new System.Drawing.Point(45, 97);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Descripcion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 53);
+            this.label3.Location = new System.Drawing.Point(45, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Barcode";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 26);
+            this.label2.Location = new System.Drawing.Point(45, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(35, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "PLU";
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(99, 102);
+            this.tbPrice.Location = new System.Drawing.Point(132, 126);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(242, 20);
+            this.tbPrice.Size = new System.Drawing.Size(321, 22);
             this.tbPrice.TabIndex = 3;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(99, 76);
+            this.tbName.Location = new System.Drawing.Point(132, 94);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(242, 20);
+            this.tbName.Size = new System.Drawing.Size(321, 22);
             this.tbName.TabIndex = 2;
             // 
             // tbBarcode
             // 
-            this.tbBarcode.Location = new System.Drawing.Point(99, 50);
+            this.tbBarcode.Location = new System.Drawing.Point(132, 62);
+            this.tbBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbBarcode.Name = "tbBarcode";
-            this.tbBarcode.Size = new System.Drawing.Size(242, 20);
+            this.tbBarcode.Size = new System.Drawing.Size(321, 22);
             this.tbBarcode.TabIndex = 1;
             // 
             // tbPLU
             // 
-            this.tbPLU.Location = new System.Drawing.Point(99, 23);
+            this.tbPLU.Location = new System.Drawing.Point(132, 28);
+            this.tbPLU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPLU.Name = "tbPLU";
-            this.tbPLU.Size = new System.Drawing.Size(242, 20);
+            this.tbPLU.Size = new System.Drawing.Size(321, 22);
             this.tbPLU.TabIndex = 0;
             // 
             // tabPage2
@@ -377,10 +407,11 @@
             this.tabPage2.Controls.Add(this.dataGridViewVentas);
             this.tabPage2.Controls.Add(this.checkBoxPesableventa);
             this.tabPage2.Controls.Add(this.dateTimePicker);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(637, 420);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(852, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ventas";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -394,20 +425,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewVentas.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVentas.Location = new System.Drawing.Point(6, 32);
+            this.dataGridViewVentas.Location = new System.Drawing.Point(8, 39);
+            this.dataGridViewVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewVentas.MultiSelect = false;
             this.dataGridViewVentas.Name = "dataGridViewVentas";
             this.dataGridViewVentas.ReadOnly = true;
-            this.dataGridViewVentas.Size = new System.Drawing.Size(625, 382);
+            this.dataGridViewVentas.Size = new System.Drawing.Size(833, 470);
             this.dataGridViewVentas.TabIndex = 12;
             // 
             // checkBoxPesableventa
             // 
             this.checkBoxPesableventa.AutoSize = true;
-            this.checkBoxPesableventa.Location = new System.Drawing.Point(214, 8);
+            this.checkBoxPesableventa.Location = new System.Drawing.Point(285, 10);
+            this.checkBoxPesableventa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxPesableventa.Name = "checkBoxPesableventa";
-            this.checkBoxPesableventa.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxPesableventa.Size = new System.Drawing.Size(97, 21);
             this.checkBoxPesableventa.TabIndex = 11;
             this.checkBoxPesableventa.Text = "¿Pesable?";
             this.checkBoxPesableventa.UseVisualStyleBackColor = true;
@@ -415,26 +449,30 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(6, 6);
+            this.dateTimePicker.Location = new System.Drawing.Point(8, 7);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker.MinDate = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.RightToLeftLayout = true;
-            this.dateTimePicker.Size = new System.Drawing.Size(202, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(268, 22);
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // manager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 485);
+            this.ClientSize = new System.Drawing.Size(892, 597);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "manager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de miamiPOS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.manager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

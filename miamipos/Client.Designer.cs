@@ -102,9 +102,11 @@
             groupBox4.Controls.Add(this.btnAgregar);
             groupBox4.Controls.Add(this.label1);
             groupBox4.Controls.Add(this.textBox1);
-            groupBox4.Location = new System.Drawing.Point(732, 216);
+            groupBox4.Location = new System.Drawing.Point(976, 266);
+            groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new System.Drawing.Size(264, 123);
+            groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox4.Size = new System.Drawing.Size(352, 151);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Busqueda";
@@ -113,9 +115,10 @@
             // 
             this.button13.AutoSize = true;
             this.button13.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(116, 48);
+            this.button13.Location = new System.Drawing.Point(155, 59);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(68, 69);
+            this.button13.Size = new System.Drawing.Size(93, 102);
             this.button13.TabIndex = 7;
             this.button13.Text = "x";
             this.button13.UseVisualStyleBackColor = true;
@@ -125,9 +128,10 @@
             // 
             this.btnAgregar.AutoSize = true;
             this.btnAgregar.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(190, 48);
+            this.btnAgregar.Location = new System.Drawing.Point(253, 59);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 69);
+            this.btnAgregar.Size = new System.Drawing.Size(96, 102);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -137,9 +141,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Location = new System.Drawing.Point(8, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Codigo";
             // 
@@ -148,9 +153,10 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(77, 19);
+            this.textBox1.Location = new System.Drawing.Point(103, 23);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 24);
+            this.textBox1.Size = new System.Drawing.Size(240, 29);
             this.textBox1.TabIndex = 3;
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -159,9 +165,10 @@
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.AutoSize = true;
             this.button14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(613, 19);
+            this.button14.Location = new System.Drawing.Point(812, 23);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(95, 69);
+            this.button14.Size = new System.Drawing.Size(132, 85);
             this.button14.TabIndex = 6;
             this.button14.Text = "Buscar";
             this.button14.UseVisualStyleBackColor = true;
@@ -177,7 +184,8 @@
             this.dEBUGToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1344, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -189,7 +197,7 @@
             this.salirToolStripMenuItem});
             this.coneccionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coneccionToolStripMenuItem.Name = "coneccionToolStripMenuItem";
-            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
+            this.coneccionToolStripMenuItem.Size = new System.Drawing.Size(139, 36);
             this.coneccionToolStripMenuItem.Text = "Coneccion";
             // 
             // conectarToolStripMenuItem
@@ -198,7 +206,7 @@
             this.actualizarProductosToolStripMenuItem,
             this.impresoraToolStripMenuItem});
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
-            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(185, 36);
             this.conectarToolStripMenuItem.Text = "Conectar";
             this.conectarToolStripMenuItem.Click += new System.EventHandler(this.conectarToolStripMenuItem_Click);
             // 
@@ -208,20 +216,20 @@
             this.incrementalToolStripMenuItem,
             this.totalToolStripMenuItem});
             this.actualizarProductosToolStripMenuItem.Name = "actualizarProductosToolStripMenuItem";
-            this.actualizarProductosToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.actualizarProductosToolStripMenuItem.Size = new System.Drawing.Size(306, 36);
             this.actualizarProductosToolStripMenuItem.Text = "Actualizar Productos";
             // 
             // incrementalToolStripMenuItem
             // 
             this.incrementalToolStripMenuItem.Name = "incrementalToolStripMenuItem";
-            this.incrementalToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.incrementalToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
             this.incrementalToolStripMenuItem.Text = "Incremental";
             this.incrementalToolStripMenuItem.Click += new System.EventHandler(this.incrementalToolStripMenuItem_Click);
             // 
             // totalToolStripMenuItem
             // 
             this.totalToolStripMenuItem.Name = "totalToolStripMenuItem";
-            this.totalToolStripMenuItem.Size = new System.Drawing.Size(184, 30);
+            this.totalToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
             this.totalToolStripMenuItem.Text = "Total";
             this.totalToolStripMenuItem.Click += new System.EventHandler(this.totalToolStripMenuItem_Click);
             // 
@@ -230,21 +238,21 @@
             this.impresoraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.activePrinter});
             this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
-            this.impresoraToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.impresoraToolStripMenuItem.Size = new System.Drawing.Size(306, 36);
             this.impresoraToolStripMenuItem.Text = "Impresora";
             this.impresoraToolStripMenuItem.Click += new System.EventHandler(this.impresoraToolStripMenuItem_Click);
             // 
             // activePrinter
             // 
             this.activePrinter.Name = "activePrinter";
-            this.activePrinter.Size = new System.Drawing.Size(294, 30);
+            this.activePrinter.Size = new System.Drawing.Size(355, 36);
             this.activePrinter.Text = "Activa-ModoSanguchero";
             this.activePrinter.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(185, 36);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -256,27 +264,27 @@
             this.colacionToolStripMenuItem});
             this.informesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
             this.informesToolStripMenuItem.Text = "Pagos";
             // 
             // empezarTurnoToolStripMenuItem
             // 
             this.empezarTurnoToolStripMenuItem.Name = "empezarTurnoToolStripMenuItem";
-            this.empezarTurnoToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.empezarTurnoToolStripMenuItem.Size = new System.Drawing.Size(230, 36);
             this.empezarTurnoToolStripMenuItem.Text = "Pagar Pedido";
             this.empezarTurnoToolStripMenuItem.Click += new System.EventHandler(this.facturaTurnoToolStripMenuItem_Click);
             // 
             // anticipoToolStripMenuItem
             // 
             this.anticipoToolStripMenuItem.Name = "anticipoToolStripMenuItem";
-            this.anticipoToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.anticipoToolStripMenuItem.Size = new System.Drawing.Size(230, 36);
             this.anticipoToolStripMenuItem.Text = "Anticipo";
             this.anticipoToolStripMenuItem.Click += new System.EventHandler(this.anticipoToolStripMenuItem_Click);
             // 
             // colacionToolStripMenuItem
             // 
             this.colacionToolStripMenuItem.Name = "colacionToolStripMenuItem";
-            this.colacionToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.colacionToolStripMenuItem.Size = new System.Drawing.Size(230, 36);
             this.colacionToolStripMenuItem.Text = "Colacion";
             this.colacionToolStripMenuItem.Click += new System.EventHandler(this.colacionToolStripMenuItem_Click);
             // 
@@ -286,13 +294,13 @@
             this.revisarToolStripMenuItem});
             this.inventarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             // 
             // revisarToolStripMenuItem
             // 
             this.revisarToolStripMenuItem.Name = "revisarToolStripMenuItem";
-            this.revisarToolStripMenuItem.Size = new System.Drawing.Size(144, 30);
+            this.revisarToolStripMenuItem.Size = new System.Drawing.Size(165, 36);
             this.revisarToolStripMenuItem.Text = "Revisar";
             this.revisarToolStripMenuItem.Click += new System.EventHandler(this.revisarToolStripMenuItem_Click);
             // 
@@ -301,14 +309,14 @@
             this.dEBUGToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dROPLOCALDBToolStripMenuItem});
             this.dEBUGToolStripMenuItem.Name = "dEBUGToolStripMenuItem";
-            this.dEBUGToolStripMenuItem.Size = new System.Drawing.Size(56, 29);
+            this.dEBUGToolStripMenuItem.Size = new System.Drawing.Size(69, 36);
             this.dEBUGToolStripMenuItem.Text = "DEBUG";
             this.dEBUGToolStripMenuItem.Visible = false;
             // 
             // dROPLOCALDBToolStripMenuItem
             // 
             this.dROPLOCALDBToolStripMenuItem.Name = "dROPLOCALDBToolStripMenuItem";
-            this.dROPLOCALDBToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.dROPLOCALDBToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.dROPLOCALDBToolStripMenuItem.Text = "DROP LOCAL DB";
             this.dROPLOCALDBToolStripMenuItem.Click += new System.EventHandler(this.dROPLOCALDBToolStripMenuItem_Click);
             // 
@@ -321,9 +329,11 @@
             this.groupBoxI.Controls.Add(this.msgBox);
             this.groupBoxI.Controls.Add(this.tbFecha);
             this.groupBoxI.Controls.Add(this.tbCajero);
-            this.groupBoxI.Location = new System.Drawing.Point(732, 36);
+            this.groupBoxI.Location = new System.Drawing.Point(976, 44);
+            this.groupBoxI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxI.Name = "groupBoxI";
-            this.groupBoxI.Size = new System.Drawing.Size(264, 174);
+            this.groupBoxI.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxI.Size = new System.Drawing.Size(352, 214);
             this.groupBoxI.TabIndex = 1;
             this.groupBoxI.TabStop = false;
             this.groupBoxI.Text = "Información";
@@ -333,9 +343,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 121);
+            this.label2.Location = new System.Drawing.Point(9, 149);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(99, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mensajes";
             // 
@@ -346,19 +357,21 @@
             this.msgBox.BackColor = System.Drawing.Color.Black;
             this.msgBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msgBox.ForeColor = System.Drawing.Color.LimeGreen;
-            this.msgBox.Location = new System.Drawing.Point(10, 142);
+            this.msgBox.Location = new System.Drawing.Point(13, 175);
+            this.msgBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.msgBox.Name = "msgBox";
             this.msgBox.ReadOnly = true;
-            this.msgBox.Size = new System.Drawing.Size(247, 26);
+            this.msgBox.Size = new System.Drawing.Size(328, 30);
             this.msgBox.TabIndex = 2;
             // 
             // tbFecha
             // 
             this.tbFecha.AutoSize = true;
             this.tbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFecha.Location = new System.Drawing.Point(17, 48);
+            this.tbFecha.Location = new System.Drawing.Point(23, 59);
+            this.tbFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tbFecha.Name = "tbFecha";
-            this.tbFecha.Size = new System.Drawing.Size(64, 18);
+            this.tbFecha.Size = new System.Drawing.Size(81, 24);
             this.tbFecha.TabIndex = 1;
             this.tbFecha.Text = "Fecha :";
             // 
@@ -366,9 +379,10 @@
             // 
             this.tbCajero.AutoSize = true;
             this.tbCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCajero.Location = new System.Drawing.Point(17, 19);
+            this.tbCajero.Location = new System.Drawing.Point(23, 23);
+            this.tbCajero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tbCajero.Name = "tbCajero";
-            this.tbCajero.Size = new System.Drawing.Size(68, 18);
+            this.tbCajero.Size = new System.Drawing.Size(83, 24);
             this.tbCajero.TabIndex = 0;
             this.tbCajero.Text = "Cajero :";
             // 
@@ -387,9 +401,11 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(732, 345);
+            this.groupBox1.Location = new System.Drawing.Point(976, 425);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 372);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(352, 458);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Teclado Numerico";
@@ -399,9 +415,10 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.AutoSize = true;
             this.button1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(4, 21);
+            this.button1.Location = new System.Drawing.Point(5, 26);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 80);
+            this.button1.Size = new System.Drawing.Size(107, 102);
             this.button1.TabIndex = 12;
             this.button1.TabStop = false;
             this.button1.Text = "1";
@@ -412,9 +429,10 @@
             // 
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button12.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(91, 279);
+            this.button12.Location = new System.Drawing.Point(121, 343);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(80, 80);
+            this.button12.Size = new System.Drawing.Size(107, 98);
             this.button12.TabIndex = 11;
             this.button12.TabStop = false;
             this.button12.Text = "C";
@@ -425,9 +443,10 @@
             // 
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button11.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(177, 279);
+            this.button11.Location = new System.Drawing.Point(236, 343);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(80, 80);
+            this.button11.Size = new System.Drawing.Size(107, 98);
             this.button11.TabIndex = 10;
             this.button11.TabStop = false;
             this.button11.Text = "Enter";
@@ -439,9 +458,10 @@
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button10.AutoSize = true;
             this.button10.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(5, 279);
+            this.button10.Location = new System.Drawing.Point(7, 343);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(80, 80);
+            this.button10.Size = new System.Drawing.Size(107, 102);
             this.button10.TabIndex = 9;
             this.button10.TabStop = false;
             this.button10.Text = "0";
@@ -453,9 +473,10 @@
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button7.AutoSize = true;
             this.button7.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(5, 193);
+            this.button7.Location = new System.Drawing.Point(7, 238);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(80, 80);
+            this.button7.Size = new System.Drawing.Size(107, 102);
             this.button7.TabIndex = 8;
             this.button7.TabStop = false;
             this.button7.Text = "7";
@@ -467,9 +488,10 @@
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button8.AutoSize = true;
             this.button8.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(91, 193);
+            this.button8.Location = new System.Drawing.Point(121, 238);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 80);
+            this.button8.Size = new System.Drawing.Size(107, 102);
             this.button8.TabIndex = 7;
             this.button8.TabStop = false;
             this.button8.Text = "8";
@@ -481,9 +503,10 @@
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button9.AutoSize = true;
             this.button9.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(177, 193);
+            this.button9.Location = new System.Drawing.Point(236, 238);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(80, 80);
+            this.button9.Size = new System.Drawing.Size(107, 102);
             this.button9.TabIndex = 6;
             this.button9.TabStop = false;
             this.button9.Text = "9";
@@ -495,9 +518,10 @@
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button4.AutoSize = true;
             this.button4.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(4, 107);
+            this.button4.Location = new System.Drawing.Point(5, 132);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 80);
+            this.button4.Size = new System.Drawing.Size(107, 102);
             this.button4.TabIndex = 5;
             this.button4.TabStop = false;
             this.button4.Text = "4";
@@ -509,9 +533,10 @@
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button5.AutoSize = true;
             this.button5.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(91, 107);
+            this.button5.Location = new System.Drawing.Point(121, 132);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 80);
+            this.button5.Size = new System.Drawing.Size(107, 102);
             this.button5.TabIndex = 4;
             this.button5.TabStop = false;
             this.button5.Text = "5";
@@ -523,9 +548,10 @@
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button6.AutoSize = true;
             this.button6.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(177, 107);
+            this.button6.Location = new System.Drawing.Point(236, 132);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 80);
+            this.button6.Size = new System.Drawing.Size(107, 102);
             this.button6.TabIndex = 3;
             this.button6.TabStop = false;
             this.button6.Text = "6";
@@ -537,9 +563,10 @@
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.AutoSize = true;
             this.button3.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(177, 21);
+            this.button3.Location = new System.Drawing.Point(236, 26);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 80);
+            this.button3.Size = new System.Drawing.Size(107, 102);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Text = "3";
@@ -551,9 +578,10 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.AutoSize = true;
             this.button2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(91, 21);
+            this.button2.Location = new System.Drawing.Point(121, 26);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 80);
+            this.button2.Size = new System.Drawing.Size(107, 102);
             this.button2.TabIndex = 1;
             this.button2.TabStop = false;
             this.button2.Text = "2";
@@ -570,9 +598,11 @@
             this.groupBox2.Controls.Add(this.dgvCarrito);
             this.groupBox2.Controls.Add(this.button15);
             this.groupBox2.Controls.Add(this.buttonTotal);
-            this.groupBox2.Location = new System.Drawing.Point(12, 216);
+            this.groupBox2.Location = new System.Drawing.Point(16, 266);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 501);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(952, 617);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Carrito de Compra";
@@ -581,9 +611,10 @@
             // 
             this.buttonQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuitar.Location = new System.Drawing.Point(473, 419);
+            this.buttonQuitar.Location = new System.Drawing.Point(631, 516);
+            this.buttonQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonQuitar.Name = "buttonQuitar";
-            this.buttonQuitar.Size = new System.Drawing.Size(82, 71);
+            this.buttonQuitar.Size = new System.Drawing.Size(109, 87);
             this.buttonQuitar.TabIndex = 5;
             this.buttonQuitar.Text = "-";
             this.buttonQuitar.UseVisualStyleBackColor = true;
@@ -593,11 +624,12 @@
             // 
             this.tbSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSubtotal.BackColor = System.Drawing.Color.Black;
-            this.tbSubtotal.Font = new System.Drawing.Font("SamsungImaginationBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSubtotal.ForeColor = System.Drawing.Color.Lime;
-            this.tbSubtotal.Location = new System.Drawing.Point(473, 378);
+            this.tbSubtotal.Location = new System.Drawing.Point(631, 465);
+            this.tbSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSubtotal.Name = "tbSubtotal";
-            this.tbSubtotal.Size = new System.Drawing.Size(235, 35);
+            this.tbSubtotal.Size = new System.Drawing.Size(312, 41);
             this.tbSubtotal.TabIndex = 4;
             this.tbSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -606,9 +638,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(358, 379);
+            this.label5.Location = new System.Drawing.Point(477, 466);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 29);
+            this.label5.Size = new System.Drawing.Size(133, 36);
             this.label5.TabIndex = 2;
             this.label5.Text = "Subtotal";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -640,21 +673,23 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCarrito.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCarrito.Location = new System.Drawing.Point(7, 19);
+            this.dgvCarrito.Location = new System.Drawing.Point(9, 23);
+            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.RowHeadersVisible = false;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarrito.ShowEditingIcon = false;
-            this.dgvCarrito.Size = new System.Drawing.Size(701, 357);
+            this.dgvCarrito.Size = new System.Drawing.Size(935, 439);
             this.dgvCarrito.TabIndex = 3;
             // 
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(7, 419);
+            this.button15.Location = new System.Drawing.Point(9, 516);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(166, 71);
+            this.button15.Size = new System.Drawing.Size(221, 87);
             this.button15.TabIndex = 2;
             this.button15.Text = "Cancelar";
             this.button15.UseVisualStyleBackColor = true;
@@ -664,9 +699,10 @@
             // 
             this.buttonTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTotal.Location = new System.Drawing.Point(561, 419);
+            this.buttonTotal.Location = new System.Drawing.Point(748, 516);
+            this.buttonTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTotal.Name = "buttonTotal";
-            this.buttonTotal.Size = new System.Drawing.Size(147, 71);
+            this.buttonTotal.Size = new System.Drawing.Size(196, 87);
             this.buttonTotal.TabIndex = 1;
             this.buttonTotal.Text = "Total";
             this.buttonTotal.UseVisualStyleBackColor = true;
@@ -679,9 +715,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Controls.Add(this.button14);
-            this.groupBox3.Location = new System.Drawing.Point(12, 36);
+            this.groupBox3.Location = new System.Drawing.Point(16, 44);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(714, 174);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(952, 214);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Referencias";
@@ -705,13 +743,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(6, 19);
+            this.dgvProductos.Location = new System.Drawing.Point(8, 23);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.ShowEditingIcon = false;
-            this.dgvProductos.Size = new System.Drawing.Size(604, 149);
+            this.dgvProductos.Size = new System.Drawing.Size(805, 183);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -722,10 +761,10 @@
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -735,6 +774,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mainForm";
             this.Text = "PAN Y PASTELES MIAMI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -38,20 +38,13 @@ namespace miamiPOS
 
             checkBoxEditMode.Enabled = false; //Deshabilitar el checkmox de modo editar
         }
-
-        private void comboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCategorias_Leave(object sender, EventArgs e)
         {
             Int32 idCategoria = Convert.ToInt32((comboBoxCategorias.SelectedItem as ComboboxItem).Value);
             Psql.execQuery("select  plu, barcode, nombre, precio, pesable, id_categoria from producto where id_categoria=" + idCategoria, ref tablaProductos);
             dataGridViewProductos.DataSource = tablaProductos;
 
             dataGridViewProductos.Columns["id_categoria"].Visible = false;
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -246,6 +239,8 @@ namespace miamiPOS
         {
             dateTimePicker_ValueChanged(sender, e);
         }
+
+
 
 
     }

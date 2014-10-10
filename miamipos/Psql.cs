@@ -79,13 +79,15 @@ namespace miamiPOS
         }
         public static String execScalar(String query)
         {
+            String result = "";
+            try
+            {
             conn.Open();
 
             NpgsqlCommand command = new NpgsqlCommand(query, conn);
-            String result = "" ;
+            
 
-            try
-            {
+
                 result = Convert.ToString( command.ExecuteScalar());
                 Console.WriteLine("Executed scalar query with result: {0}", result);
             }

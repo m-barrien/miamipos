@@ -16,6 +16,8 @@ namespace miamiPOS
        
         DataTable tablaProductos = null;
         DataTable tablaVentas = null;
+        DataTable tablaFacturas = null;
+        DataTable tablaRetiros = null;
         public manager()
         {
             InitializeComponent();
@@ -230,6 +232,19 @@ namespace miamiPOS
                 ,checkBoxPesableventa.Checked.ToString(),year,doy);
             Psql.execQuery(query, ref tablaVentas);
             dataGridViewVentas.DataSource = tablaVentas;
+            //Se lleno el datagridViewventas
+
+            //Ahora se rellena las facturas
+            query = String.Format("select factura.codigo,empresa.nombre, factura.total from empresa,factura where factura.id_empresa=empresa.id and extract(year from fecha)={0} and extract(doy from fecha)={1} order by factura.total DESC"
+                , year, doy);
+            Psql.execQuery(query, ref tablaFacturas);
+            dataGridViewFacturas.DataSource = tablaFacturas;
+
+            //Ahora se rellena los anticipos
+            query = String.Format("select cajero.nombre, anticipo.total from anticipo,cajero where cajero.id=anticipo.id_deudor and extract(year from fecha)={0} and extract(doy from fecha)={1} order by anticipo.total DESC"
+                , year, doy);
+            Psql.execQuery(query, ref tablaRetiros);
+            dataGridViewRetiros.DataSource = tablaRetiros;
 
             dataGridViewVentas.Columns["dinero"].DefaultCellStyle.Format = "$##,###,###";
             //dataGridViewProductos.Columns["id_categoria"].Visible = false;
@@ -237,7 +252,13 @@ namespace miamiPOS
 
         private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)
         {
-            dateTimePicker_ValueChanged(sender, e);
+            int doy = dateTimePicker.Value.DayOfYear;
+            int year = dateTimePicker.Value.Year;
+            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from fecha)={1} and extract(doy from fecha)={2} group by nombre order by Dinero DESC"
+                , checkBoxPesableventa.Checked.ToString(), year, doy);
+            Psql.execQuery(query, ref tablaVentas);
+            dataGridViewVentas.DataSource = tablaVentas;
+            //Se lleno el datagridViewventas
         }
 
 

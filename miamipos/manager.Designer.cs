@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +65,8 @@
             this.dataGridViewVentas = new System.Windows.Forms.DataGridView();
             this.checkBoxPesableventa = new System.Windows.Forms.CheckBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewFacturas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewRetiros = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -70,6 +75,8 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetiros)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -114,7 +121,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(16, 33);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(860, 549);
@@ -128,9 +135,9 @@
             this.tabPage1.Controls.Add(this.dataGridViewProductos);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(852, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Productos";
@@ -144,9 +151,9 @@
             this.groupBox2.Controls.Add(this.textBoxSearch);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(8, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(455, 85);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -155,7 +162,7 @@
             // buttonSearch
             // 
             this.buttonSearch.Location = new System.Drawing.Point(347, 21);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(100, 28);
             this.buttonSearch.TabIndex = 8;
@@ -167,7 +174,7 @@
             // 
             this.comboBoxCategorias.FormattingEnabled = true;
             this.comboBoxCategorias.Location = new System.Drawing.Point(8, 52);
-            this.comboBoxCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(329, 24);
             this.comboBoxCategorias.TabIndex = 1;
@@ -176,7 +183,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(8, 23);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(329, 22);
             this.textBoxSearch.TabIndex = 7;
@@ -196,7 +203,7 @@
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDelete.Location = new System.Drawing.Point(479, 464);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(173, 46);
             this.buttonDelete.TabIndex = 5;
@@ -208,7 +215,7 @@
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEdit.Location = new System.Drawing.Point(660, 464);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(181, 46);
             this.buttonEdit.TabIndex = 4;
@@ -229,7 +236,7 @@
             this.dataGridViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProductos.Cursor = System.Windows.Forms.Cursors.Cross;
             this.dataGridViewProductos.Location = new System.Drawing.Point(479, 9);
-            this.dataGridViewProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewProductos.MultiSelect = false;
             this.dataGridViewProductos.Name = "dataGridViewProductos";
             this.dataGridViewProductos.ReadOnly = true;
@@ -257,9 +264,9 @@
             this.groupBox1.Controls.Add(this.tbBarcode);
             this.groupBox1.Controls.Add(this.tbPLU);
             this.groupBox1.Location = new System.Drawing.Point(4, 124);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(463, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -268,7 +275,7 @@
             // buttonNewItem
             // 
             this.buttonNewItem.Location = new System.Drawing.Point(247, 219);
-            this.buttonNewItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNewItem.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNewItem.Name = "buttonNewItem";
             this.buttonNewItem.Size = new System.Drawing.Size(100, 28);
             this.buttonNewItem.TabIndex = 14;
@@ -281,7 +288,7 @@
             this.checkBoxEditMode.AutoSize = true;
             this.checkBoxEditMode.BackColor = System.Drawing.Color.Gold;
             this.checkBoxEditMode.Location = new System.Drawing.Point(8, 219);
-            this.checkBoxEditMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxEditMode.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxEditMode.Name = "checkBoxEditMode";
             this.checkBoxEditMode.Size = new System.Drawing.Size(127, 21);
             this.checkBoxEditMode.TabIndex = 13;
@@ -292,7 +299,7 @@
             // buttonSaveItem
             // 
             this.buttonSaveItem.Location = new System.Drawing.Point(355, 219);
-            this.buttonSaveItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSaveItem.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSaveItem.Name = "buttonSaveItem";
             this.buttonSaveItem.Size = new System.Drawing.Size(100, 28);
             this.buttonSaveItem.TabIndex = 12;
@@ -314,7 +321,7 @@
             // 
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(132, 158);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(321, 24);
             this.cbCategoria.TabIndex = 6;
@@ -323,7 +330,7 @@
             // 
             this.checkBoxPesable.AutoSize = true;
             this.checkBoxPesable.Location = new System.Drawing.Point(353, 191);
-            this.checkBoxPesable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxPesable.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxPesable.Name = "checkBoxPesable";
             this.checkBoxPesable.Size = new System.Drawing.Size(97, 21);
             this.checkBoxPesable.TabIndex = 10;
@@ -373,7 +380,7 @@
             // tbPrice
             // 
             this.tbPrice.Location = new System.Drawing.Point(132, 126);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(321, 22);
             this.tbPrice.TabIndex = 3;
@@ -381,7 +388,7 @@
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(132, 94);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(321, 22);
             this.tbName.TabIndex = 2;
@@ -389,7 +396,7 @@
             // tbBarcode
             // 
             this.tbBarcode.Location = new System.Drawing.Point(132, 62);
-            this.tbBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.tbBarcode.Name = "tbBarcode";
             this.tbBarcode.Size = new System.Drawing.Size(321, 22);
             this.tbBarcode.TabIndex = 1;
@@ -397,20 +404,22 @@
             // tbPLU
             // 
             this.tbPLU.Location = new System.Drawing.Point(132, 28);
-            this.tbPLU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPLU.Margin = new System.Windows.Forms.Padding(4);
             this.tbPLU.Name = "tbPLU";
             this.tbPLU.Size = new System.Drawing.Size(321, 22);
             this.tbPLU.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridViewRetiros);
+            this.tabPage2.Controls.Add(this.dataGridViewFacturas);
             this.tabPage2.Controls.Add(this.dataGridViewVentas);
             this.tabPage2.Controls.Add(this.checkBoxPesableventa);
             this.tabPage2.Controls.Add(this.dateTimePicker);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(852, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ventas";
@@ -428,18 +437,28 @@
             this.dataGridViewVentas.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVentas.Location = new System.Drawing.Point(8, 39);
-            this.dataGridViewVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewVentas.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewVentas.MultiSelect = false;
             this.dataGridViewVentas.Name = "dataGridViewVentas";
             this.dataGridViewVentas.ReadOnly = true;
-            this.dataGridViewVentas.Size = new System.Drawing.Size(833, 470);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewVentas.RowHeadersVisible = false;
+            this.dataGridViewVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewVentas.Size = new System.Drawing.Size(476, 470);
             this.dataGridViewVentas.TabIndex = 12;
             // 
             // checkBoxPesableventa
             // 
             this.checkBoxPesableventa.AutoSize = true;
             this.checkBoxPesableventa.Location = new System.Drawing.Point(285, 10);
-            this.checkBoxPesableventa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxPesableventa.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxPesableventa.Name = "checkBoxPesableventa";
             this.checkBoxPesableventa.Size = new System.Drawing.Size(97, 21);
             this.checkBoxPesableventa.TabIndex = 11;
@@ -450,7 +469,7 @@
             // dateTimePicker
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(8, 7);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.MinDate = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.RightToLeftLayout = true;
@@ -458,6 +477,60 @@
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
+            // 
+            // dataGridViewFacturas
+            // 
+            this.dataGridViewFacturas.AllowUserToAddRows = false;
+            this.dataGridViewFacturas.AllowUserToDeleteRows = false;
+            this.dataGridViewFacturas.AllowUserToResizeRows = false;
+            this.dataGridViewFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewFacturas.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFacturas.Location = new System.Drawing.Point(492, 39);
+            this.dataGridViewFacturas.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewFacturas.MultiSelect = false;
+            this.dataGridViewFacturas.Name = "dataGridViewFacturas";
+            this.dataGridViewFacturas.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewFacturas.RowHeadersVisible = false;
+            this.dataGridViewFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewFacturas.Size = new System.Drawing.Size(356, 168);
+            this.dataGridViewFacturas.TabIndex = 13;
+            // 
+            // dataGridViewRetiros
+            // 
+            this.dataGridViewRetiros.AllowUserToAddRows = false;
+            this.dataGridViewRetiros.AllowUserToDeleteRows = false;
+            this.dataGridViewRetiros.AllowUserToResizeRows = false;
+            this.dataGridViewRetiros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewRetiros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRetiros.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewRetiros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRetiros.Location = new System.Drawing.Point(492, 215);
+            this.dataGridViewRetiros.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewRetiros.MultiSelect = false;
+            this.dataGridViewRetiros.Name = "dataGridViewRetiros";
+            this.dataGridViewRetiros.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRetiros.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewRetiros.RowHeadersVisible = false;
+            this.dataGridViewRetiros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRetiros.Size = new System.Drawing.Size(356, 168);
+            this.dataGridViewRetiros.TabIndex = 14;
             // 
             // manager
             // 
@@ -468,7 +541,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de miamiPOS";
@@ -486,6 +559,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetiros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,5 +601,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.DataGridView dataGridViewVentas;
         private System.Windows.Forms.CheckBox checkBoxPesableventa;
+        private System.Windows.Forms.DataGridView dataGridViewRetiros;
+        private System.Windows.Forms.DataGridView dataGridViewFacturas;
     }
 }

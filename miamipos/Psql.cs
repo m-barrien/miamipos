@@ -313,6 +313,32 @@ namespace miamiPOS
             }
            
         }
+        public static void getSucursales(ref ComboBox listadoSucursales)
+        {
+            DataTable sucursales = null;
+
+            try
+            {
+                Psql.execQuery("select id,nombre FROM sucursales order by nombre ASC", ref sucursales);
+                foreach (DataRow row in sucursales.Rows)
+                {
+                    ComboboxItem item = new ComboboxItem();
+                    item.Text = row[1].ToString();
+                    item.Value = Convert.ToInt32(row[0]);
+                    listadoSucursales.Items.Add(item);
+                }
+            }
+            catch (Npgsql.NpgsqlException e)
+            {
+                Console.WriteLine("Error SQL:" + e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error Sistema:" + e.Message);
+            }
+
+        }
+
         public static void getCajeros(ref ComboBox listadoEmpresas)
         {
             DataTable empresas = null;

@@ -62,27 +62,28 @@
             this.tbBarcode = new System.Windows.Forms.TextBox();
             this.tbPLU = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBoxResumen = new System.Windows.Forms.GroupBox();
+            this.textBoxCfinal = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxCinicial = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxVentas = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxFacturas = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxColaciones = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxAnticipos = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewRetiros = new System.Windows.Forms.DataGridView();
             this.dataGridViewFacturas = new System.Windows.Forms.DataGridView();
             this.dataGridViewVentas = new System.Windows.Forms.DataGridView();
             this.checkBoxPesableventa = new System.Windows.Forms.CheckBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.groupBoxResumen = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBoxVentas = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.comboBoxSucursales = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -90,10 +91,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBoxResumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetiros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).BeginInit();
-            this.groupBoxResumen.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -151,7 +152,7 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(637, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Productos";
@@ -400,6 +401,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.comboBoxSucursales);
             this.tabPage2.Controls.Add(this.groupBoxResumen);
             this.tabPage2.Controls.Add(this.dataGridViewRetiros);
             this.tabPage2.Controls.Add(this.dataGridViewFacturas);
@@ -408,22 +410,193 @@
             this.tabPage2.Controls.Add(this.dateTimePicker);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(637, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ventas";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxResumen
+            // 
+            this.groupBoxResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxResumen.Controls.Add(this.textBoxCfinal);
+            this.groupBoxResumen.Controls.Add(this.label12);
+            this.groupBoxResumen.Controls.Add(this.textBox9);
+            this.groupBoxResumen.Controls.Add(this.textBoxCinicial);
+            this.groupBoxResumen.Controls.Add(this.label11);
+            this.groupBoxResumen.Controls.Add(this.textBox7);
+            this.groupBoxResumen.Controls.Add(this.textBoxVentas);
+            this.groupBoxResumen.Controls.Add(this.label10);
+            this.groupBoxResumen.Controls.Add(this.textBoxFacturas);
+            this.groupBoxResumen.Controls.Add(this.label9);
+            this.groupBoxResumen.Controls.Add(this.textBoxColaciones);
+            this.groupBoxResumen.Controls.Add(this.label8);
+            this.groupBoxResumen.Controls.Add(this.textBoxAnticipos);
+            this.groupBoxResumen.Controls.Add(this.label7);
+            this.groupBoxResumen.Controls.Add(this.textBox1);
+            this.groupBoxResumen.Location = new System.Drawing.Point(6, 359);
+            this.groupBoxResumen.Name = "groupBoxResumen";
+            this.groupBoxResumen.Size = new System.Drawing.Size(625, 127);
+            this.groupBoxResumen.TabIndex = 15;
+            this.groupBoxResumen.TabStop = false;
+            this.groupBoxResumen.Text = "Resumen";
+            // 
+            // textBoxCfinal
+            // 
+            this.textBoxCfinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textBoxCfinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCfinal.Location = new System.Drawing.Point(387, 45);
+            this.textBoxCfinal.Name = "textBoxCfinal";
+            this.textBoxCfinal.ReadOnly = true;
+            this.textBoxCfinal.Size = new System.Drawing.Size(151, 24);
+            this.textBoxCfinal.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(298, 44);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Caja Final";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Location = new System.Drawing.Point(403, 45);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(151, 13);
+            this.textBox9.TabIndex = 12;
+            // 
+            // textBoxCinicial
+            // 
+            this.textBoxCinicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textBoxCinicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCinicial.Location = new System.Drawing.Point(387, 19);
+            this.textBoxCinicial.Name = "textBoxCinicial";
+            this.textBoxCinicial.ReadOnly = true;
+            this.textBoxCinicial.Size = new System.Drawing.Size(151, 24);
+            this.textBoxCinicial.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(291, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 18);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Caja Inicial";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Location = new System.Drawing.Point(403, 19);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(151, 13);
+            this.textBox7.TabIndex = 9;
+            // 
+            // textBoxVentas
+            // 
+            this.textBoxVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVentas.Location = new System.Drawing.Point(105, 19);
+            this.textBoxVentas.Name = "textBoxVentas";
+            this.textBoxVentas.ReadOnly = true;
+            this.textBoxVentas.Size = new System.Drawing.Size(151, 24);
+            this.textBoxVentas.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(22, 95);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 18);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Facturas";
+            // 
+            // textBoxFacturas
+            // 
+            this.textBoxFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFacturas.Location = new System.Drawing.Point(105, 96);
+            this.textBoxFacturas.Name = "textBoxFacturas";
+            this.textBoxFacturas.ReadOnly = true;
+            this.textBoxFacturas.Size = new System.Drawing.Size(151, 24);
+            this.textBoxFacturas.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 18);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Colaciones";
+            // 
+            // textBoxColaciones
+            // 
+            this.textBoxColaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxColaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxColaciones.Location = new System.Drawing.Point(105, 71);
+            this.textBoxColaciones.Name = "textBoxColaciones";
+            this.textBoxColaciones.ReadOnly = true;
+            this.textBoxColaciones.Size = new System.Drawing.Size(151, 24);
+            this.textBoxColaciones.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Anticipos";
+            // 
+            // textBoxAnticipos
+            // 
+            this.textBoxAnticipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxAnticipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAnticipos.Location = new System.Drawing.Point(105, 45);
+            this.textBoxAnticipos.Name = "textBoxAnticipos";
+            this.textBoxAnticipos.ReadOnly = true;
+            this.textBoxAnticipos.Size = new System.Drawing.Size(151, 24);
+            this.textBoxAnticipos.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(40, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 18);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Ventas";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(105, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 13);
+            this.textBox1.TabIndex = 0;
             // 
             // dataGridViewRetiros
             // 
             this.dataGridViewRetiros.AllowUserToAddRows = false;
             this.dataGridViewRetiros.AllowUserToDeleteRows = false;
             this.dataGridViewRetiros.AllowUserToResizeRows = false;
-            this.dataGridViewRetiros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewRetiros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewRetiros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRetiros.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewRetiros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRetiros.Location = new System.Drawing.Point(369, 175);
+            this.dataGridViewRetiros.Location = new System.Drawing.Point(345, 206);
             this.dataGridViewRetiros.MultiSelect = false;
             this.dataGridViewRetiros.Name = "dataGridViewRetiros";
             this.dataGridViewRetiros.ReadOnly = true;
@@ -437,7 +610,7 @@
             this.dataGridViewRetiros.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRetiros.RowHeadersVisible = false;
             this.dataGridViewRetiros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRetiros.Size = new System.Drawing.Size(267, 136);
+            this.dataGridViewRetiros.Size = new System.Drawing.Size(292, 147);
             this.dataGridViewRetiros.TabIndex = 14;
             // 
             // dataGridViewFacturas
@@ -445,11 +618,12 @@
             this.dataGridViewFacturas.AllowUserToAddRows = false;
             this.dataGridViewFacturas.AllowUserToDeleteRows = false;
             this.dataGridViewFacturas.AllowUserToResizeRows = false;
-            this.dataGridViewFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewFacturas.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFacturas.Location = new System.Drawing.Point(369, 32);
+            this.dataGridViewFacturas.Location = new System.Drawing.Point(345, 32);
             this.dataGridViewFacturas.MultiSelect = false;
             this.dataGridViewFacturas.Name = "dataGridViewFacturas";
             this.dataGridViewFacturas.ReadOnly = true;
@@ -463,7 +637,7 @@
             this.dataGridViewFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewFacturas.RowHeadersVisible = false;
             this.dataGridViewFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewFacturas.Size = new System.Drawing.Size(267, 136);
+            this.dataGridViewFacturas.Size = new System.Drawing.Size(291, 168);
             this.dataGridViewFacturas.TabIndex = 13;
             // 
             // dataGridViewVentas
@@ -491,7 +665,7 @@
             this.dataGridViewVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewVentas.RowHeadersVisible = false;
             this.dataGridViewVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewVentas.Size = new System.Drawing.Size(357, 279);
+            this.dataGridViewVentas.Size = new System.Drawing.Size(333, 321);
             this.dataGridViewVentas.TabIndex = 12;
             // 
             // checkBoxPesableventa
@@ -516,169 +690,13 @@
             this.dateTimePicker.Value = new System.DateTime(2014, 8, 1, 16, 42, 9, 0);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
-            // groupBoxResumen
+            // comboBoxSucursales
             // 
-            this.groupBoxResumen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxResumen.Controls.Add(this.textBox8);
-            this.groupBoxResumen.Controls.Add(this.label12);
-            this.groupBoxResumen.Controls.Add(this.textBox9);
-            this.groupBoxResumen.Controls.Add(this.textBox6);
-            this.groupBoxResumen.Controls.Add(this.label11);
-            this.groupBoxResumen.Controls.Add(this.textBox7);
-            this.groupBoxResumen.Controls.Add(this.textBoxVentas);
-            this.groupBoxResumen.Controls.Add(this.label10);
-            this.groupBoxResumen.Controls.Add(this.textBox4);
-            this.groupBoxResumen.Controls.Add(this.label9);
-            this.groupBoxResumen.Controls.Add(this.textBox3);
-            this.groupBoxResumen.Controls.Add(this.label8);
-            this.groupBoxResumen.Controls.Add(this.textBox2);
-            this.groupBoxResumen.Controls.Add(this.label7);
-            this.groupBoxResumen.Controls.Add(this.textBox1);
-            this.groupBoxResumen.Location = new System.Drawing.Point(6, 337);
-            this.groupBoxResumen.Name = "groupBoxResumen";
-            this.groupBoxResumen.Size = new System.Drawing.Size(625, 149);
-            this.groupBoxResumen.TabIndex = 15;
-            this.groupBoxResumen.TabStop = false;
-            this.groupBoxResumen.Text = "Resumen";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(105, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 13);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 18);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Ventas";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Anticipos";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(105, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 18);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Colaciones";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.Location = new System.Drawing.Point(105, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(151, 20);
-            this.textBox3.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 18);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Facturas";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBox4.Location = new System.Drawing.Point(105, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(151, 20);
-            this.textBox4.TabIndex = 6;
-            // 
-            // textBoxVentas
-            // 
-            this.textBoxVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBoxVentas.Location = new System.Drawing.Point(105, 19);
-            this.textBoxVentas.Name = "textBoxVentas";
-            this.textBoxVentas.ReadOnly = true;
-            this.textBoxVentas.Size = new System.Drawing.Size(151, 20);
-            this.textBoxVentas.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox6.Location = new System.Drawing.Point(387, 19);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(151, 20);
-            this.textBox6.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(291, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 18);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Caja Inicial";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(403, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 13);
-            this.textBox7.TabIndex = 9;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox8.Location = new System.Drawing.Point(387, 45);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(151, 20);
-            this.textBox8.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(298, 44);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 18);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Caja Final";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(403, 45);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(151, 13);
-            this.textBox9.TabIndex = 12;
+            this.comboBoxSucursales.FormattingEnabled = true;
+            this.comboBoxSucursales.Location = new System.Drawing.Point(300, 6);
+            this.comboBoxSucursales.Name = "comboBoxSucursales";
+            this.comboBoxSucursales.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSucursales.TabIndex = 16;
             // 
             // manager
             // 
@@ -705,11 +723,11 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBoxResumen.ResumeLayout(false);
+            this.groupBoxResumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetiros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVentas)).EndInit();
-            this.groupBoxResumen.ResumeLayout(false);
-            this.groupBoxResumen.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,20 +771,21 @@
         private System.Windows.Forms.DataGridView dataGridViewRetiros;
         private System.Windows.Forms.DataGridView dataGridViewFacturas;
         private System.Windows.Forms.GroupBox groupBoxResumen;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxCfinal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxCinicial;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBoxVentas;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxFacturas;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxColaciones;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxAnticipos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxSucursales;
     }
 }

@@ -33,13 +33,16 @@ namespace miamiPOS
             this.Close();
         }
 
+
         private void manager_Load(object sender, EventArgs e)
         {
             miamiDB.getCategorias(ref comboBoxCategorias);
             miamiDB.getCategorias(ref cbCategoria);
-
+            miamiDB.getSucursales(ref comboBoxSucursales);
+            comboBoxSucursales.SelectedIndex = 0;
             checkBoxEditMode.Enabled = false; //Deshabilitar el checkmox de modo editar
         }
+
         private void comboBoxCategorias_Leave(object sender, EventArgs e)
         {
             Int32 idCategoria = Convert.ToInt32((comboBoxCategorias.SelectedItem as ComboboxItem).Value);
@@ -247,7 +250,26 @@ namespace miamiPOS
             dataGridViewRetiros.DataSource = tablaRetiros;
 
             dataGridViewVentas.Columns["dinero"].DefaultCellStyle.Format = "$##,###,###";
-            //dataGridViewProductos.Columns["id_categoria"].Visible = false;
+            //Se rellenaron los dataGridView
+
+
+            //Ahora se rellenanan los campos de totales
+            try
+            {
+                Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
+                ResumenDiario Resumen = new ResumenDiario(doy, year, idLocal);
+                textBoxVentas.Text = Resumen.ventas.ToString();
+                textBoxAnticipos.Text = Resumen.anticipos.ToString();
+                textBoxColaciones.Text = Resumen.colaciones.ToString();
+                textBoxFacturas.Text = Resumen.facturas.ToString();
+
+                //textBoxCfinal.Text = Resumen.cajaFinal.ToString();
+                //textBoxCinicial.Text = Resumen.cajaInicial.ToString();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
         }
 
         private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)

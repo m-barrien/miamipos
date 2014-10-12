@@ -5,7 +5,79 @@ using System.Text;
 
 namespace miamiPOS
 {
+    //Utilidad para el manager y asi resumir datos de ventas
+    public class ResumenDiario
+    {
+        public int ventas { get; set; }
+        public int facturas { get; set; }
+        public int colaciones { get; set; }
+        public int anticipos { get; set; }
+        public int cajaInicial { get; set; }
+        public int cajaFinal { get; set; }
 
+        public ResumenDiario(int doy, int year,int idLocal)
+        {
+            //VENTAS
+            var query = String.Format("select sum( venta.total ) from venta where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                , year, doy);
+            var dump = Psql.execScalar(query);
+            try
+            {
+                this.ventas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.ventas = 0;
+            }
+            //ANTICIPOS
+            query = String.Format("select sum( anticipo.total ) from anticipo where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                , year, doy);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.anticipos = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.anticipos = 0;
+            }
+
+            //COLACIONES
+            query = String.Format("select sum( colacion.total ) from colacion where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                 , year, doy);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.colaciones = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.colaciones = 0;
+            }
+            //FACTURAS
+            query = String.Format("select sum( factura.total ) from factura where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                 , year, doy);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.facturas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.facturas = 0;
+            }
+  
+        }
+
+        public int getIngresos()
+        {
+            return this.ventas - this.facturas - this.colaciones - this.anticipos;
+        }
+        public int getRetiros()
+        {
+            return this.getIngresos() - this.cajaFinal;
+        }
+    }
     //Custom class para los itemes de las empresas
     public class ComboboxItem
     {

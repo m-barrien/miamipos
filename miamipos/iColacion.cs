@@ -30,7 +30,7 @@ namespace miamiPOS
                 var existentes = Psql.execScalar("select count(*) from cajero where id=" + idCajero + " and password='" + textBox2.Text + "'");
                 if (existentes == "1")
                 {
-                    Int32 rowsAffected = Psql.execInsert("insert into colacion(id_cajero,total,fecha) VALUES (" + idCajero + "," + total + ",now() )");
+                    Int32 rowsAffected = Psql.execInsert("insert into colacion(id_cajero,total,id_turno,fecha) VALUES (" + idCajero + "," + total + "," + miamiDB.id_turno + ",now() )");
                     this.Close();
                 }
                 else

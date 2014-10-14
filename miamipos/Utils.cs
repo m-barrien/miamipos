@@ -30,8 +30,8 @@ namespace miamiPOS
                 this.ventas = 0;
             }
             //ANTICIPOS
-            query = String.Format("select sum( anticipo.total ) from anticipo,turno where extract(year from anticipo.fecha)={0} and extract(doy from anticipo.fecha)={1} and turno.id=anticipo.id_turno and turno.sucursal={2}" 
-                , year,doy,idLocal);
+            query = String.Format("select sum( anticipo.total ) from anticipo where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                , year, doy);
             dump = Psql.execScalar(query);
             try
             {
@@ -43,8 +43,8 @@ namespace miamiPOS
             }
 
             //COLACIONES
-            query = String.Format("select sum( colacion.total ) from colacion,turno where extract(year from colacion.fecha)={0} and extract(doy from colacion.fecha)={1} and turno.id=colacion.id_turno and turno.sucursal={2}"
-                 , year,doy,idLocal);
+            query = String.Format("select sum( colacion.total ) from colacion where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                 , year, doy);
             dump = Psql.execScalar(query);
             try
             {
@@ -55,8 +55,8 @@ namespace miamiPOS
                 this.colaciones = 0;
             }
             //FACTURAS
-            query = String.Format("select sum( factura.total ) from factura,turno where extract(year from factura.fecha)={0} and extract(doy from factura.fecha)={1} and turno.id=factura.id_turno and turno.sucursal={2} "
-                 , year,doy,idLocal);
+            query = String.Format("select sum( factura.total ) from factura where extract(year from fecha)={0} and extract(doy from fecha)={1}"
+                 , year, doy);
             dump = Psql.execScalar(query);
             try
             {

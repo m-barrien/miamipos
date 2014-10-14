@@ -228,11 +228,12 @@ namespace miamiPOS
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
+            Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
             // dateTimePicker.Value.Month
             int doy = dateTimePicker.Value.DayOfYear;
             int year = dateTimePicker.Value.Year;
-            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from fecha)={1} and extract(doy from fecha)={2} group by nombre order by Dinero DESC"
-                ,checkBoxPesableventa.Checked.ToString(),year,doy);
+            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta,turno where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from venta.fecha)={1} and extract(doy from venta.fecha)={2} and turno.id=venta.id_turno and turno.sucursal={3} group by nombre order by Dinero DESC"
+                ,checkBoxPesableventa.Checked.ToString(),year,doy,idLocal);
             Psql.execQuery(query, ref tablaVentas);
             dataGridViewVentas.DataSource = tablaVentas;
             //Se lleno el datagridViewventas
@@ -256,7 +257,7 @@ namespace miamiPOS
             //Ahora se rellenanan los campos de totales
             try
             {
-                Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
+                
                 ResumenDiario Resumen = new ResumenDiario(doy, year, idLocal);
                 textBoxVentas.Text = Resumen.ventas.ToString();
                 textBoxAnticipos.Text = Resumen.anticipos.ToString();
@@ -274,10 +275,11 @@ namespace miamiPOS
 
         private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)
         {
+            Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
             int doy = dateTimePicker.Value.DayOfYear;
             int year = dateTimePicker.Value.Year;
-            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from fecha)={1} and extract(doy from fecha)={2} group by nombre order by Dinero DESC"
-                , checkBoxPesableventa.Checked.ToString(), year, doy);
+            var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta,turno where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from venta.fecha)={1} and extract(doy from venta.fecha)={2} and turno.id=venta.id_turno and turno.sucursal={3} group by nombre order by Dinero DESC"
+                , checkBoxPesableventa.Checked.ToString(), year, doy,idLocal);
             Psql.execQuery(query, ref tablaVentas);
             dataGridViewVentas.DataSource = tablaVentas;
             //Se lleno el datagridViewventas

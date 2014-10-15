@@ -30,8 +30,8 @@ namespace miamiPOS
                 this.ventas = 0;
             }
             //ANTICIPOS
-            query = String.Format("select sum( anticipo.total ) from anticipo where extract(year from fecha)={0} and extract(doy from fecha)={1}"
-                , year, doy);
+            query = String.Format("select sum( anticipo.total ) from anticipo,turno where extract(year from anticipo.fecha)={0} and extract(doy from anticipo.fecha)={1} and turno.id=anticipo.id_turno and turno.sucursal={2}"
+                , year, doy, idLocal);
             dump = Psql.execScalar(query);
             try
             {
@@ -43,8 +43,8 @@ namespace miamiPOS
             }
 
             //COLACIONES
-            query = String.Format("select sum( colacion.total ) from colacion where extract(year from fecha)={0} and extract(doy from fecha)={1}"
-                 , year, doy);
+            query = String.Format("select sum( colacion.total ) from colacion,turno where extract(year from colacion.fecha)={0} and extract(doy from colacion.fecha)={1} and turno.id=colacion.id_turno and turno.sucursal={2}"
+                 , year, doy, idLocal);
             dump = Psql.execScalar(query);
             try
             {
@@ -55,8 +55,8 @@ namespace miamiPOS
                 this.colaciones = 0;
             }
             //FACTURAS
-            query = String.Format("select sum( factura.total ) from factura where extract(year from fecha)={0} and extract(doy from fecha)={1}"
-                 , year, doy);
+            query = String.Format("select sum( factura.total ) from factura,turno where extract(year from factura.fecha)={0} and extract(doy from factura.fecha)={1} and turno.id=factura.id_turno and turno.sucursal={2}"
+                 , year, doy ,idLocal);
             dump = Psql.execScalar(query);
             try
             {
@@ -66,7 +66,30 @@ namespace miamiPOS
             {
                 this.facturas = 0;
             }
-  
+            //CAJA INICIAL
+            query = String.Format("select turno.caja_inicial from turno where extract(year from turno.fecha)={0} and extract(doy from turno.fecha)={1} and turno.sucursal={2}  order by id ASC"
+                 , year, doy, idLocal);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.cajaInicial = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.cajaInicial = 0;
+            }
+            //CAJA FINAL
+            query = String.Format("select turno.caja_final from turno where extract(year from turno.fecha)={0} and extract(doy from turno.fecha)={1} and turno.sucursal={2}  order by id DESC"
+                 , year, doy, idLocal);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.cajaFinal = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.cajaFinal = 0;
+            } 
         }
 
         public int getIngresos()

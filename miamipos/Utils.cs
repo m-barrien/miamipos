@@ -92,13 +92,13 @@ namespace miamiPOS
             } 
         }
 
-        public int getIngresos()
+        public int getLiquido()
         {
-            return this.ventas - this.facturas - this.colaciones - this.anticipos;
+            return this.ventas + this.cajaInicial - this.facturas - this.colaciones - this.anticipos;
         }
         public int getRetiros()
         {
-            return this.getIngresos() - this.cajaFinal;
+            return this.getLiquido() - this.cajaFinal;
         }
     }
     //Custom class para los itemes de las empresas

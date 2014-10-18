@@ -286,6 +286,12 @@ namespace miamiPOS
             //Se lleno el datagridViewventas
         }
 
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            iInventario formInventario = new iInventario();
+            formInventario.Show();
+        }
+
 
 
 

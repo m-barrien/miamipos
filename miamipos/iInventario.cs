@@ -11,6 +11,7 @@ namespace miamiPOS
 {
     public partial class iInventario : Form
     {
+        int selectedPLU;
         public iInventario()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace miamiPOS
             {
                 MessageBox.Show("Sin conexion");
             }
+            // Si no es admin bloquear controles
+            if (!miamiPOS.Properties.Settings.Default.admin)
+            {
+                SetReadonlyControls(groupBoxEditor.Controls);
+            }
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -34,7 +40,22 @@ namespace miamiPOS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           DataGridView dgv = sender as DataGridView;
+           labelSelected.Text = dgv.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.selectedPLU =  (int)dgv.Rows[e.RowIndex].Cells[0].Value;
+        }
 
+        private void SetReadonlyControls(Control.ControlCollection controlCollection)
+        {
+            if (controlCollection == null)
+            {
+                return;
+            }
+
+            foreach (TextBoxBase c in controlCollection.OfType<TextBoxBase>())
+            {
+                c.ReadOnly = true;
+            }
         }
 
         private void iInventario_Load(object sender, EventArgs e)
@@ -47,6 +68,37 @@ namespace miamiPOS
             catch (Exception E)
             {
                 Console.WriteLine(E.Message);
+            }
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int cantidad = Convert.ToInt32(this.textBoxEdit.Text);
+                string query;
+                DataGridViewRow rowEditada = dataGridView1.SelectedRows[0];
+
+                if (radioButtonAdd.Checked)
+                {
+                    //suma a inventario
+                    query=String.Format("UPDATE inventario SET stock=stock + {0} where plu={1}", cantidad, selectedPLU);
+                    rowEditada.Cells["stock"].Value = cantidad + (int)rowEditada.Cells["stock"].Value;
+                }
+                else
+                {
+                    //cambiar total inventario
+                    query = String.Format("UPDATE inventario SET stock={0} where plu={1}", cantidad, selectedPLU);
+                    rowEditada.Cells["stock"].Value = cantidad;
+
+                }
+                Psql.execInsert(query);
+                MessageBox.Show("EXITO");
+
+            }
+            catch(Exception E)
+            {
+                MessageBox.Show("No permitido"+E.Message);
             }
         }
     }

@@ -110,7 +110,7 @@
             this.groupBoxEditor.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxEditor.Name = "groupBoxEditor";
             this.groupBoxEditor.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxEditor.Size = new System.Drawing.Size(316, 151);
+            this.groupBoxEditor.Size = new System.Drawing.Size(398, 151);
             this.groupBoxEditor.TabIndex = 2;
             this.groupBoxEditor.TabStop = false;
             this.groupBoxEditor.Text = "Administrador";
@@ -127,7 +127,7 @@
             // 
             // textBoxEdit
             // 
-            this.textBoxEdit.Location = new System.Drawing.Point(12, 121);
+            this.textBoxEdit.Location = new System.Drawing.Point(13, 53);
             this.textBoxEdit.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEdit.Name = "textBoxEdit";
             this.textBoxEdit.Size = new System.Drawing.Size(164, 22);
@@ -137,7 +137,7 @@
             // 
             this.radioButtonSet.AutoSize = true;
             this.radioButtonSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSet.Location = new System.Drawing.Point(13, 90);
+            this.radioButtonSet.Location = new System.Drawing.Point(13, 112);
             this.radioButtonSet.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonSet.Name = "radioButtonSet";
             this.radioButtonSet.Size = new System.Drawing.Size(70, 29);
@@ -150,7 +150,7 @@
             this.radioButtonAdd.AutoSize = true;
             this.radioButtonAdd.Checked = true;
             this.radioButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAdd.Location = new System.Drawing.Point(12, 53);
+            this.radioButtonAdd.Location = new System.Drawing.Point(12, 75);
             this.radioButtonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAdd.Name = "radioButtonAdd";
             this.radioButtonAdd.Size = new System.Drawing.Size(91, 29);

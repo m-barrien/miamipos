@@ -40,9 +40,17 @@ namespace miamiPOS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           DataGridView dgv = sender as DataGridView;
-           labelSelected.Text = dgv.Rows[e.RowIndex].Cells[1].Value.ToString();
-            this.selectedPLU =  (int)dgv.Rows[e.RowIndex].Cells[0].Value;
+            try
+            {
+
+                DataGridView dgv = sender as DataGridView;
+                labelSelected.Text = dgv.Rows[e.RowIndex].Cells[1].Value.ToString();
+                this.selectedPLU = (int)dgv.Rows[e.RowIndex].Cells[0].Value;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Out of bounds exception in datagridview");
+            }
         }
 
         private void SetReadonlyControls(Control.ControlCollection controlCollection)

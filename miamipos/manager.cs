@@ -292,6 +292,22 @@ namespace miamiPOS
             formInventario.Show();
         }
 
+        private void buttonCrearStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedrowindex = dataGridViewProductos.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridViewProductos.Rows[selectedrowindex];
+
+                var plu = selectedRow.Cells["plu"].Value.ToString(); //plu de item seleccionado
+                Psql.execInsert(String.Format("insert into inventario (plu,stock) VALUES ({0},0)",plu));
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("ERROR - Quizas existe \r" + error.Message);
+            }
+        }
+
 
 
 

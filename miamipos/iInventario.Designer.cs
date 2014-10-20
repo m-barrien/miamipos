@@ -34,12 +34,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonClose = new System.Windows.Forms.Button();
             this.groupBoxEditor = new System.Windows.Forms.GroupBox();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButtonAdd = new System.Windows.Forms.RadioButton();
-            this.radioButtonSet = new System.Windows.Forms.RadioButton();
-            this.textBoxEdit = new System.Windows.Forms.TextBox();
             this.labelSelected = new System.Windows.Forms.Label();
+            this.textBoxEdit = new System.Windows.Forms.TextBox();
+            this.radioButtonSet = new System.Windows.Forms.RadioButton();
+            this.radioButtonAdd = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxEditor.SuspendLayout();
             this.SuspendLayout();
@@ -73,22 +73,25 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 16);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(547, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 457);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.Location = new System.Drawing.Point(415, 462);
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(553, 569);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(144, 43);
+            this.buttonClose.Size = new System.Drawing.Size(192, 53);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.Text = "Salir";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -96,85 +99,100 @@
             // 
             // groupBoxEditor
             // 
+            this.groupBoxEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBoxEditor.Controls.Add(this.labelSelected);
             this.groupBoxEditor.Controls.Add(this.textBoxEdit);
             this.groupBoxEditor.Controls.Add(this.radioButtonSet);
             this.groupBoxEditor.Controls.Add(this.radioButtonAdd);
             this.groupBoxEditor.Controls.Add(this.label1);
             this.groupBoxEditor.Controls.Add(this.buttonUpdate);
-            this.groupBoxEditor.Location = new System.Drawing.Point(12, 423);
+            this.groupBoxEditor.Location = new System.Drawing.Point(16, 481);
+            this.groupBoxEditor.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxEditor.Name = "groupBoxEditor";
-            this.groupBoxEditor.Size = new System.Drawing.Size(237, 90);
+            this.groupBoxEditor.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxEditor.Size = new System.Drawing.Size(316, 151);
             this.groupBoxEditor.TabIndex = 2;
             this.groupBoxEditor.TabStop = false;
             this.groupBoxEditor.Text = "Administrador";
             // 
-            // buttonUpdate
+            // labelSelected
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(139, 41);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(92, 43);
-            this.buttonUpdate.TabIndex = 0;
-            this.buttonUpdate.Text = "Actualizar";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            this.labelSelected.AutoSize = true;
+            this.labelSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelected.Location = new System.Drawing.Point(107, 24);
+            this.labelSelected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSelected.Name = "labelSelected";
+            this.labelSelected.Size = new System.Drawing.Size(0, 25);
+            this.labelSelected.TabIndex = 5;
             // 
-            // label1
+            // textBoxEdit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Producto:";
+            this.textBoxEdit.Location = new System.Drawing.Point(12, 121);
+            this.textBoxEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEdit.Name = "textBoxEdit";
+            this.textBoxEdit.Size = new System.Drawing.Size(164, 22);
+            this.textBoxEdit.TabIndex = 4;
+            // 
+            // radioButtonSet
+            // 
+            this.radioButtonSet.AutoSize = true;
+            this.radioButtonSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSet.Location = new System.Drawing.Point(13, 90);
+            this.radioButtonSet.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonSet.Name = "radioButtonSet";
+            this.radioButtonSet.Size = new System.Drawing.Size(70, 29);
+            this.radioButtonSet.TabIndex = 3;
+            this.radioButtonSet.Text = "Fijar";
+            this.radioButtonSet.UseVisualStyleBackColor = true;
             // 
             // radioButtonAdd
             // 
             this.radioButtonAdd.AutoSize = true;
             this.radioButtonAdd.Checked = true;
-            this.radioButtonAdd.Location = new System.Drawing.Point(78, 39);
+            this.radioButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAdd.Location = new System.Drawing.Point(12, 53);
+            this.radioButtonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAdd.Name = "radioButtonAdd";
-            this.radioButtonAdd.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonAdd.Size = new System.Drawing.Size(91, 29);
             this.radioButtonAdd.TabIndex = 2;
             this.radioButtonAdd.TabStop = true;
             this.radioButtonAdd.Text = "Sumar";
             this.radioButtonAdd.UseVisualStyleBackColor = true;
             // 
-            // radioButtonSet
+            // label1
             // 
-            this.radioButtonSet.AutoSize = true;
-            this.radioButtonSet.Location = new System.Drawing.Point(9, 39);
-            this.radioButtonSet.Name = "radioButtonSet";
-            this.radioButtonSet.Size = new System.Drawing.Size(63, 17);
-            this.radioButtonSet.TabIndex = 3;
-            this.radioButtonSet.Text = "Cambiar";
-            this.radioButtonSet.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Producto:";
             // 
-            // textBoxEdit
+            // buttonUpdate
             // 
-            this.textBoxEdit.Location = new System.Drawing.Point(9, 62);
-            this.textBoxEdit.Name = "textBoxEdit";
-            this.textBoxEdit.Size = new System.Drawing.Size(124, 20);
-            this.textBoxEdit.TabIndex = 4;
-            // 
-            // labelSelected
-            // 
-            this.labelSelected.AutoSize = true;
-            this.labelSelected.Location = new System.Drawing.Point(66, 16);
-            this.labelSelected.Name = "labelSelected";
-            this.labelSelected.Size = new System.Drawing.Size(0, 13);
-            this.labelSelected.TabIndex = 5;
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.Location = new System.Drawing.Point(185, 90);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(123, 53);
+            this.buttonUpdate.TabIndex = 0;
+            this.buttonUpdate.Text = "Actualizar";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // iInventario
             // 
             this.AcceptButton = this.buttonClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 516);
+            this.ClientSize = new System.Drawing.Size(761, 635);
             this.Controls.Add(this.groupBoxEditor);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "iInventario";
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.iInventario_Load);

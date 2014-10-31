@@ -175,3 +175,6 @@ FakesAssemblies/
 
 .nuget/
 MISC/productos con codigo de barra_files/Thumbs.db
+
+#Kettle software pentaho integration enviroment variables
+ELT/.kettle

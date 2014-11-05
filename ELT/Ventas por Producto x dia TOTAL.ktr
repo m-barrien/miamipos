@@ -83,7 +83,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;07&#x2f;02 15&#x3a;23&#x3a;16.011</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;10&#x2f;31 18&#x3a;17&#x3a;19.845</modified_date>
+  <modified_date>2014&#x2f;11&#x2f;04 21&#x3a;57&#x3a;58.655</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -137,10 +137,10 @@
   </connection>
   <order>
   <hop> <from>Producto</from><to>Sort plu</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
   <hop> <from>Cubo ventas x dia</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Sort plu</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Merge Join</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Cubo ventas x dia</name>
@@ -213,15 +213,15 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C&#x3a;&#x5c;Users&#x5c;server&#x5c;Desktop&#x5c;RESUMENES&#x5c;ventas por dia.xls</name>
+      <name>C&#x3a;&#x5c;Users&#x5c;server&#x5c;Desktop&#x5c;RESUMENES&#x5c;ResumenVentasLocal&#x24;&#x7b;LOCAL&#x7d;-&#x24;&#x7b;ANNO&#x7d;-&#x24;&#x7b;MES&#x7d;</name>
       <extention>xls</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <do_not_open_newfile_init>Y</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
       <split>N</split>
-      <add_date>Y</add_date>
-      <add_time>Y</add_time>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
+      <date_time_format>yyyy-MM-dd</date_time_format>
       <sheetname>Sheet1</sheetname>
       <autosizecolums>N</autosizecolums>
       <nullisblank>N</nullisblank>
@@ -249,7 +249,7 @@
       </field>
       <field>
         <name>day</name>
-        <type>Number</type>
+        <type>Integer</type>
         <format/>
       </field>
       <field>
@@ -259,7 +259,12 @@
       </field>
       <field>
         <name>total</name>
-        <type>Number</type>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>cantidad</name>
+        <type>Integer</type>
         <format/>
       </field>
     </fields>
@@ -282,8 +287,8 @@
       </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>711</xloc>
-      <yloc>142</yloc>
+      <xloc>727</xloc>
+      <yloc>134</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -341,11 +346,11 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>cantidad</name>
+      </field>      <field>        <name>total</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>total</name>
+      </field>      <field>        <name>cantidad</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>

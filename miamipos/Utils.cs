@@ -5,6 +5,82 @@ using System.Text;
 
 namespace miamiPOS
 {
+    //Utilidad para finalizar el turno y mostrar totales para un turno
+    public class ResumenTurno
+    {
+        public int ventas { get; set; }
+        public int facturas { get; set; }
+        public int colaciones { get; set; }
+        public int anticipos { get; set; }
+        public int cajaInicial { get; set; }
+        public int cajaFinal { get; set; }
+        public ResumenTurno(int idTurno)
+        {
+            //VENTAS
+            var query = String.Format("select sum( venta.total ) from venta where venta.id_turno = {0}"
+                , idTurno);
+            var dump = Psql.execScalar(query);
+            try
+            {
+                this.ventas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.ventas = 0;
+            }
+            //ANTICIPOS
+            query = String.Format("select sum( anticipo.total ) from anticipo where anticipo.id_turno ={0}"
+                , idTurno);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.anticipos = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.anticipos = 0;
+            }
+
+            //COLACIONES
+            query = String.Format("select sum( colacion.total ) from colacion where colacion.id_turno ={0}"
+                 , idTurno);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.colaciones = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.colaciones = 0;
+            }
+            //FACTURAS
+            query = String.Format("select sum( factura.total ) from factura where factura.id_turno ={0}"
+                 , idTurno);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.facturas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.facturas = 0;
+            }
+            //CAJA INICIAL
+            query = String.Format("select turno.caja_inicial from turno where anticipo.id_turno ={0}"
+                 , idTurno);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.cajaInicial = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.cajaInicial = 0;
+            }
+
+        }
+
+    }
     //Utilidad para el manager y asi resumir datos de ventas
     public class ResumenDiario
     {

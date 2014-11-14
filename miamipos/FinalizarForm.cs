@@ -128,8 +128,7 @@ namespace miamiPOS
 
         private void FinalizarForm_Load_1(object sender, EventArgs e)
         {
-            var url = miamiPOS.Properties.Settings.Default.serverRemote +"miamipos/resume.php?turno=" + miamiDB.id_turno;
-            webBrowser1.Navigate(url);
+            ResumenTurno turno = new ResumenTurno(miamiDB.id_turno);
         }
 
     }

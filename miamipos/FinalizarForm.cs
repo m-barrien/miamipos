@@ -129,6 +129,13 @@ namespace miamiPOS
         private void FinalizarForm_Load_1(object sender, EventArgs e)
         {
             ResumenTurno turno = new ResumenTurno(miamiDB.id_turno);
+            textBoxTurno.Text = miamiDB.id_turno.ToString();
+            textBoxVentas.Text = turno.ventas.ToString();
+            textBoxFacturas.Text = turno.facturas.ToString();
+            textBoxAncticipos.Text = turno.anticipos.ToString();
+            textBoxColaciones.Text = turno.colaciones.ToString();
+            textBoxCinicial.Text = turno.cajaInicial.ToString();
+
         }
 
     }

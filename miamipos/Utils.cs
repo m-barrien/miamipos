@@ -66,7 +66,7 @@ namespace miamiPOS
                 this.facturas = 0;
             }
             //CAJA INICIAL
-            query = String.Format("select turno.caja_inicial from turno where turno.id_turno ={0}"
+            query = String.Format("select turno.caja_inicial from turno where turno.id ={0}"
                  , idTurno);
             dump = Psql.execScalar(query);
             try

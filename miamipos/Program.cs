@@ -60,7 +60,7 @@ namespace miamiPOS
                         miamiPOS.Properties.Settings.Default.Save();
                     }
                         // Sino es administrador no se abre un turno
-                    else miamiDB.beginTurno();
+                    else if ( miamiPOS.Properties.Settings.Default.idCajero != 0 ) miamiDB.beginTurno();
                 }
                 if (miamiPOS.Properties.Settings.Default.idCajero != 0)
                 {

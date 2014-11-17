@@ -25,7 +25,7 @@ namespace miamiPOS
             {
                 if(!mutex.WaitOne(0, false))
                 {
-                    MessageBox.Show("Se abrio el programa dos veces , Mal Mal...\rCerrar esta ventana");
+                    MessageBox.Show("Se abrio el programa dos veces...\rCerrar esta ventana");
                     return;
                 }
 

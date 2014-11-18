@@ -240,6 +240,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="miamiIcon.ico" />
+    <None Include="Resources\cash.jpg" />
+    <None Include="Resources\swipecard.jpg" />
     <None Include="Resources\miamilogin.png" />
   </ItemGroup>
   <ItemGroup>

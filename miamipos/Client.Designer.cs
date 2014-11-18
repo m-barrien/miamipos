@@ -103,9 +103,9 @@
             groupBox4.Controls.Add(this.label1);
             groupBox4.Controls.Add(this.textBox1);
             groupBox4.Location = new System.Drawing.Point(976, 266);
-            groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox4.Margin = new System.Windows.Forms.Padding(4);
             groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            groupBox4.Padding = new System.Windows.Forms.Padding(4);
             groupBox4.Size = new System.Drawing.Size(352, 151);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
@@ -116,7 +116,7 @@
             this.button13.AutoSize = true;
             this.button13.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.Location = new System.Drawing.Point(155, 59);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(93, 102);
             this.button13.TabIndex = 7;
@@ -129,7 +129,7 @@
             this.btnAgregar.AutoSize = true;
             this.btnAgregar.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(253, 59);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(96, 102);
             this.btnAgregar.TabIndex = 5;
@@ -154,7 +154,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(103, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 29);
             this.textBox1.TabIndex = 3;
@@ -165,10 +165,10 @@
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.AutoSize = true;
             this.button14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(812, 23);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Location = new System.Drawing.Point(821, 23);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(132, 85);
+            this.button14.Size = new System.Drawing.Size(123, 85);
             this.button14.TabIndex = 6;
             this.button14.Text = "Buscar";
             this.button14.UseVisualStyleBackColor = true;
@@ -330,9 +330,9 @@
             this.groupBoxI.Controls.Add(this.tbFecha);
             this.groupBoxI.Controls.Add(this.tbCajero);
             this.groupBoxI.Location = new System.Drawing.Point(976, 44);
-            this.groupBoxI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxI.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxI.Name = "groupBoxI";
-            this.groupBoxI.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxI.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxI.Size = new System.Drawing.Size(352, 214);
             this.groupBoxI.TabIndex = 1;
             this.groupBoxI.TabStop = false;
@@ -358,7 +358,7 @@
             this.msgBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msgBox.ForeColor = System.Drawing.Color.LimeGreen;
             this.msgBox.Location = new System.Drawing.Point(13, 175);
-            this.msgBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.msgBox.Margin = new System.Windows.Forms.Padding(4);
             this.msgBox.Name = "msgBox";
             this.msgBox.ReadOnly = true;
             this.msgBox.Size = new System.Drawing.Size(328, 30);
@@ -402,9 +402,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(976, 425);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(352, 458);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -416,7 +416,7 @@
             this.button1.AutoSize = true;
             this.button1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(5, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 102);
             this.button1.TabIndex = 12;
@@ -430,7 +430,7 @@
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button12.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(121, 343);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(107, 98);
             this.button12.TabIndex = 11;
@@ -444,7 +444,7 @@
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button11.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(236, 343);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(107, 98);
             this.button11.TabIndex = 10;
@@ -459,7 +459,7 @@
             this.button10.AutoSize = true;
             this.button10.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(7, 343);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 102);
             this.button10.TabIndex = 9;
@@ -474,7 +474,7 @@
             this.button7.AutoSize = true;
             this.button7.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(7, 238);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(107, 102);
             this.button7.TabIndex = 8;
@@ -489,7 +489,7 @@
             this.button8.AutoSize = true;
             this.button8.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(121, 238);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(107, 102);
             this.button8.TabIndex = 7;
@@ -504,7 +504,7 @@
             this.button9.AutoSize = true;
             this.button9.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(236, 238);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(107, 102);
             this.button9.TabIndex = 6;
@@ -519,7 +519,7 @@
             this.button4.AutoSize = true;
             this.button4.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(5, 132);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(107, 102);
             this.button4.TabIndex = 5;
@@ -534,7 +534,7 @@
             this.button5.AutoSize = true;
             this.button5.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(121, 132);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 102);
             this.button5.TabIndex = 4;
@@ -549,7 +549,7 @@
             this.button6.AutoSize = true;
             this.button6.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(236, 132);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 102);
             this.button6.TabIndex = 3;
@@ -564,7 +564,7 @@
             this.button3.AutoSize = true;
             this.button3.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(236, 26);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 102);
             this.button3.TabIndex = 2;
@@ -579,7 +579,7 @@
             this.button2.AutoSize = true;
             this.button2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(121, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 102);
             this.button2.TabIndex = 1;
@@ -599,9 +599,9 @@
             this.groupBox2.Controls.Add(this.button15);
             this.groupBox2.Controls.Add(this.buttonTotal);
             this.groupBox2.Location = new System.Drawing.Point(16, 266);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(952, 617);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -612,7 +612,7 @@
             this.buttonQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuitar.Location = new System.Drawing.Point(631, 516);
-            this.buttonQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonQuitar.Name = "buttonQuitar";
             this.buttonQuitar.Size = new System.Drawing.Size(109, 87);
             this.buttonQuitar.TabIndex = 5;
@@ -627,7 +627,7 @@
             this.tbSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSubtotal.ForeColor = System.Drawing.Color.Lime;
             this.tbSubtotal.Location = new System.Drawing.Point(631, 465);
-            this.tbSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbSubtotal.Name = "tbSubtotal";
             this.tbSubtotal.Size = new System.Drawing.Size(312, 41);
             this.tbSubtotal.TabIndex = 4;
@@ -674,7 +674,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCarrito.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCarrito.Location = new System.Drawing.Point(9, 23);
-            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.RowHeadersVisible = false;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -687,7 +687,7 @@
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.Location = new System.Drawing.Point(9, 516);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(221, 87);
             this.button15.TabIndex = 2;
@@ -700,7 +700,7 @@
             this.buttonTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTotal.Location = new System.Drawing.Point(748, 516);
-            this.buttonTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTotal.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTotal.Name = "buttonTotal";
             this.buttonTotal.Size = new System.Drawing.Size(196, 87);
             this.buttonTotal.TabIndex = 1;
@@ -716,9 +716,9 @@
             this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Controls.Add(this.button14);
             this.groupBox3.Location = new System.Drawing.Point(16, 44);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(952, 214);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
@@ -744,7 +744,7 @@
             this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(8, 23);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersVisible = false;
@@ -774,7 +774,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainForm";
             this.Text = "PAN Y PASTELES MIAMI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

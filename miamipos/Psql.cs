@@ -724,13 +724,24 @@ namespace miamiPOS
         {
             dgvCarrito.DataSource = carro;
         }
-        public void sendToDB()
+        public void sendToDB(bool debito)
         {
             if (carro.Rows.Count == 0) throw new Exception("Carro Vacio");
-
             this.subTotal();
+            string esDebito;
+            if (debito)
+            {
+                esDebito = "TRUE";
+            }
+            else
+            {
+                esDebito = "FALSE";
+            }
+
             Int32 idVenta = Convert.ToInt32(Psql.execScalar("select nextval('venta_id_venta_seq')"));
-            string query = "insert into venta(id_venta,total,fecha,id_turno) VALUES (" + idVenta + "," + total + ",now()," + miamiDB.id_turno + ")";
+            string query = "insert into venta(id_venta,total,fecha,id_turno,debito) VALUES ({0},{1},now(),{2},{3})";
+            query = String.Format(query
+                , idVenta, total, miamiDB.id_turno, esDebito);
             Int32 rowsAffected = Psql.execInsert(query);
             if (rowsAffected > 0)
             {

@@ -231,6 +231,7 @@ namespace miamiPOS
             }
             else
             {
+                bool esDebito = false;
                 try
                 {
                     //Modo sanguchero
@@ -240,11 +241,12 @@ namespace miamiPOS
                     }
                     else
                     {
+                        
                         iMonederoForm monedero = new iMonederoForm(Carro.subTotal().ToString());
                         monedero.ShowDialog();
-                        while (monedero.IsAccessible) { System.Threading.Thread.Sleep(1000); }
+                        esDebito = monedero.payment();
                     }
-                    Carro.sendToDB();
+                    Carro.sendToDB(esDebito);
                 }
                 catch (Exception E)
                 {

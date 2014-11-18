@@ -15,6 +15,15 @@ namespace miamiPOS
         public iInventario()
         {
             InitializeComponent();
+            refreshStock();
+            // Si no es admin bloquear controles
+            if (!miamiPOS.Properties.Settings.Default.admin)
+            {
+                SetReadonlyControls(groupBoxEditor.Controls);
+            }
+        }
+        private void refreshStock()
+        {
             DataTable inventario = null;
             try
             {
@@ -26,13 +35,7 @@ namespace miamiPOS
             {
                 MessageBox.Show("Sin conexion");
             }
-            // Si no es admin bloquear controles
-            if (!miamiPOS.Properties.Settings.Default.admin)
-            {
-                SetReadonlyControls(groupBoxEditor.Controls);
-            }
         }
-
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -108,6 +111,11 @@ namespace miamiPOS
             {
                 MessageBox.Show("No permitido"+E.Message);
             }
+        }
+
+        private void buttonUpdateStock_Click(object sender, EventArgs e)
+        {
+            refreshStock();
         }
     }
 }

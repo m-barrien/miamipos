@@ -304,7 +304,7 @@ namespace miamiPOS
             }
             catch(Exception error)
             {
-                MessageBox.Show("ERROR - Quizas existe \r" + error.Message);
+                MessageBox.Show("ERROR - STOCK YA CREADO \r" + error.Message);
             }
         }
 

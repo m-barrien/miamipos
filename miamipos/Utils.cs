@@ -14,6 +14,7 @@ namespace miamiPOS
         public int anticipos { get; set; }
         public int cajaInicial { get; set; }
         public int cajaFinal { get; set; }
+        public int debito { get; set; }
         public ResumenTurno(int idTurno)
         {
             //VENTAS
@@ -23,6 +24,18 @@ namespace miamiPOS
             try
             {
                 this.ventas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.ventas = 0;
+            }
+            //DEBITO
+            query = String.Format("select sum( venta.total ) from venta where venta.id_turno = {0} and venta.debito=TRUE"
+                , idTurno);
+             dump = Psql.execScalar(query);
+            try
+            {
+                this.debito = Convert.ToInt32(dump);
             }
             catch
             {

@@ -103,6 +103,7 @@ namespace miamiPOS
         public int anticipos { get; set; }
         public int cajaInicial { get; set; }
         public int cajaFinal { get; set; }
+        public int debito { get; set; }
 
         public ResumenDiario(int doy, int year,int idLocal)
         {
@@ -113,6 +114,18 @@ namespace miamiPOS
             try
             {
                 this.ventas = Convert.ToInt32(dump);
+            }
+            catch
+            {
+                this.ventas = 0;
+            }
+            //DEBITO
+            query = String.Format("select sum( venta.total ) from venta,turno where extract(year from venta.fecha)={0} and extract(doy from venta.fecha)={1} and turno.id=venta.id_turno and turno.sucursal={2} and venta.debito=TRUE"
+                , year, doy, idLocal);
+            dump = Psql.execScalar(query);
+            try
+            {
+                this.debito = Convert.ToInt32(dump);
             }
             catch
             {

@@ -263,10 +263,12 @@ namespace miamiPOS
                 textBoxAnticipos.Text = Resumen.anticipos.ToString();
                 textBoxColaciones.Text = Resumen.colaciones.ToString();
                 textBoxFacturas.Text = Resumen.facturas.ToString();
+                textBoxDebito.Text = Resumen.debito.ToString();
 
                 textBoxCfinal.Text = Resumen.cajaFinal.ToString();
                 textBoxCinicial.Text = Resumen.cajaInicial.ToString();
                 textBoxRetiros.Text = Resumen.getRetiros().ToString();
+                
             }
             catch (Exception E)
             {

@@ -39,7 +39,7 @@ namespace miamiPOS
             }
             catch
             {
-                this.ventas = 0;
+                this.debito = 0;
             }
             //ANTICIPOS
             query = String.Format("select sum( anticipo.total ) from anticipo where anticipo.id_turno ={0}"
@@ -129,7 +129,7 @@ namespace miamiPOS
             }
             catch
             {
-                this.ventas = 0;
+                this.debito = 0;
             }
             //ANTICIPOS
             query = String.Format("select sum( anticipo.total ) from anticipo,turno where extract(year from anticipo.fecha)={0} and extract(doy from anticipo.fecha)={1} and turno.id=anticipo.id_turno and turno.sucursal={2}"
@@ -196,7 +196,7 @@ namespace miamiPOS
 
         public int getLiquido()
         {
-            return this.ventas + this.cajaInicial - this.facturas - this.colaciones - this.anticipos;
+            return this.ventas + this.cajaInicial - this.debito - this.facturas - this.colaciones - this.anticipos;
         }
         public int getRetiros()
         {

@@ -135,6 +135,7 @@ namespace miamiPOS
             textBoxAncticipos.Text = turno.anticipos.ToString();
             textBoxColaciones.Text = turno.colaciones.ToString();
             textBoxCinicial.Text = turno.cajaInicial.ToString();
+            textBoxDebito.Text = turno.debito.ToString();
 
         }
 

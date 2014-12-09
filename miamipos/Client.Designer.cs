@@ -118,7 +118,7 @@
             this.button13.Location = new System.Drawing.Point(155, 59);
             this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(93, 102);
+            this.button13.Size = new System.Drawing.Size(93, 84);
             this.button13.TabIndex = 7;
             this.button13.Text = "x";
             this.button13.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(253, 59);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(96, 102);
+            this.btnAgregar.Size = new System.Drawing.Size(96, 84);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;

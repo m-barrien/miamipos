@@ -96,7 +96,7 @@
             this.button12.Location = new System.Drawing.Point(121, 343);
             this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(107, 98);
+            this.button12.Size = new System.Drawing.Size(107, 102);
             this.button12.TabIndex = 11;
             this.button12.TabStop = false;
             this.button12.Text = "C";

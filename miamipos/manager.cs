@@ -38,8 +38,8 @@ namespace miamiPOS
         {
             miamiDB.getCategorias(ref comboBoxCategorias);
             miamiDB.getCategorias(ref cbCategoria);
-            miamiDB.getSucursales(ref comboBoxSucursales);
-            comboBoxSucursales.SelectedIndex = 0;
+            miamiDB.getSucursales(ref comboBoxSucursales1);
+            comboBoxSucursales1.SelectedIndex = 0;
             checkBoxEditMode.Enabled = false; //Deshabilitar el checkmox de modo editar
         }
 
@@ -228,7 +228,7 @@ namespace miamiPOS
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
+            Int32 idLocal = Convert.ToInt32((comboBoxSucursales1.SelectedItem as ComboboxItem).Value);
             // dateTimePicker.Value.Month
             int doy = dateTimePicker.Value.DayOfYear;
             int year = dateTimePicker.Value.Year;
@@ -278,7 +278,7 @@ namespace miamiPOS
 
         private void checkBoxPesableventa_CheckedChanged(object sender, EventArgs e)
         {
-            Int32 idLocal = Convert.ToInt32((comboBoxSucursales.SelectedItem as ComboboxItem).Value);
+            Int32 idLocal = Convert.ToInt32((comboBoxSucursales1.SelectedItem as ComboboxItem).Value);
             int doy = dateTimePicker.Value.DayOfYear;
             int year = dateTimePicker.Value.Year;
             var query = String.Format("select nombre,sum(cantidad) as Cantidad,sum(venta_producto.total) as Dinero from producto,venta_producto,venta,turno where venta.id_venta = venta_producto.id_venta and venta_producto.plu=producto.plu and producto.pesable={0} and extract(year from venta.fecha)={1} and extract(doy from venta.fecha)={2} and turno.id=venta.id_turno and turno.sucursal={3} group by nombre order by Dinero DESC"
@@ -308,6 +308,17 @@ namespace miamiPOS
             {
                 MessageBox.Show("ERROR - STOCK YA CREADO \r" + error.Message);
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            int doy = dateTimePicker.Value.DayOfYear;
+            int year = dateTimePicker.Value.Year;
+            var query = String.Format(""
+                , year, doy);
+            Psql.execQuery(query, ref tablaVentas);
+            dataGridViewVentas.DataSource = tablaVentas;
+
         }
 
 

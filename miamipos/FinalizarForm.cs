@@ -11,22 +11,26 @@ namespace miamiPOS
 {
     public partial class FinalizarForm : Form
     {
+        TextBox selectedTB;
         public FinalizarForm()
         {
             InitializeComponent();
             this.ControlBox = false;
             this.AcceptButton = btnReg;
+            selectedTB = textBoxCI;
         }
 
         private void buttonReg_Click(object sender, EventArgs e)
         {
             try
             {
-                Int32 caja = Math.Abs(Convert.ToInt32(textBox1.Text));
+                Int32 caja = Math.Abs(Convert.ToInt32(textBoxCI.Text));
+                Int32 retiros = Math.Abs(Convert.ToInt32(textBoxRetiros.Text));
                 miamiPOS.Properties.Settings.Default.cajaInicial = caja;
                 miamiPOS.Properties.Settings.Default.Save();
 
-                Psql.execInsert("UPDATE turno SET caja_final=" + caja + " WHERE id=" + miamiDB.id_turno);
+                string query = String.Format("UPDATE turno SET caja_final={0},retiro={1} WHERE id={2}", caja, retiros, miamiDB.id_turno);
+                Psql.execInsert(query);
 
                 this.FormClosing -= new System.Windows.Forms.FormClosingEventHandler(this.FinalizarForm_FormClosing);
                 this.Close();
@@ -56,73 +60,18 @@ namespace miamiPOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Focus();
-            SendKeys.Send("{1}");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{2}");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{3}");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{4}");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{5}");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{6}");
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{7}");
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{8}");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{9}");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{0}");
+            Button tecla = sender as Button;
+            selectedTB.Text += tecla.Text;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            textBox1.Focus();
-            textBox1.Clear();
+            selectedTB.Clear();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            textBox1.Focus();
+            textBoxCI.Focus();
             SendKeys.Send("{ENTER}");
         }
 
@@ -137,6 +86,12 @@ namespace miamiPOS
             textBoxCinicial.Text = turno.cajaInicial.ToString();
             textBoxDebito.Text = turno.debito.ToString();
 
+        }
+
+        private void switchContext(object sender, EventArgs e)
+        {
+            TextBox focusedTextBox = sender as TextBox;
+            selectedTB = focusedTextBox;
         }
 
     }

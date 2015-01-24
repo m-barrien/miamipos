@@ -89,11 +89,6 @@ namespace miamiPOS
             textBoxCash.Clear();
         }
 
-        private void iMonederoForm_Load(object sender, EventArgs e)
-        {
-           
-        }
-
 
         private void actualizarMonedero(object sender, EventArgs e)
         {

@@ -588,6 +588,7 @@ namespace miamiPOS
 
             string producto = String.Format("{0,-5}{1,-20}{2,-5} ${3,5}"
                     , "Plu","Nombre","#","Total");
+
             myPrinter.WriteLine(producto);
 
 
@@ -724,7 +725,7 @@ namespace miamiPOS
         {
             dgvCarrito.DataSource = carro;
         }
-        public void sendToDB(bool debito)
+        public int sendToDB(bool debito)
         {
             if (carro.Rows.Count == 0) throw new Exception("Carro Vacio");
             this.subTotal();
@@ -755,6 +756,8 @@ namespace miamiPOS
                     }
                 }
                 this.cancel();
+                Logger.log("Venta #"+ idVenta.ToString(), 1);
+                return idVenta;
 
             }
             else
@@ -765,5 +768,23 @@ namespace miamiPOS
 
 
     }
-
+    public static class Logger
+    {
+        private static TextBox messageBox;
+        public static void bind(ref TextBox ClientTb)
+        {
+            messageBox = ClientTb;
+        }
+        private static void show(string alert)
+        {
+            messageBox.Text = alert;
+        }
+        public static void log(string alert, int importance)
+        {
+            if (importance > 0)
+            {
+                show(alert);
+            }
+        }
+    }
 }

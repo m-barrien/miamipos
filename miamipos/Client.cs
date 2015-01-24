@@ -44,6 +44,7 @@ namespace miamiPOS
         public mainForm()
         {
             InitializeComponent();
+            Logger.bind(ref this.msgBox);
             BackColor = miamiPOS.Properties.Settings.Default.backColor;
             tbCajero.Text = "Cajera "+miamiPOS.Properties.Settings.Default.nombreCajero;
             tbFecha.Text = "Entrada al sistema \r "+DateTime.Now.ToString() +"\r N° Turno "+miamiDB.id_turno+ "\r Caja Inicial: "+miamiPOS.Properties.Settings.Default.cajaInicial;
@@ -246,7 +247,7 @@ namespace miamiPOS
                         monedero.ShowDialog();
                         esDebito = monedero.payment();
                     }
-                    Carro.sendToDB(esDebito);
+                    int idVenta = Carro.sendToDB(esDebito);
                 }
                 catch (Exception E)
                 {

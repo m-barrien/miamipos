@@ -65,7 +65,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(319, 15);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -242,7 +242,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(373, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 42);
@@ -254,7 +254,7 @@
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.Color.Red;
-            this.labelTotal.Location = new System.Drawing.Point(52, 60);
+            this.labelTotal.Location = new System.Drawing.Point(409, 58);
             this.labelTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(33, 36);
@@ -265,7 +265,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 98);
+            this.label3.Location = new System.Drawing.Point(373, 96);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 42);
@@ -275,7 +275,7 @@
             // textBoxCash
             // 
             this.textBoxCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCash.Location = new System.Drawing.Point(24, 143);
+            this.textBoxCash.Location = new System.Drawing.Point(381, 141);
             this.textBoxCash.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCash.Name = "textBoxCash";
             this.textBoxCash.Size = new System.Drawing.Size(285, 34);
@@ -286,7 +286,7 @@
             this.labelVuelto.AutoSize = true;
             this.labelVuelto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVuelto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelVuelto.Location = new System.Drawing.Point(52, 232);
+            this.labelVuelto.Location = new System.Drawing.Point(409, 230);
             this.labelVuelto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVuelto.Name = "labelVuelto";
             this.labelVuelto.Size = new System.Drawing.Size(33, 36);
@@ -297,7 +297,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 186);
+            this.label5.Location = new System.Drawing.Point(373, 184);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 42);
@@ -309,7 +309,7 @@
             this.buttonCash.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonCash.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCash.Image = global::miamiPOS.Properties.Resources.cash;
-            this.buttonCash.Location = new System.Drawing.Point(13, 372);
+            this.buttonCash.Location = new System.Drawing.Point(370, 370);
             this.buttonCash.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCash.Name = "buttonCash";
             this.buttonCash.Size = new System.Drawing.Size(296, 88);
@@ -324,7 +324,7 @@
             this.buttonDebit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDebit.ForeColor = System.Drawing.Color.Black;
             this.buttonDebit.Image = global::miamiPOS.Properties.Resources.swipecard;
-            this.buttonDebit.Location = new System.Drawing.Point(13, 276);
+            this.buttonDebit.Location = new System.Drawing.Point(370, 274);
             this.buttonDebit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDebit.Name = "buttonDebit";
             this.buttonDebit.Size = new System.Drawing.Size(296, 88);
@@ -347,7 +347,7 @@
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -356,7 +356,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de vuelto";
-            this.Load += new System.EventHandler(this.iMonederoForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

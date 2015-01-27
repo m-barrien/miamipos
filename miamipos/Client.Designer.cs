@@ -598,11 +598,11 @@
             this.groupBox2.Controls.Add(this.dgvCarrito);
             this.groupBox2.Controls.Add(this.button15);
             this.groupBox2.Controls.Add(this.buttonTotal);
-            this.groupBox2.Location = new System.Drawing.Point(16, 266);
+            this.groupBox2.Location = new System.Drawing.Point(16, 425);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(952, 617);
+            this.groupBox2.Size = new System.Drawing.Size(952, 458);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Carrito de Compra";
@@ -611,7 +611,7 @@
             // 
             this.buttonQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuitar.Location = new System.Drawing.Point(631, 516);
+            this.buttonQuitar.Location = new System.Drawing.Point(631, 357);
             this.buttonQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonQuitar.Name = "buttonQuitar";
             this.buttonQuitar.Size = new System.Drawing.Size(109, 87);
@@ -626,7 +626,7 @@
             this.tbSubtotal.BackColor = System.Drawing.Color.Black;
             this.tbSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSubtotal.ForeColor = System.Drawing.Color.Lime;
-            this.tbSubtotal.Location = new System.Drawing.Point(631, 465);
+            this.tbSubtotal.Location = new System.Drawing.Point(631, 306);
             this.tbSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.tbSubtotal.Name = "tbSubtotal";
             this.tbSubtotal.Size = new System.Drawing.Size(312, 41);
@@ -679,14 +679,14 @@
             this.dgvCarrito.RowHeadersVisible = false;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarrito.ShowEditingIcon = false;
-            this.dgvCarrito.Size = new System.Drawing.Size(935, 439);
+            this.dgvCarrito.Size = new System.Drawing.Size(935, 280);
             this.dgvCarrito.TabIndex = 3;
             // 
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(9, 516);
+            this.button15.Location = new System.Drawing.Point(9, 357);
             this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(221, 87);
@@ -699,7 +699,7 @@
             // 
             this.buttonTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTotal.Location = new System.Drawing.Point(748, 516);
+            this.buttonTotal.Location = new System.Drawing.Point(748, 357);
             this.buttonTotal.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTotal.Name = "buttonTotal";
             this.buttonTotal.Size = new System.Drawing.Size(196, 87);
@@ -719,7 +719,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(952, 214);
+            this.groupBox3.Size = new System.Drawing.Size(952, 373);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Referencias";
@@ -750,7 +750,7 @@
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.ShowEditingIcon = false;
-            this.dgvProductos.Size = new System.Drawing.Size(805, 183);
+            this.dgvProductos.Size = new System.Drawing.Size(805, 342);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 

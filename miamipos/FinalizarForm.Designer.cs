@@ -67,20 +67,20 @@
             // 
             this.textBoxCI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCI.Location = new System.Drawing.Point(21, 44);
-            this.textBoxCI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCI.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCI.Name = "textBoxCI";
             this.textBoxCI.Size = new System.Drawing.Size(343, 34);
-            this.textBoxCI.TabIndex = 0;
+            this.textBoxCI.TabIndex = 1;
             this.textBoxCI.Enter += new System.EventHandler(this.switchContext);
             // 
             // btnReg
             // 
             this.btnReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReg.Location = new System.Drawing.Point(635, 486);
-            this.btnReg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReg.Margin = new System.Windows.Forms.Padding(4);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(201, 119);
-            this.btnReg.TabIndex = 1;
+            this.btnReg.TabIndex = 3;
             this.btnReg.Text = "Finalizar Turno";
             this.btnReg.UseVisualStyleBackColor = true;
             this.btnReg.Click += new System.EventHandler(this.buttonReg_Click);
@@ -111,9 +111,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(21, 160);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(352, 458);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -125,7 +125,7 @@
             this.button1.AutoSize = true;
             this.button1.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(5, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 102);
             this.button1.TabIndex = 12;
@@ -139,7 +139,7 @@
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button12.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(121, 343);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(107, 102);
             this.button12.TabIndex = 11;
@@ -154,7 +154,7 @@
             this.button10.AutoSize = true;
             this.button10.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(7, 343);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 102);
             this.button10.TabIndex = 9;
@@ -169,7 +169,7 @@
             this.button7.AutoSize = true;
             this.button7.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(7, 238);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(107, 102);
             this.button7.TabIndex = 8;
@@ -184,7 +184,7 @@
             this.button8.AutoSize = true;
             this.button8.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(121, 238);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(107, 102);
             this.button8.TabIndex = 7;
@@ -199,7 +199,7 @@
             this.button9.AutoSize = true;
             this.button9.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(236, 238);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(107, 102);
             this.button9.TabIndex = 6;
@@ -214,7 +214,7 @@
             this.button4.AutoSize = true;
             this.button4.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(5, 132);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(107, 102);
             this.button4.TabIndex = 5;
@@ -229,7 +229,7 @@
             this.button5.AutoSize = true;
             this.button5.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(121, 132);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 102);
             this.button5.TabIndex = 4;
@@ -244,7 +244,7 @@
             this.button6.AutoSize = true;
             this.button6.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(236, 132);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 102);
             this.button6.TabIndex = 3;
@@ -259,7 +259,7 @@
             this.button3.AutoSize = true;
             this.button3.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(236, 26);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 102);
             this.button3.TabIndex = 2;
@@ -274,7 +274,7 @@
             this.button2.AutoSize = true;
             this.button2.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(121, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 102);
             this.button2.TabIndex = 1;
@@ -348,77 +348,84 @@
             this.textBoxTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBoxTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTurno.Location = new System.Drawing.Point(605, 47);
-            this.textBoxTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTurno.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTurno.Name = "textBoxTurno";
             this.textBoxTurno.ReadOnly = true;
             this.textBoxTurno.Size = new System.Drawing.Size(231, 34);
             this.textBoxTurno.TabIndex = 10;
+            this.textBoxTurno.TabStop = false;
             // 
             // textBoxVentas
             // 
             this.textBoxVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVentas.Location = new System.Drawing.Point(605, 113);
-            this.textBoxVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxVentas.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxVentas.Name = "textBoxVentas";
             this.textBoxVentas.ReadOnly = true;
             this.textBoxVentas.Size = new System.Drawing.Size(231, 34);
             this.textBoxVentas.TabIndex = 11;
+            this.textBoxVentas.TabStop = false;
             // 
             // textBoxFacturas
             // 
             this.textBoxFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFacturas.Location = new System.Drawing.Point(605, 219);
-            this.textBoxFacturas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFacturas.Name = "textBoxFacturas";
             this.textBoxFacturas.ReadOnly = true;
             this.textBoxFacturas.Size = new System.Drawing.Size(231, 34);
             this.textBoxFacturas.TabIndex = 12;
+            this.textBoxFacturas.TabStop = false;
             // 
             // textBoxAncticipos
             // 
             this.textBoxAncticipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxAncticipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAncticipos.Location = new System.Drawing.Point(605, 287);
-            this.textBoxAncticipos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxAncticipos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAncticipos.Name = "textBoxAncticipos";
             this.textBoxAncticipos.ReadOnly = true;
             this.textBoxAncticipos.Size = new System.Drawing.Size(231, 34);
             this.textBoxAncticipos.TabIndex = 13;
+            this.textBoxAncticipos.TabStop = false;
             // 
             // textBoxColaciones
             // 
             this.textBoxColaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxColaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxColaciones.Location = new System.Drawing.Point(605, 354);
-            this.textBoxColaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxColaciones.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxColaciones.Name = "textBoxColaciones";
             this.textBoxColaciones.ReadOnly = true;
             this.textBoxColaciones.Size = new System.Drawing.Size(231, 34);
             this.textBoxColaciones.TabIndex = 14;
+            this.textBoxColaciones.TabStop = false;
             // 
             // textBoxCinicial
             // 
             this.textBoxCinicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBoxCinicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCinicial.Location = new System.Drawing.Point(605, 418);
-            this.textBoxCinicial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCinicial.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCinicial.Name = "textBoxCinicial";
             this.textBoxCinicial.ReadOnly = true;
             this.textBoxCinicial.Size = new System.Drawing.Size(231, 34);
             this.textBoxCinicial.TabIndex = 15;
+            this.textBoxCinicial.TabStop = false;
             // 
             // textBoxDebito
             // 
             this.textBoxDebito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDebito.Location = new System.Drawing.Point(605, 158);
-            this.textBoxDebito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDebito.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDebito.Name = "textBoxDebito";
             this.textBoxDebito.ReadOnly = true;
             this.textBoxDebito.Size = new System.Drawing.Size(231, 34);
             this.textBoxDebito.TabIndex = 17;
+            this.textBoxDebito.TabStop = false;
             // 
             // label8
             // 
@@ -448,7 +455,7 @@
             this.textBoxRetiros.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRetiros.Name = "textBoxRetiros";
             this.textBoxRetiros.Size = new System.Drawing.Size(343, 34);
-            this.textBoxRetiros.TabIndex = 18;
+            this.textBoxRetiros.TabIndex = 2;
             this.textBoxRetiros.Enter += new System.EventHandler(this.switchContext);
             // 
             // FinalizarForm
@@ -478,7 +485,7 @@
             this.Controls.Add(this.textBoxCI);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FinalizarForm";

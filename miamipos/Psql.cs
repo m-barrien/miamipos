@@ -750,10 +750,9 @@ namespace miamiPOS
                 {
 
                     rowsAffected = Psql.execInsert("insert into venta_producto(id_venta,plu,cantidad,total) VALUES (" + idVenta + "," + row["plu"] + "," + row["cantidad"]+ "," + row["total"]+")");
-                    if(!miamiDB.isPesable((Int32)row["plu"]))
-                    {
+                   
                         rowsAffected = Psql.execInsert("update inventario set stock=stock-"+ row["cantidad"] +" where plu="+row["plu"]);
-                    }
+                    
                 }
                 this.cancel();
                 Logger.log("Venta #"+ idVenta.ToString(), 1);

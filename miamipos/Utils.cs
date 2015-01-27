@@ -254,7 +254,6 @@ namespace miamiPOS
 
             if (!editar)
             {
-                System.Threading.Thread.Sleep(4000);
                 string query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}','{1}',{3},{4},{5})";
                 if (this.barcode == "NULL") query = "INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ({0},'{2}',NULL,{3},{4},{5})"; 
 

@@ -314,9 +314,9 @@ namespace miamiPOS
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            int doy = dateTimePicker.Value.DayOfYear;
-            int year = dateTimePicker.Value.Year;
-            var query = String.Format(" select id,nombre_cajero,local,comienzo_turno,fin_turno,caja_inicial,caja_final,total_ventas,debito,gastos,retiro,error from resumen_turno "
+            int doy = dateTimePicker1.Value.DayOfYear;
+            int year = dateTimePicker1.Value.Year;
+            var query = String.Format(" select id,nombre_cajero,local,comienzo_turno,fin_turno,caja_inicial,caja_final,total_ventas,debito,gastos,retiro,error from resumen_turno where extract(year from comienzo_turno)={0} and extract(doy from comienzo_turno)={1}"
                 , year, doy);
             Psql.execQuery(query, ref tablaTurnos);
             dataGridViewTurnos.DataSource = tablaTurnos;

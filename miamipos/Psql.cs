@@ -237,57 +237,6 @@ namespace miamiPOS
             }
 
         }
-        public static int loadProductsIncremental()
-        {
-
-            DataTable producto=null;
-            if (dt == null || dt.Tables["producto"] == null || !isInitialized)
-            {
-                throw new InvalidOperationException("Base de datos no iniciada , mejor descarga total");
-            }
-            try
-            {
-                var found = Psql.execScalar("select count(*) from producto where last_change>= timestamp '" + miamiDB.lastUpdate.ToString() +"'");
-                if (found == "0")
-                {
-                    Console.WriteLine("NADA QUE ACTUALIZAR");
-                }
-                else
-                {
-                    Psql.execQuery("select plu,nombre,precio,categoria.nombre_categoria,pesable,barcode FROM producto,categoria where producto.id_categoria=categoria.id AND last_change>= timestamp '" + miamiDB.lastUpdate.ToString() + "'", ref producto);
-                    Console.WriteLine("Se van a actualizar " + producto.Rows.Count + " productos");
-                    foreach (DataRow newrow in producto.Rows)
-                    {
-                        Console.WriteLine(newrow[0] + " " + newrow[1]);
-                        var oldrows = dt.Tables["producto"].Select("[plu]=" + newrow["plu"]);
-                        try
-                        {
-                            oldrows[0].Delete();
-                        }
-                        catch (IndexOutOfRangeException)
-                        {
-                            Console.Write("Nuevo producto!");
-                        }
-                        dt.Tables["producto"].ImportRow(newrow);
-                    }
-
-                    miamiPOS.Properties.Settings.Default.masterSet = dt;
-                    miamiPOS.Properties.Settings.Default.Save();
-                    saveTime();
-                    return producto.Rows.Count;
-                }
-            }
-            catch (Npgsql.NpgsqlException e)
-            {
-                Console.WriteLine("Error SQL:" + e.Message);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error Sistema:" + e.Message);
-            }
-
-            return 0;
-        }
         public static void getEmpresas(ref ComboBox listadoEmpresas)
         {
             DataTable empresas=null;
@@ -550,6 +499,11 @@ namespace miamiPOS
             myPrinter.lineFeed();
             myPrinter.autoCutter();
             myPrinter.close();
+        }
+
+        internal static object loadProductsIncremental()
+        {
+            throw new NotImplementedException();
         }
     }
     /*

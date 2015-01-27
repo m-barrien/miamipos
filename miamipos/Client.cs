@@ -337,7 +337,6 @@ namespace miamiPOS
             loadingForm.Close();
 
             // Update any other UI controls that may need to be updated.
-            msgBox.Text = "Se actualizaron " + ((int)result).ToString() + " productos";
         }
 
         //Funcion que ejecuta la actualizacion en si

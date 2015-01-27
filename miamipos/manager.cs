@@ -18,6 +18,8 @@ namespace miamiPOS
         DataTable tablaVentas = null;
         DataTable tablaFacturas = null;
         DataTable tablaRetiros = null;
+        DataTable tablaTurnos = null;
+
         public manager()
         {
             InitializeComponent();
@@ -314,11 +316,18 @@ namespace miamiPOS
         {
             int doy = dateTimePicker.Value.DayOfYear;
             int year = dateTimePicker.Value.Year;
-            var query = String.Format(""
+            var query = String.Format(" select id,nombre_cajero,local,comienzo_turno,fin_turno,caja_inicial,caja_final,total_ventas,debito,gastos,retiro,error from resumen_turno "
                 , year, doy);
-            Psql.execQuery(query, ref tablaVentas);
-            dataGridViewVentas.DataSource = tablaVentas;
-
+            Psql.execQuery(query, ref tablaTurnos);
+            dataGridViewTurnos.DataSource = tablaTurnos;
+            
+            foreach(DataGridViewRow row in dataGridViewTurnos.Rows  )
+            {
+                double prop_error = Math.Abs(Convert.ToDouble(row.Cells["error"].Value)/5000);
+                if (prop_error > 1) prop_error = 1;
+                byte red = Convert.ToByte(prop_error * 255);
+                row.Cells["error"].Style.BackColor = Color.FromArgb(red, 255-red, 0);
+            } 
         }
 
 

@@ -327,7 +327,7 @@ namespace miamiPOS
                 if (prop_error > 1) prop_error = 1;
                 byte red = Convert.ToByte(prop_error * 255);
                 row.Cells["error"].Style.BackColor = Color.FromArgb(red, 255-red, 0);
-            } 
+            }
         }
 
 

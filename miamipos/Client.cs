@@ -123,6 +123,7 @@ namespace miamiPOS
         {
             miamiDB.drop();
             miamiDB.loadProducts();
+            dgvProductos.DataSource = null;
             miamiDB.linkDataGrid("producto",ref dgvProductos);
         }
 

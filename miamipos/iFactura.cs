@@ -26,77 +26,21 @@ namespace miamiPOS
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{1}");
+            Button tecla = sender as Button;
+            if (lastFocus.tb.SelectedText.Length > 0)
+            {
+                lastFocus.tb.Clear();
+            }
+            lastFocus.tb.Text += tecla.Text;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{2}");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{3}");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{4}");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{5}");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{6}");
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{7}");
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{8}");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{9}");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            lastFocus.tb.Focus();
-            SendKeys.Send("{0}");
-        }
-
+       
         private void button12_Click(object sender, EventArgs e)
         {
-            lastFocus.tb.Focus();
-            textBox1.Clear();
+            lastFocus.tb.Clear();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            if (lastFocus.tb == textBox1) lastFocus.tb = textBox2;
-            else lastFocus.tb = textBox1;
-            lastFocus.tb.Focus();
-            
-        }
+
 
         private void iFactura_Load(object sender, EventArgs e)
         {

@@ -81,9 +81,9 @@
             this.button15 = new System.Windows.Forms.Button();
             this.buttonTotal = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.timerActualizar = new System.Windows.Forms.Timer(this.components);
-            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             groupBox4 = new System.Windows.Forms.GroupBox();
             groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -120,7 +120,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(93, 84);
             this.button13.TabIndex = 7;
-            this.button13.Text = "x";
+            this.button13.Text = "*";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -221,7 +221,7 @@
             // totalToolStripMenuItem
             // 
             this.totalToolStripMenuItem.Name = "totalToolStripMenuItem";
-            this.totalToolStripMenuItem.Size = new System.Drawing.Size(152, 36);
+            this.totalToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
             this.totalToolStripMenuItem.Text = "Total";
             this.totalToolStripMenuItem.Click += new System.EventHandler(this.totalToolStripMenuItem_Click);
             // 
@@ -355,6 +355,7 @@
             this.msgBox.ReadOnly = true;
             this.msgBox.Size = new System.Drawing.Size(328, 30);
             this.msgBox.TabIndex = 2;
+            this.msgBox.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // tbFecha
             // 
@@ -611,6 +612,7 @@
             this.buttonQuitar.Text = "-";
             this.buttonQuitar.UseVisualStyleBackColor = true;
             this.buttonQuitar.Click += new System.EventHandler(this.buttonQuitar_Click);
+            this.buttonQuitar.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // tbSubtotal
             // 
@@ -624,6 +626,7 @@
             this.tbSubtotal.Size = new System.Drawing.Size(312, 41);
             this.tbSubtotal.TabIndex = 4;
             this.tbSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbSubtotal.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // label5
             // 
@@ -673,6 +676,7 @@
             this.dgvCarrito.ShowEditingIcon = false;
             this.dgvCarrito.Size = new System.Drawing.Size(935, 280);
             this.dgvCarrito.TabIndex = 3;
+            this.dgvCarrito.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // button15
             // 
@@ -686,6 +690,7 @@
             this.button15.Text = "Cancelar";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // buttonTotal
             // 
@@ -699,6 +704,7 @@
             this.buttonTotal.Text = "Total";
             this.buttonTotal.UseVisualStyleBackColor = true;
             this.buttonTotal.Click += new System.EventHandler(this.buttonTotal_Click);
+            this.buttonTotal.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // groupBox3
             // 
@@ -716,6 +722,17 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Referencias";
+            // 
+            // comboBoxCategorias
+            // 
+            this.comboBoxCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCategorias.FormattingEnabled = true;
+            this.comboBoxCategorias.Location = new System.Drawing.Point(9, 26);
+            this.comboBoxCategorias.Name = "comboBoxCategorias";
+            this.comboBoxCategorias.Size = new System.Drawing.Size(322, 33);
+            this.comboBoxCategorias.TabIndex = 7;
+            this.comboBoxCategorias.Text = "Buscar por Categoria";
+            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // dgvProductos
             // 
@@ -746,25 +763,16 @@
             this.dgvProductos.Size = new System.Drawing.Size(936, 294);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
+            this.dgvProductos.Enter += new System.EventHandler(this.refocusTextBox);
             // 
             // timerActualizar
             // 
             this.timerActualizar.Interval = 3600000;
             this.timerActualizar.Tick += new System.EventHandler(this.timerActualizar_Tick);
             // 
-            // comboBoxCategorias
-            // 
-            this.comboBoxCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(9, 26);
-            this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(322, 33);
-            this.comboBoxCategorias.TabIndex = 7;
-            this.comboBoxCategorias.Text = "Buscar por Categoria";
-            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
-            // 
             // mainForm
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;

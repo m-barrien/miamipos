@@ -99,6 +99,7 @@ namespace miamiPOS
         private void button12_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+            textBox1.Focus();
         }
 
 
@@ -348,6 +349,7 @@ namespace miamiPOS
         {
             Int32 idCategoria = Convert.ToInt32(((sender as ComboBox).SelectedItem as ComboboxItem).Value);
             (dgvProductos.DataSource as DataTable).DefaultView.RowFilter = string.Format("[id_categoria] = {0}", idCategoria);
+            textBox1.Focus();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -384,6 +386,15 @@ namespace miamiPOS
                 textBox1.Focus();
                 textBox1.SelectAll();
             }
+        }
+
+        private void comboBoxCategorias_Leave(object sender, EventArgs e)
+        {
+            textBox1.Focus();
+        }
+        private void refocusTextBox(object sender, EventArgs e)
+        {
+            textBox1.Focus();
         }
 
 

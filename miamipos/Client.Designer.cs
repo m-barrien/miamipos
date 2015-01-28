@@ -43,7 +43,6 @@
             this.coneccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.incrementalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.impresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activePrinter = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,6 +83,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.timerActualizar = new System.Windows.Forms.Timer(this.components);
+            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             groupBox4 = new System.Windows.Forms.GroupBox();
             groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -122,7 +122,7 @@
             this.button13.TabIndex = 7;
             this.button13.Text = "x";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            this.button13.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAgregar
             // 
@@ -135,7 +135,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.button13_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
@@ -158,20 +158,20 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 29);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.AutoSize = true;
             this.button14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(821, 23);
+            this.button14.Location = new System.Drawing.Point(723, 20);
             this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(123, 85);
+            this.button14.Size = new System.Drawing.Size(220, 43);
             this.button14.TabIndex = 6;
             this.button14.Text = "Buscar";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // menuStrip1
@@ -213,23 +213,15 @@
             // actualizarProductosToolStripMenuItem
             // 
             this.actualizarProductosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incrementalToolStripMenuItem,
             this.totalToolStripMenuItem});
             this.actualizarProductosToolStripMenuItem.Name = "actualizarProductosToolStripMenuItem";
             this.actualizarProductosToolStripMenuItem.Size = new System.Drawing.Size(306, 36);
             this.actualizarProductosToolStripMenuItem.Text = "Actualizar Productos";
             // 
-            // incrementalToolStripMenuItem
-            // 
-            this.incrementalToolStripMenuItem.Name = "incrementalToolStripMenuItem";
-            this.incrementalToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
-            this.incrementalToolStripMenuItem.Text = "Incremental";
-            this.incrementalToolStripMenuItem.Click += new System.EventHandler(this.incrementalToolStripMenuItem_Click);
-            // 
             // totalToolStripMenuItem
             // 
             this.totalToolStripMenuItem.Name = "totalToolStripMenuItem";
-            this.totalToolStripMenuItem.Size = new System.Drawing.Size(216, 36);
+            this.totalToolStripMenuItem.Size = new System.Drawing.Size(152, 36);
             this.totalToolStripMenuItem.Text = "Total";
             this.totalToolStripMenuItem.Click += new System.EventHandler(this.totalToolStripMenuItem_Click);
             // 
@@ -451,14 +443,14 @@
             this.button11.TabStop = false;
             this.button11.Text = "Enter";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // button10
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button10.AutoSize = true;
             this.button10.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(7, 343);
+            this.button10.Location = new System.Drawing.Point(5, 342);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 102);
@@ -466,14 +458,14 @@
             this.button10.TabStop = false;
             this.button10.Text = "0";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.button1_Click);
             // 
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button7.AutoSize = true;
             this.button7.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(7, 238);
+            this.button7.Location = new System.Drawing.Point(5, 238);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(107, 102);
@@ -481,7 +473,7 @@
             this.button7.TabStop = false;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.button1_Click);
             // 
             // button8
             // 
@@ -496,7 +488,7 @@
             this.button8.TabStop = false;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.button1_Click);
             // 
             // button9
             // 
@@ -511,7 +503,7 @@
             this.button9.TabStop = false;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -526,7 +518,7 @@
             this.button4.TabStop = false;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -541,7 +533,7 @@
             this.button5.TabStop = false;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
             // button6
             // 
@@ -556,7 +548,7 @@
             this.button6.TabStop = false;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -571,7 +563,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -586,7 +578,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -713,6 +705,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.comboBoxCategorias);
             this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Controls.Add(this.button14);
             this.groupBox3.Location = new System.Drawing.Point(16, 44);
@@ -743,14 +736,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(8, 23);
+            this.dgvProductos.Location = new System.Drawing.Point(8, 71);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.ShowEditingIcon = false;
-            this.dgvProductos.Size = new System.Drawing.Size(805, 342);
+            this.dgvProductos.Size = new System.Drawing.Size(936, 294);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -758,6 +751,17 @@
             // 
             this.timerActualizar.Interval = 3600000;
             this.timerActualizar.Tick += new System.EventHandler(this.timerActualizar_Tick);
+            // 
+            // comboBoxCategorias
+            // 
+            this.comboBoxCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCategorias.FormattingEnabled = true;
+            this.comboBoxCategorias.Location = new System.Drawing.Point(9, 26);
+            this.comboBoxCategorias.Name = "comboBoxCategorias";
+            this.comboBoxCategorias.Size = new System.Drawing.Size(322, 33);
+            this.comboBoxCategorias.TabIndex = 7;
+            this.comboBoxCategorias.Text = "Buscar por Categoria";
+            this.comboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorias_SelectedIndexChanged);
             // 
             // mainForm
             // 
@@ -835,7 +839,6 @@
         private System.Windows.Forms.ToolStripMenuItem dEBUGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dROPLOCALDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem incrementalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem totalToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbSubtotal;
@@ -851,6 +854,7 @@
         private System.Windows.Forms.ToolStripMenuItem colacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem impresoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activePrinter;
+        private System.Windows.Forms.ComboBox comboBoxCategorias;
 
     }
 }

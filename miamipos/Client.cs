@@ -54,9 +54,12 @@ namespace miamiPOS
             textBox1.Focus();
 
             timerActualizar.Start();
+            //Cargar categorias para la busqueda
+            miamiDB.getCategorias(ref comboBoxCategorias);
         }
         private void mainForm_Load(object sender, EventArgs e)
         {
+
             //Activar modo sanguchero si es que estaba guardado
             activePrinter.Checked = miamiPOS.Properties.Settings.Default.modoSanguchero;
             toolStripMenuItem1_Click(sender, e);
@@ -77,86 +80,28 @@ namespace miamiPOS
 
             Carro.linkGrid(ref dgvCarrito);
 
+            
+
             this.AcceptButton = btnAgregar;
             textBox1.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Focus();
-            SendKeys.Send("{1}");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{2}");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{3}");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{4}");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{5}");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{6}");
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{7}");
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{8}");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{9}");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{0}");
+            Button tecla = sender as Button;
+            if (textBox1.SelectedText.Length > 0)
+            {
+                textBox1.Clear();
+            }
+            textBox1.Text += tecla.Text;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            textBox1.Focus();
             textBox1.Clear();
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{ENTER}");
-        }
-        private void button13_Click_1(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-            SendKeys.Send("{*}");
-        }
+
         private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -183,37 +128,7 @@ namespace miamiPOS
 
         private void button13_Click(object sender, EventArgs e)
         {
-            String[] tokens = {textBox1.Text};
-            var cantidad = 1;
-            Int64 plu;
-            try
-            {
-                if (textBox1.Text.Contains("*"))
-                {
-                    tokens = textBox1.Text.Split('*');
-                    cantidad = Convert.ToInt32(tokens[0]);
-                    plu = Convert.ToInt64(tokens[1]);
-                }
-                else plu = Convert.ToInt64(tokens[0]);
 
-                if (miamiDB.isPesable(plu))
-                {
-                    PesarForm pesa = new PesarForm();
-                    pesa.ShowDialog();
-                    while (pesa.IsAccessible) { System.Threading.Thread.Sleep(1000); }
-                    Carro.addItem(plu, Pesable.Gramos);
-                }
-                else Carro.addItem(plu, cantidad);
-                tbSubtotal.Text = Carro.subTotal().ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Error Codigo invalido");
-            }
-            finally
-            {
-                textBox1.SelectAll();
-            }
         }
 
         private void button15_Click(object sender, EventArgs e) //boton cancelar
@@ -286,10 +201,6 @@ namespace miamiPOS
             formInventario.ShowDialog();
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            textBox1.Focus();
-        }
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -430,6 +341,48 @@ namespace miamiPOS
         private void impresoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Int32 idCategoria = Convert.ToInt32(((sender as ComboBox).SelectedItem as ComboboxItem).Value);
+            (dgvProductos.DataSource as DataTable).DefaultView.RowFilter = string.Format("[id_categoria] = {0}", idCategoria);
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            String[] tokens = { textBox1.Text };
+            var cantidad = 1;
+            Int64 plu;
+            try
+            {
+                if (textBox1.Text.Contains("*"))
+                {
+                    tokens = textBox1.Text.Split('*');
+                    cantidad = Convert.ToInt32(tokens[0]);
+                    plu = Convert.ToInt64(tokens[1]);
+                }
+                else plu = Convert.ToInt64(tokens[0]);
+
+                if (miamiDB.isPesable(plu))
+                {
+                    PesarForm pesa = new PesarForm();
+                    pesa.ShowDialog();
+                    while (pesa.IsAccessible) { System.Threading.Thread.Sleep(1000); }
+                    Carro.addItem(plu, Pesable.Gramos);
+                }
+                else Carro.addItem(plu, cantidad);
+                tbSubtotal.Text = Carro.subTotal().ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Error Codigo invalido");
+            }
+            finally
+            {
+                textBox1.Focus();
+                textBox1.SelectAll();
+            }
         }
 
 

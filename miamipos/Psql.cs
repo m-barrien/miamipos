@@ -220,7 +220,7 @@ namespace miamiPOS
             else if(dt != null) { producto = dt.Tables["producto"]; }
             try
             {
-                Psql.execQuery("select plu,nombre,precio,categoria.nombre_categoria,pesable,barcode FROM producto,categoria where producto.id_categoria=categoria.id", ref dt, "producto");
+                Psql.execQuery("select plu,nombre,precio,pesable,barcode,id_categoria FROM producto", ref dt, "producto");
                 miamiPOS.Properties.Settings.Default.masterSet = dt;
                 miamiPOS.Properties.Settings.Default.Save();
                 saveTime();
@@ -501,9 +501,9 @@ namespace miamiPOS
             myPrinter.close();
         }
 
-        internal static object loadProductsIncremental()
+        internal static int loadProductsIncremental()
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
     /*

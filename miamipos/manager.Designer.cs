@@ -94,6 +94,15 @@
             this.tbPLU = new System.Windows.Forms.TextBox();
             this.Tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonUpdateAcc = new System.Windows.Forms.Button();
+            this.groupBoxGrupos = new System.Windows.Forms.GroupBox();
+            this.dataGridViewGrupos = new System.Windows.Forms.DataGridView();
+            this.groupBoxEmpresas = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
+            this.groupBoxSucursales = new System.Windows.Forms.GroupBox();
+            this.dataGridViewSucursales = new System.Windows.Forms.DataGridView();
+            this.groupBoxCajeros = new System.Windows.Forms.GroupBox();
+            this.dataGridViewCajeros = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,6 +118,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.Tabs.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBoxGrupos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrupos)).BeginInit();
+            this.groupBoxEmpresas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
+            this.groupBoxSucursales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSucursales)).BeginInit();
+            this.groupBoxCajeros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCajeros)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -897,6 +915,11 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.buttonUpdateAcc);
+            this.tabPage3.Controls.Add(this.groupBoxGrupos);
+            this.tabPage3.Controls.Add(this.groupBoxEmpresas);
+            this.tabPage3.Controls.Add(this.groupBoxSucursales);
+            this.tabPage3.Controls.Add(this.groupBoxCajeros);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -904,6 +927,124 @@
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Cuentas Etc.";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpdateAcc
+            // 
+            this.buttonUpdateAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateAcc.Location = new System.Drawing.Point(13, 7);
+            this.buttonUpdateAcc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUpdateAcc.Name = "buttonUpdateAcc";
+            this.buttonUpdateAcc.Size = new System.Drawing.Size(173, 61);
+            this.buttonUpdateAcc.TabIndex = 11;
+            this.buttonUpdateAcc.Text = "Actualizar";
+            this.buttonUpdateAcc.UseVisualStyleBackColor = true;
+            this.buttonUpdateAcc.Click += new System.EventHandler(this.buttonUpdateAcc_Click);
+            // 
+            // groupBoxGrupos
+            // 
+            this.groupBoxGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxGrupos.Controls.Add(this.dataGridViewGrupos);
+            this.groupBoxGrupos.Location = new System.Drawing.Point(617, 318);
+            this.groupBoxGrupos.Name = "groupBoxGrupos";
+            this.groupBoxGrupos.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxGrupos.TabIndex = 3;
+            this.groupBoxGrupos.TabStop = false;
+            this.groupBoxGrupos.Text = "Grupos";
+            // 
+            // dataGridViewGrupos
+            // 
+            this.dataGridViewGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewGrupos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewGrupos.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGrupos.Location = new System.Drawing.Point(7, 21);
+            this.dataGridViewGrupos.Name = "dataGridViewGrupos";
+            this.dataGridViewGrupos.ReadOnly = true;
+            this.dataGridViewGrupos.RowTemplate.Height = 24;
+            this.dataGridViewGrupos.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewGrupos.TabIndex = 1;
+            // 
+            // groupBoxEmpresas
+            // 
+            this.groupBoxEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxEmpresas.Controls.Add(this.dataGridViewEmpresas);
+            this.groupBoxEmpresas.Location = new System.Drawing.Point(6, 69);
+            this.groupBoxEmpresas.Name = "groupBoxEmpresas";
+            this.groupBoxEmpresas.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxEmpresas.TabIndex = 2;
+            this.groupBoxEmpresas.TabStop = false;
+            this.groupBoxEmpresas.Text = "Facturas";
+            // 
+            // dataGridViewEmpresas
+            // 
+            this.dataGridViewEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEmpresas.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmpresas.Location = new System.Drawing.Point(7, 22);
+            this.dataGridViewEmpresas.Name = "dataGridViewEmpresas";
+            this.dataGridViewEmpresas.ReadOnly = true;
+            this.dataGridViewEmpresas.RowTemplate.Height = 24;
+            this.dataGridViewEmpresas.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewEmpresas.TabIndex = 0;
+            // 
+            // groupBoxSucursales
+            // 
+            this.groupBoxSucursales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxSucursales.Controls.Add(this.dataGridViewSucursales);
+            this.groupBoxSucursales.Location = new System.Drawing.Point(617, 69);
+            this.groupBoxSucursales.Name = "groupBoxSucursales";
+            this.groupBoxSucursales.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxSucursales.TabIndex = 1;
+            this.groupBoxSucursales.TabStop = false;
+            this.groupBoxSucursales.Text = "Sucursales";
+            // 
+            // dataGridViewSucursales
+            // 
+            this.dataGridViewSucursales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewSucursales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSucursales.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewSucursales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSucursales.Location = new System.Drawing.Point(7, 22);
+            this.dataGridViewSucursales.Name = "dataGridViewSucursales";
+            this.dataGridViewSucursales.ReadOnly = true;
+            this.dataGridViewSucursales.RowTemplate.Height = 24;
+            this.dataGridViewSucursales.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewSucursales.TabIndex = 1;
+            // 
+            // groupBoxCajeros
+            // 
+            this.groupBoxCajeros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxCajeros.Controls.Add(this.dataGridViewCajeros);
+            this.groupBoxCajeros.Location = new System.Drawing.Point(6, 318);
+            this.groupBoxCajeros.Name = "groupBoxCajeros";
+            this.groupBoxCajeros.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxCajeros.TabIndex = 0;
+            this.groupBoxCajeros.TabStop = false;
+            this.groupBoxCajeros.Text = "Usuarios";
+            // 
+            // dataGridViewCajeros
+            // 
+            this.dataGridViewCajeros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCajeros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCajeros.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCajeros.Location = new System.Drawing.Point(7, 21);
+            this.dataGridViewCajeros.Name = "dataGridViewCajeros";
+            this.dataGridViewCajeros.ReadOnly = true;
+            this.dataGridViewCajeros.RowTemplate.Height = 24;
+            this.dataGridViewCajeros.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewCajeros.TabIndex = 1;
             // 
             // manager
             // 
@@ -941,6 +1082,15 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Tabs.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBoxGrupos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrupos)).EndInit();
+            this.groupBoxEmpresas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).EndInit();
+            this.groupBoxSucursales.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSucursales)).EndInit();
+            this.groupBoxCajeros.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCajeros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1009,5 +1159,14 @@
         private System.Windows.Forms.TextBox tbPLU;
         private System.Windows.Forms.TabControl Tabs;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBoxGrupos;
+        private System.Windows.Forms.DataGridView dataGridViewGrupos;
+        private System.Windows.Forms.GroupBox groupBoxEmpresas;
+        private System.Windows.Forms.DataGridView dataGridViewEmpresas;
+        private System.Windows.Forms.GroupBox groupBoxSucursales;
+        private System.Windows.Forms.DataGridView dataGridViewSucursales;
+        private System.Windows.Forms.GroupBox groupBoxCajeros;
+        private System.Windows.Forms.DataGridView dataGridViewCajeros;
+        private System.Windows.Forms.Button buttonUpdateAcc;
     }
 }

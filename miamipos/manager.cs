@@ -13,17 +13,24 @@ namespace miamiPOS
     
     public partial class manager : Form
     {
-       
+       //para tab sobre resumen de dia
         DataTable tablaProductos = null;
         DataTable tablaVentas = null;
         DataTable tablaFacturas = null;
         DataTable tablaRetiros = null;
+        //Para tab sobre turnos
         DataTable tablaTurnos = null;
+        //Para tab sobre cuentas
+        DataTable tablaEmpresas = null;
+        DataTable tablaCajeros = null;
+        DataTable tablaSucursales = null;
+        DataTable tablaCategorias = null;
+
+
 
         public manager()
         {
             InitializeComponent();
-            dataGridViewProductos.DataSource = tablaProductos;
 
             // Para la pestaña de anticipos
             //dateTimePicker.Format = DateTimePickerFormat.Custom;
@@ -328,6 +335,19 @@ namespace miamiPOS
                 byte red = Convert.ToByte(prop_error * 255);
                 row.Cells["error"].Style.BackColor = Color.FromArgb(red, 255-red, 0);
             }
+        }
+
+        private void buttonUpdateAcc_Click(object sender, EventArgs e)
+        {
+            Psql.execQuery("select * from cajero", ref tablaCajeros);
+            Psql.execQuery("select * from empresa", ref tablaEmpresas);
+            Psql.execQuery("select * from categoria", ref tablaCategorias);
+            Psql.execQuery("select * from sucursales", ref tablaSucursales);
+            dataGridViewCajeros.DataSource = tablaCajeros;
+            dataGridViewEmpresas.DataSource = tablaEmpresas;
+            dataGridViewGrupos.DataSource = tablaCategorias;
+            dataGridViewSucursales.DataSource = tablaSucursales;
+
         }
 
 

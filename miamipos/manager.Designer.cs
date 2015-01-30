@@ -98,7 +98,7 @@
             this.groupBoxGrupos = new System.Windows.Forms.GroupBox();
             this.dataGridViewGrupos = new System.Windows.Forms.DataGridView();
             this.groupBoxEmpresas = new System.Windows.Forms.GroupBox();
-            this.buttonSaveEmpresas = new System.Windows.Forms.Button();
+            this.buttonSaveAll = new System.Windows.Forms.Button();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
             this.groupBoxSucursales = new System.Windows.Forms.GroupBox();
             this.dataGridViewSucursales = new System.Windows.Forms.DataGridView();
@@ -916,7 +916,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.buttonSaveEmpresas);
+            this.tabPage3.Controls.Add(this.buttonSaveAll);
             this.tabPage3.Controls.Add(this.buttonUpdateAcc);
             this.tabPage3.Controls.Add(this.groupBoxGrupos);
             this.tabPage3.Controls.Add(this.groupBoxEmpresas);
@@ -985,17 +985,17 @@
             this.groupBoxEmpresas.TabStop = false;
             this.groupBoxEmpresas.Text = "Facturas";
             // 
-            // buttonSaveEmpresas
+            // buttonSaveAll
             // 
-            this.buttonSaveEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveEmpresas.Location = new System.Drawing.Point(193, 7);
-            this.buttonSaveEmpresas.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSaveEmpresas.Name = "buttonSaveEmpresas";
-            this.buttonSaveEmpresas.Size = new System.Drawing.Size(172, 55);
-            this.buttonSaveEmpresas.TabIndex = 12;
-            this.buttonSaveEmpresas.Text = "Guardar";
-            this.buttonSaveEmpresas.UseVisualStyleBackColor = true;
-            this.buttonSaveEmpresas.Click += new System.EventHandler(this.buttonSaveEmpresas_Click);
+            this.buttonSaveAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveAll.Location = new System.Drawing.Point(193, 7);
+            this.buttonSaveAll.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSaveAll.Name = "buttonSaveAll";
+            this.buttonSaveAll.Size = new System.Drawing.Size(172, 55);
+            this.buttonSaveAll.TabIndex = 12;
+            this.buttonSaveAll.Text = "Guardar";
+            this.buttonSaveAll.UseVisualStyleBackColor = true;
+            this.buttonSaveAll.Click += new System.EventHandler(this.buttonSaveEmpresas_Click);
             // 
             // dataGridViewEmpresas
             // 
@@ -1200,6 +1200,6 @@
         private System.Windows.Forms.GroupBox groupBoxCajeros;
         private System.Windows.Forms.DataGridView dataGridViewCajeros;
         private System.Windows.Forms.Button buttonUpdateAcc;
-        private System.Windows.Forms.Button buttonSaveEmpresas;
+        private System.Windows.Forms.Button buttonSaveAll;
     }
 }

@@ -339,19 +339,127 @@ namespace miamiPOS
 
         private void buttonUpdateAcc_Click(object sender, EventArgs e)
         {
-            Psql.execQuery("select * from cajero", ref tablaCajeros);
-            Psql.execQuery("select * from empresa", ref tablaEmpresas);
-            Psql.execQuery("select * from categoria", ref tablaCategorias);
-            Psql.execQuery("select * from sucursales", ref tablaSucursales);
+            Psql.execQuery("select id,nombre,password from cajero ORDER BY id", ref tablaCajeros);
+            Psql.execQuery("select * from empresa ORDER BY id", ref tablaEmpresas);
+            Psql.execQuery("select id, nombre_categoria as nombre from categoria ORDER BY id", ref tablaCategorias);
+            Psql.execQuery("select * from sucursales ORDER BY id", ref tablaSucursales);
             dataGridViewCajeros.DataSource = tablaCajeros;
+            dataGridViewCajeros.Columns["id"].ReadOnly = true;
             dataGridViewEmpresas.DataSource = tablaEmpresas;
+            dataGridViewEmpresas.Columns["id"].ReadOnly = true;
             dataGridViewGrupos.DataSource = tablaCategorias;
+            dataGridViewGrupos.Columns["id"].ReadOnly = true;
             dataGridViewSucursales.DataSource = tablaSucursales;
+            dataGridViewSucursales.Columns["id"].ReadOnly = true;
 
         }
 
+        private void dataGridViewCajeros_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                int currentMaxId = (int)((sender as DataGridView).DataSource as DataTable).Compute("Max(id)", "");
+                (sender as DataGridView).Rows[(e.Row as DataGridViewRow).Index - 1].Cells["id"].Value = currentMaxId + 1;
+            }
+            catch (InvalidCastException)
+            {
+                (sender as DataGridView).Rows[(e.Row as DataGridViewRow).Index - 1].Cells["id"].Value = 1;
+            }
+            
+        }
+        private void buttonSaveEmpresas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in dataGridViewEmpresas.Rows)
+                {
+                    string query = String.Format("UPDATE {2} SET nombre = '{1}' where id ={0}; INSERT INTO {2}(id,nombre) SELECT {0},'{1}' WHERE NOT EXISTS (SELECT 1 FROM {2} WHERE id={0});"
+                        , row.Cells["id"].Value.ToString(), row.Cells["nombre"].Value.ToString(), "empresa");
+                    Psql.execInsert(query);
+                }
+            }
+            catch (NullReferenceException) { }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
+            try
+            {
+                foreach (DataGridViewRow row in dataGridViewSucursales.Rows)
+                {
+                    string query = String.Format("UPDATE {2} SET nombre = '{1}' where id ={0}; INSERT INTO {2}(id,nombre) SELECT {0},'{1}' WHERE NOT EXISTS (SELECT 1 FROM {2} WHERE id={0});"
+                        , row.Cells["id"].Value.ToString(), row.Cells["nombre"].Value.ToString(), "sucursales");
+                    Psql.execInsert(query);
+                }
+            }
+            catch (NullReferenceException) { }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
+            try
+            {
+                foreach (DataGridViewRow row in dataGridViewGrupos.Rows)
+                {
+                    string query = String.Format("UPDATE {2} SET nombre_categoria = '{1}' where id ={0}; INSERT INTO {2}(id,nombre_categoria) SELECT {0},'{1}' WHERE NOT EXISTS (SELECT 1 FROM {2} WHERE id={0});"
+                        , row.Cells["id"].Value.ToString(), row.Cells["nombre"].Value.ToString(), "categoria");
+                    Psql.execInsert(query);
+                }
+            }
+            catch (NullReferenceException) { }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
+            try
+            {
+                foreach (DataGridViewRow row in dataGridViewCajeros.Rows)
+                {
+                    string query = String.Format("UPDATE cajero SET nombre = '{1}',password = '{2}' where cajero.id ={0}; INSERT INTO cajero(id,nombre,password) SELECT {0},'{1}','{2}' WHERE NOT EXISTS (SELECT 1 FROM cajero WHERE id={0});"
+                        , row.Cells["id"].Value.ToString(), row.Cells["nombre"].Value.ToString(), row.Cells["password"].Value.ToString());
+                    Psql.execInsert(query);
+                }
+            }
+            catch (NullReferenceException) { }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void dataGridViewAcc_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            string dataGridName = (sender as DataGridView).Name, tableName= null;
+            if(dataGridName.Contains("mpresa"))
+            {
+                tableName = "empresa";
+            }
+            else if (dataGridName.Contains("ajero"))
+            {
+                tableName = "cajero";
+            }
+            else if (dataGridName.Contains("rupo"))
+            {
+                tableName = "categoria";
+            }
+            else if (dataGridName.Contains("ucursal"))
+            {
+                tableName = "sucursales";
+            }
+            string query = String.Format("DELETE FROM {0} where id ={1}"
+                ,tableName,(e.Row as DataGridViewRow).Cells["id"].Value.ToString());
+            try
+            {
+                Psql.execInsert(query);
+            }
+            catch
+            {
+                MessageBox.Show("No se pudo borrar");
+                e.Cancel = true;
+            }
+        }
     }
 }

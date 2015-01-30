@@ -98,6 +98,7 @@
             this.groupBoxGrupos = new System.Windows.Forms.GroupBox();
             this.dataGridViewGrupos = new System.Windows.Forms.DataGridView();
             this.groupBoxEmpresas = new System.Windows.Forms.GroupBox();
+            this.buttonSaveEmpresas = new System.Windows.Forms.Button();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
             this.groupBoxSucursales = new System.Windows.Forms.GroupBox();
             this.dataGridViewSucursales = new System.Windows.Forms.DataGridView();
@@ -915,6 +916,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.buttonSaveEmpresas);
             this.tabPage3.Controls.Add(this.buttonUpdateAcc);
             this.tabPage3.Controls.Add(this.groupBoxGrupos);
             this.tabPage3.Controls.Add(this.groupBoxEmpresas);
@@ -934,7 +936,7 @@
             this.buttonUpdateAcc.Location = new System.Drawing.Point(13, 7);
             this.buttonUpdateAcc.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdateAcc.Name = "buttonUpdateAcc";
-            this.buttonUpdateAcc.Size = new System.Drawing.Size(173, 61);
+            this.buttonUpdateAcc.Size = new System.Drawing.Size(172, 55);
             this.buttonUpdateAcc.TabIndex = 11;
             this.buttonUpdateAcc.Text = "Actualizar";
             this.buttonUpdateAcc.UseVisualStyleBackColor = true;
@@ -947,13 +949,15 @@
             this.groupBoxGrupos.Controls.Add(this.dataGridViewGrupos);
             this.groupBoxGrupos.Location = new System.Drawing.Point(617, 318);
             this.groupBoxGrupos.Name = "groupBoxGrupos";
-            this.groupBoxGrupos.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxGrupos.Size = new System.Drawing.Size(590, 270);
             this.groupBoxGrupos.TabIndex = 3;
             this.groupBoxGrupos.TabStop = false;
             this.groupBoxGrupos.Text = "Grupos";
             // 
             // dataGridViewGrupos
             // 
+            this.dataGridViewGrupos.AllowUserToResizeColumns = false;
+            this.dataGridViewGrupos.AllowUserToResizeRows = false;
             this.dataGridViewGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -962,10 +966,12 @@
             this.dataGridViewGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGrupos.Location = new System.Drawing.Point(7, 21);
             this.dataGridViewGrupos.Name = "dataGridViewGrupos";
-            this.dataGridViewGrupos.ReadOnly = true;
             this.dataGridViewGrupos.RowTemplate.Height = 24;
-            this.dataGridViewGrupos.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewGrupos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewGrupos.Size = new System.Drawing.Size(572, 194);
             this.dataGridViewGrupos.TabIndex = 1;
+            this.dataGridViewGrupos.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewCajeros_UserAddedRow);
+            this.dataGridViewGrupos.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAcc_UserDeletingRow);
             // 
             // groupBoxEmpresas
             // 
@@ -979,19 +985,37 @@
             this.groupBoxEmpresas.TabStop = false;
             this.groupBoxEmpresas.Text = "Facturas";
             // 
+            // buttonSaveEmpresas
+            // 
+            this.buttonSaveEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveEmpresas.Location = new System.Drawing.Point(193, 7);
+            this.buttonSaveEmpresas.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSaveEmpresas.Name = "buttonSaveEmpresas";
+            this.buttonSaveEmpresas.Size = new System.Drawing.Size(172, 55);
+            this.buttonSaveEmpresas.TabIndex = 12;
+            this.buttonSaveEmpresas.Text = "Guardar";
+            this.buttonSaveEmpresas.UseVisualStyleBackColor = true;
+            this.buttonSaveEmpresas.Click += new System.EventHandler(this.buttonSaveEmpresas_Click);
+            // 
             // dataGridViewEmpresas
             // 
+            this.dataGridViewEmpresas.AllowUserToResizeColumns = false;
+            this.dataGridViewEmpresas.AllowUserToResizeRows = false;
             this.dataGridViewEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewEmpresas.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmpresas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewEmpresas.Location = new System.Drawing.Point(7, 22);
+            this.dataGridViewEmpresas.MultiSelect = false;
             this.dataGridViewEmpresas.Name = "dataGridViewEmpresas";
-            this.dataGridViewEmpresas.ReadOnly = true;
             this.dataGridViewEmpresas.RowTemplate.Height = 24;
+            this.dataGridViewEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEmpresas.Size = new System.Drawing.Size(572, 164);
             this.dataGridViewEmpresas.TabIndex = 0;
+            this.dataGridViewEmpresas.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewCajeros_UserAddedRow);
+            this.dataGridViewEmpresas.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAcc_UserDeletingRow);
             // 
             // groupBoxSucursales
             // 
@@ -1006,6 +1030,8 @@
             // 
             // dataGridViewSucursales
             // 
+            this.dataGridViewSucursales.AllowUserToResizeColumns = false;
+            this.dataGridViewSucursales.AllowUserToResizeRows = false;
             this.dataGridViewSucursales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewSucursales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1013,10 +1039,12 @@
             this.dataGridViewSucursales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSucursales.Location = new System.Drawing.Point(7, 22);
             this.dataGridViewSucursales.Name = "dataGridViewSucursales";
-            this.dataGridViewSucursales.ReadOnly = true;
             this.dataGridViewSucursales.RowTemplate.Height = 24;
+            this.dataGridViewSucursales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSucursales.Size = new System.Drawing.Size(572, 164);
             this.dataGridViewSucursales.TabIndex = 1;
+            this.dataGridViewSucursales.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewCajeros_UserAddedRow);
+            this.dataGridViewSucursales.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAcc_UserDeletingRow);
             // 
             // groupBoxCajeros
             // 
@@ -1026,13 +1054,15 @@
             this.groupBoxCajeros.Controls.Add(this.dataGridViewCajeros);
             this.groupBoxCajeros.Location = new System.Drawing.Point(6, 318);
             this.groupBoxCajeros.Name = "groupBoxCajeros";
-            this.groupBoxCajeros.Size = new System.Drawing.Size(590, 240);
+            this.groupBoxCajeros.Size = new System.Drawing.Size(590, 270);
             this.groupBoxCajeros.TabIndex = 0;
             this.groupBoxCajeros.TabStop = false;
             this.groupBoxCajeros.Text = "Usuarios";
             // 
             // dataGridViewCajeros
             // 
+            this.dataGridViewCajeros.AllowUserToResizeColumns = false;
+            this.dataGridViewCajeros.AllowUserToResizeRows = false;
             this.dataGridViewCajeros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1041,10 +1071,12 @@
             this.dataGridViewCajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCajeros.Location = new System.Drawing.Point(7, 21);
             this.dataGridViewCajeros.Name = "dataGridViewCajeros";
-            this.dataGridViewCajeros.ReadOnly = true;
             this.dataGridViewCajeros.RowTemplate.Height = 24;
-            this.dataGridViewCajeros.Size = new System.Drawing.Size(572, 164);
+            this.dataGridViewCajeros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCajeros.Size = new System.Drawing.Size(572, 194);
             this.dataGridViewCajeros.TabIndex = 1;
+            this.dataGridViewCajeros.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewCajeros_UserAddedRow);
+            this.dataGridViewCajeros.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAcc_UserDeletingRow);
             // 
             // manager
             // 
@@ -1168,5 +1200,6 @@
         private System.Windows.Forms.GroupBox groupBoxCajeros;
         private System.Windows.Forms.DataGridView dataGridViewCajeros;
         private System.Windows.Forms.Button buttonUpdateAcc;
+        private System.Windows.Forms.Button buttonSaveEmpresas;
     }
 }

@@ -75,6 +75,7 @@ namespace miamiPOS
                         else
                         {
                             miamiDB.printSalesDay();
+                            Psql.execInsert(String.Format("UPDATE turno SET retiro = (SELECT total_ventas FROM resumen_turno WHERE id={0}) WHERE id={0}",miamiDB.id_turno));
                         }
                         //Finalizar turno
                         miamiDB.endTurno();

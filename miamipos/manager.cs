@@ -221,11 +221,9 @@ namespace miamiPOS
         }
         private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)13)
             {
-                if (e.KeyChar == (char)13)
-                {
-                    button1_Click(sender, new EventArgs());
-                }
+                button1_Click(sender, new EventArgs());
             }
         }
 
@@ -457,7 +455,7 @@ namespace miamiPOS
             }
             catch
             {
-                MessageBox.Show("No se pudo borrar");
+                MessageBox.Show("No se pudo borrar, dato con historial?");
                 e.Cancel = true;
             }
         }

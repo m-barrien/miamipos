@@ -189,7 +189,7 @@ namespace miamiPOS
             }
             catch
             {
-                Console.WriteLine("Nada que quitar de carrito");
+                Logger.log("Nada que quitar de carrito",Logger.DEBUG);
             }
             finally
             {
@@ -261,7 +261,7 @@ namespace miamiPOS
             }
             catch (Exception E)
             {
-                Console.WriteLine(E.Message);
+                Logger.log(E.Message,Logger.ERROR);
                 e.Result = 0;
             }
         }
@@ -291,7 +291,7 @@ namespace miamiPOS
             }
             catch (Exception E)
             {
-                Console.WriteLine(E.Message);
+                Logger.log(E.Message,2);
             }
 
         }

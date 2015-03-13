@@ -62,7 +62,7 @@ namespace miamiPOS
             {
                 rowsAffected = command.ExecuteNonQuery();
 
-                Console.WriteLine("Se agregaron {0} lineas en la BD", rowsAffected);
+                Logger.log(String.Format("Se agregaron {0} lineas en la BD", rowsAffected),Logger.DEBUG);
                 
             }
             catch (Npgsql.NpgsqlException e)
@@ -82,14 +82,11 @@ namespace miamiPOS
             String result = "";
             try
             {
-            conn.Open();
-
-            NpgsqlCommand command = new NpgsqlCommand(query, conn);
-            
-
+                conn.Open();
+                NpgsqlCommand command = new NpgsqlCommand(query, conn);
 
                 result = Convert.ToString( command.ExecuteScalar());
-                Console.WriteLine("Executed scalar query with result: {0}", result);
+                Logger.log("Executed scalar query with result:" + result,Logger.DEBUG);
             }
             catch (Npgsql.NpgsqlException e)
             {
@@ -175,7 +172,7 @@ namespace miamiPOS
                 dt = miamiPOS.Properties.Settings.Default.masterSet;
                 isInitialized = true;
             }
-            else Console.WriteLine("Using Backup database");
+            else Logger.log("Using Backup database",Logger.DEBUG);
         }
         /*
          * linkDataGrid
@@ -196,11 +193,11 @@ namespace miamiPOS
             }
             catch (NullReferenceException)
             {
-                Console.WriteLine("Se desea esconder columna inexistente");
+                Logger.log("Se desea esconder columna inexistente",Logger.ERROR);
             }
             catch
             {
-                Console.WriteLine("DataGrid not linked to table {0}", tableName);
+                Logger.log("DataGrid not linked to table "+ tableName, Logger.ERROR);
                 throw new Exception("Datagrid no vinculada para " + tableName);
             }
         }
@@ -229,11 +226,11 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                Console.WriteLine("Error SQL:"+ e.Message);
+                Logger.log("Error SQL:"+ e.Message ,Logger.ERROR);
             }
             catch(Exception e)
             {
-                Console.WriteLine("Error Sistema:"+ e.Message);
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
             }
 
         }
@@ -254,11 +251,11 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                Console.WriteLine("Error SQL:" + e.Message);
+                Logger.log("Error SQL:" + e.Message, Logger.ERROR);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error Sistema:" + e.Message);
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
             }
            
         }
@@ -279,11 +276,11 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                Console.WriteLine("Error SQL:" + e.Message);
+                Logger.log("Error SQL:" + e.Message, Logger.ERROR);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error Sistema:" + e.Message);
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
             }
 
         }
@@ -305,11 +302,11 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                Console.WriteLine("Error SQL:" + e.Message);
+                Logger.log("Error SQL:" + e.Message, Logger.ERROR);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error Sistema:" + e.Message);
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
             }
 
         }
@@ -330,11 +327,11 @@ namespace miamiPOS
             }
             catch (Npgsql.NpgsqlException e)
             {
-                Console.WriteLine("Error SQL:" + e.Message);
+                Logger.log("Error SQL:" + e.Message, Logger.ERROR);
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error Sistema:" + e.Message);
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
             }
 
         }
@@ -358,15 +355,15 @@ namespace miamiPOS
                 {
                     query = "[plu] = " + plu.ToString();
                     foundRowArr = dt.Tables["producto"].Select(query);
-                    Console.WriteLine("Looking for PLU " + plu.ToString());
+                    Logger.log("Looking for PLU " + plu.ToString(), Logger.DEBUG);
                 }
                 else
                 {
-                    Console.WriteLine("Looking for BARCODE "+plu.ToString());
+                    Logger.log("Looking for BARCODE " + plu.ToString(), Logger.DEBUG);
                     foundRowArr = dt.Tables["producto"].Select(String.Format("barcode='{0}'",plu.ToString()));
                 }
-            
-                Console.WriteLine(foundRowArr[0]["barcode"].ToString() + " " + foundRowArr[0]["barcode"].GetType());
+
+                Logger.log(foundRowArr[0]["barcode"].ToString() + " " + foundRowArr[0]["barcode"].GetType(), Logger.DEBUG);
                 return foundRowArr[0];
             }
             catch
@@ -402,7 +399,7 @@ namespace miamiPOS
                     throw new Exception("Error al desechar base de datos local ");
                 }
             }
-            else Console.WriteLine("Nothing to Drop in DB");
+            else Logger.log("Nothing to Drop in DB", Logger.DEBUG);
         }
         public static void beginTurno()
         {
@@ -575,7 +572,7 @@ namespace miamiPOS
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Exception en ADDITEM: \r "+e.Message);
+                    Logger.log("Exception en ADDITEM: \r " + e.Message, Logger.ERROR);
                     string query;
                     if (plu.ToString().Length < 7) query = "[plu] = " + plu.ToString();
                     else query = "[plu] = " + prod[0].ToString();
@@ -724,6 +721,11 @@ namespace miamiPOS
     public static class Logger
     {
         private static TextBox messageBox;
+
+        public static byte ERROR { get { return 2; } }
+        public static byte WARN { get { return 1; } }
+        public static byte DEBUG { get { return 0; } }
+
         public static void bind(ref TextBox ClientTb)
         {
             messageBox = ClientTb;

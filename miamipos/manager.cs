@@ -74,7 +74,7 @@ namespace miamiPOS
             }
             catch
             {
-                Console.WriteLine("Error al eliminar");
+                Logger.log("Error al eliminar",Logger.WARN);
             }
         }
 
@@ -135,7 +135,7 @@ namespace miamiPOS
             }
             catch(Exception E)
             {
-                Console.WriteLine("Nada que Editar \r catch: " + E.Message);
+                Logger.log("Nada que Editar \r catch: " + E.Message,Logger.WARN);
             }
         }
 
@@ -171,7 +171,7 @@ namespace miamiPOS
             try
             {
                 Producto productoAEditar = getFromEditor();
-                Console.WriteLine(productoAEditar.toSQL(checkBoxEditMode.Checked));
+                Logger.log(productoAEditar.toSQL(checkBoxEditMode.Checked),Logger.DEBUG);
 
                 Psql.execInsert(productoAEditar.toSQL(checkBoxEditMode.Checked));
 

@@ -19,7 +19,7 @@ namespace miamiPOS
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Console.WriteLine(miamiDB.lastUpdate.ToString());
+            Logger.log(miamiDB.lastUpdate.ToString(),Logger.DEBUG);
 
             using(Mutex mutex = new Mutex(false, "Global\\" + appGuid))
             {

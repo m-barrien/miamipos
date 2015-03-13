@@ -52,7 +52,7 @@ namespace miamiPOS
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Out of bounds exception in datagridview");
+                Logger.log("Out of bounds exception in datagridview",Logger.ERROR);
             }
         }
 
@@ -78,7 +78,7 @@ namespace miamiPOS
             }
             catch (Exception E)
             {
-                Console.WriteLine(E.Message);
+                Logger.log(E.Message,Logger.ERROR);
             }
         }
 

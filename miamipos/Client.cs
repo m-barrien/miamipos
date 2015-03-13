@@ -257,7 +257,7 @@ namespace miamiPOS
         {
             try
             {
-                e.Result = miamiDB.loadProductsIncremental();
+                e.Result = miamiDB.checkNewProducts();
             }
             catch (Exception E)
             {
@@ -280,20 +280,7 @@ namespace miamiPOS
 
         private void timerActualizar_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                var actualizados = miamiDB.loadProductsIncremental();
-                if (actualizados > 0)
-                {
-                    msgBox.Text = "Se actualizaron " + actualizados + " productos";
-                }
-                else msgBox.Text = "Nada que actualizar";
-            }
-            catch (Exception E)
-            {
-                Logger.log(E.Message,2);
-            }
-
+            miamiDB.checkNewProducts();
         }
 
         private void anticipoToolStripMenuItem_Click(object sender, EventArgs e)

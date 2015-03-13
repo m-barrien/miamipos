@@ -498,8 +498,37 @@ namespace miamiPOS
             myPrinter.close();
         }
 
-        internal static int loadProductsIncremental()
+        public static int checkNewProducts()
         {
+            if (dt == null || dt.Tables["producto"] == null || !isInitialized)
+            {
+                Logger.log("Base de datos no iniciada , mejor descarga total",Logger.ERROR);
+            }
+            try
+            {
+                string query = String.Format("select count(*) from producto where EXTRACT(year from last_change) >= {0} AND EXTRACT(doy from last_change) >= {1} AND EXTRACT(hour from last_change) >= {2}"
+                    , miamiDB.lastUpdate.Year, miamiDB.lastUpdate.DayOfYear, miamiDB.lastUpdate.Hour);
+                var found = Psql.execScalar(query);
+                if (found == "0")
+                {
+                    Logger.log("Nada que actualizar.",Logger.INFO);
+                    return 0;
+                }
+                else
+                {
+                    Logger.log("ACTUALIZAR PRODUCTOS.", Logger.INFO);
+                    return Convert.ToInt32(found);
+                }
+            }
+            catch (Npgsql.NpgsqlException e)
+            {
+                Logger.log("Error SQL:" + e.Message,Logger.ERROR);
+            }
+            catch (Exception e)
+            {
+                Logger.log("Error Sistema:" + e.Message, Logger.ERROR);
+            }
+
             return 0;
         }
     }
@@ -706,7 +735,7 @@ namespace miamiPOS
                     
                 }
                 this.cancel();
-                Logger.log("Venta #"+ idVenta.ToString(), 1);
+                Logger.log("Venta #"+ idVenta.ToString(), Logger.INFO);
                 return idVenta;
 
             }
@@ -722,8 +751,9 @@ namespace miamiPOS
     {
         private static TextBox messageBox;
 
-        public static byte ERROR { get { return 2; } }
-        public static byte WARN { get { return 1; } }
+        public static byte ERROR { get { return 3; } }
+        public static byte WARN { get { return 2; } }
+        public static byte INFO { get { return 1; } }
         public static byte DEBUG { get { return 0; } }
 
         public static void bind(ref TextBox ClientTb)
@@ -736,10 +766,16 @@ namespace miamiPOS
         }
         public static void log(string alert, int importance)
         {
-            if (importance > 0)
-            {
-                show(alert);
-            }
+            string text_importance= "OTHER";
+            if      (importance == 0) text_importance = "DEBUG";
+            else if (importance == 1) text_importance = "INFO ";
+            else if (importance == 2) text_importance = "WARN ";
+            else if (importance == 3) text_importance = "ERROR";
+            
+            string register_of_log = String.Format("{0} {1} - {2}", text_importance, DateTime.Now.ToString() , alert);
+            Console.WriteLine(register_of_log);
+
+            if (importance == INFO) show(alert);
         }
     }
 }

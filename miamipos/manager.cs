@@ -246,14 +246,14 @@ namespace miamiPOS
             //Se lleno el datagridViewventas
 
             //Ahora se rellena las facturas
-            query = String.Format("select factura.codigo,empresa.nombre, factura.total from empresa,factura where factura.id_empresa=empresa.id and extract(year from fecha)={0} and extract(doy from fecha)={1} order by factura.total DESC"
-                , year, doy);
+            query = String.Format("select factura.codigo,empresa.nombre, factura.total from empresa,factura,turno where factura.id_empresa=empresa.id and factura.id_turno=turno.id and turno.sucursal={2} and extract(year from factura.fecha)={0} and extract(doy from factura.fecha)={1} order by factura.total DESC"
+                , year, doy,idLocal);
             Psql.execQuery(query, ref tablaFacturas);
             dataGridViewFacturas.DataSource = tablaFacturas;
 
             //Ahora se rellena los anticipos
-            query = String.Format("select cajero.nombre, anticipo.total from anticipo,cajero where cajero.id=anticipo.id_deudor and extract(year from fecha)={0} and extract(doy from fecha)={1} order by anticipo.total DESC"
-                , year, doy);
+            query = String.Format("select cajero.nombre, anticipo.total from anticipo,cajero,turno where cajero.id=anticipo.id_deudor and anticipo.id_turno=turno.id and turno.sucursal={2} and extract(year from anticipo.fecha)={0} and extract(doy from anticipo.fecha)={1} order by anticipo.total DESC"
+                , year, doy, idLocal);
             Psql.execQuery(query, ref tablaRetiros);
             dataGridViewRetiros.DataSource = tablaRetiros;
 

@@ -3,7 +3,7 @@ var db= require('../models/database.js')
 var products = {
  
   getAll: function(req, res) {
-    db.query("SELECT plu,nombre FROM producto ORDER BY plu"
+    db.query("SELECT plu,nombre,precio,pesable,barcode,id_categoria FROM producto ORDER BY plu"
       , []
       , function(queryReturn){
           res.json(queryReturn);

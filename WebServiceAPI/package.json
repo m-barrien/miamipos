@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "async": "^1.4.2",
     "body-parser": "~1.14.1",
     "express": "~4.13.3",
     "jwt-simple": "~0.3.1",

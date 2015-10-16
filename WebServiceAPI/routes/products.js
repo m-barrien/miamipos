@@ -1,8 +1,14 @@
+var db= require('../models/database.js')
+
 var products = {
  
   getAll: function(req, res) {
-    var allProducts = data; // Spoof a DB call
-    res.json(allProducts);
+    db.query("SELECT plu,nombre FROM producto ORDER BY plu LIMIT 10"
+      , []
+      , function(queryReturn){
+          res.json(queryReturn);
+      }
+    );
   },
  
   getOne: function(req, res) {

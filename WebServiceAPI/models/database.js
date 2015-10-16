@@ -25,23 +25,23 @@ module.exports = {
         pg.connect(conString, function(err, client, done) {
             if(err) {
                 console.error('error fetching client from pool', err);
-                RESULTS = {"error": err};
+                callback({"success":false,"message": error.toString(),"rows":{}});
             }
-            var output = client.query(query, params 
-            );
+            var output = client.query(query, params);
+
+            output.on('error', function(error) {
+                done();
+                callback({"success":false,"message": error.toString(),"rows":{}});
+            });
             output.on('row', function(row) {
                 RESULTS.push(row);
             });
             output.on('end', function() {
                 done();
-                //console.log("very local arr: "+RESULTS);
-                //return RESULTS;
-                callback(RESULTS);
+                var jsonOut= {"success":true, "message":query, "rows":RESULTS};
+                callback(jsonOut);
             });
 
-            console.log("local arr: "+RESULTS);
         });//""
-        console.log("global arr: "+RESULTS);
-        return RESULTS;
     }
 }

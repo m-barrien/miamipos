@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var auth = require('./auth.js');
-var products = require('./products.js');
-var user = require('./users.js');
+var products = require('../models/products.js');
+var user = require('../models/users.js');
 /*
 * Routes that can be accessed by any one
 */

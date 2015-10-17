@@ -72,27 +72,41 @@ var products = {
  
   update: function(req, res) {
     var updateProduct = req.body;
-    var id = req.params.id;
-    data[id] = updateProduct // Spoof a DB call
-    res.json(updateProduct);
+    var plu = req.params.id;
+
+    var query = "UPDATE producto SET (nombre, barcode, precio, id_categoria, pesable,last_change)=($2,$3,$4, $5,$6 ,now()) WHERE plu=$1 RETURNING *"; 
+    var params = [plu, updateProduct.nombre, updateProduct.barcode, updateProduct.precio, updateProduct.id_categoria, updateProduct.pesable];
+ 
+    if (!updateProduct|| !updateProduct.nombre || updateProduct.nombre.length<2 || !updateProduct.id_categoria || !updateProduct.pesable || !updateProduct.precio) 
+    {
+      errorjson = {  "success": false,
+                      "message": "Missing values from product body.",
+                      "rows": {}
+                    };
+      res.json(errorjson);
+      return;
+    }   
+    db.query(
+        query
+      , params
+      , function(updatedProduct){
+          res.json(updatedProduct);
+      }
+    ); 
   },
  
   delete: function(req, res) {
-    var id = req.params.id;
-    data.splice(id, 1) // Spoof a DB call
-    res.json(true);
+    var plu = req.params.id;
+    var query ="DELETE FROM producto WHERE plu=$1 RETURNING *";
+    db.query(
+        query
+      , [plu]
+      , function(updatedProduct){
+          res.json(updatedProduct);
+      }
+    );     
   }
 };
- 
-var data = [{
-  name: 'product 1',
-  id: '1'
-}, {
-  name: 'product 2',
-  id: '2'
-}, {
-  name: 'product 3',
-  id: '3'
-}];
+
  
 module.exports = products;

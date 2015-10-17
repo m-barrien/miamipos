@@ -32,17 +32,42 @@ var products = {
  
   create: function(req, res) {
     var newProduct = req.body;
-    var query ="INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ($1,$2,$3,$4,$5,$6)";
-    if (!newProduct || newProduct.nombre.length=<1 || !newProduct.id_categoria || !newProduct.pesable || !newProduct.precio) 
+    var query ="INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *";
+    var params = [newProduct.plu, newProduct.nombre, newProduct.barcode, newProduct.precio, newProduct.id_categoria, newProduct.pesable];
+    if (!newProduct|| !newProduct.nombre || newProduct.nombre.length<2 || !newProduct.id_categoria || !newProduct.pesable || !newProduct.precio) 
       {
         newProduct = {  "success": false,
-                        "message": "Missing values from product body."
+                        "message": "Missing values from product body.",
                         "rows": {}
                       };
-      };
-    if (newProduct.barcode==null) {newProduct.barcode="NULL"};
-    if (newProduct.plu==null) {newProduct.plu="DEFAULT"};
-    res.json(newProduct);
+        res.json(newProduct);
+        return;
+      }
+    else{
+      if (!newProduct.barcode) {
+        query = query.replace("barcode,","").replace(",$6","");
+        params.splice(2,1);
+        if (!newProduct.plu) {
+          query = query.replace("plu,","").replace(",$5","");
+          params.splice(0,1);
+        }
+      }
+      else
+      {
+        if (!newProduct.plu) {
+          query = query.replace("plu,","").replace(",$6","");
+          params.splice(0,1);
+        };
+      }
+      
+    }
+    db.query(
+        query
+      , params
+      , function(newProduct){
+          res.json(newProduct);
+      }
+    );    
   },
  
   update: function(req, res) {

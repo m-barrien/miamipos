@@ -12,14 +12,36 @@ var products = {
   },
  
   getOne: function(req, res) {
-    var id = req.params.id;
-    var product = data[0]; // Spoof a DB call
-    res.json(product);
+    var id = req.params.id.toString();
+    var query='';
+    if (id.length>5) {
+      query = "SELECT plu,nombre,precio,pesable,barcode,id_categoria FROM producto where barcode=$1 ORDER BY plu";
+    }
+    else {
+      query = "SELECT plu,nombre,precio,pesable,barcode,id_categoria FROM producto where plu=$1 ORDER BY plu";
+    }
+
+    db.query(
+        query
+      , [id]
+      , function(queryReturn){
+          res.json(queryReturn);
+      }
+    );    
   },
  
   create: function(req, res) {
     var newProduct = req.body;
-    data.push(newProduct); // Spoof a DB call
+    var query ="INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ($1,$2,$3,$4,$5,$6)";
+    if (!newProduct || newProduct.nombre.length=<1 || !newProduct.id_categoria || !newProduct.pesable || !newProduct.precio) 
+      {
+        newProduct = {  "success": false,
+                        "message": "Missing values from product body."
+                        "rows": {}
+                      };
+      };
+    if (newProduct.barcode==null) {newProduct.barcode="NULL"};
+    if (newProduct.plu==null) {newProduct.plu="DEFAULT"};
     res.json(newProduct);
   },
  

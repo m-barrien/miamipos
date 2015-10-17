@@ -4,6 +4,7 @@ var router = express.Router();
 var auth = require('./auth.js');
 var products = require('../models/products.js');
 var user = require('../models/users.js');
+var shifts = require('../models/shifts.js');
 /*
 * Routes that can be accessed by any one
 */
@@ -12,6 +13,8 @@ router.post('/login', auth.login);
 /*
 * Routes that can be accessed only by autheticated users
 */
+router.post('/api/v1/shift/', shifts.create);
+
 router.get('/api/v1/products', products.getAll);
 router.get('/api/v1/product/:id', products.getOne);
 router.post('/api/v1/product/', products.create);
@@ -20,6 +23,8 @@ router.delete('/api/v1/product/:id', products.delete);
 /*
 * Routes that can be accessed only by authenticated & authorized users
 */
+router.get('/api/v1/admin/shifts', shifts.getAll);
+
 router.get('/api/v1/admin/users', user.getAll);
 router.get('/api/v1/admin/user/:id', user.getOne);
 router.post('/api/v1/admin/user/', user.create);

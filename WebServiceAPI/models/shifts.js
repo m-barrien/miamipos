@@ -1,9 +1,9 @@
 var db= require('../models/database.js')
 
-var products = {
+var shifts = {
  
   getAll: function(req, res) {
-    db.query("SELECT plu,nombre,precio,pesable,barcode,id_categoria FROM producto ORDER BY plu"
+    db.query("SELECT * FROM turno ORDER BY fecha DESC LIMIT 100"
       , []
       , function(queryReturn){
           res.json(queryReturn);
@@ -31,41 +31,23 @@ var products = {
   },
  
   create: function(req, res) {
-    var newProduct = req.body;
-    var query ="INSERT INTO producto (plu,  nombre, barcode, precio, id_categoria, pesable) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *";
-    var params = [newProduct.plu, newProduct.nombre, newProduct.barcode, newProduct.precio, newProduct.id_categoria, newProduct.pesable];
-    if (!newProduct|| !newProduct.nombre || newProduct.nombre.length<2 || !newProduct.id_categoria || !newProduct.pesable || !newProduct.precio) 
+    var newShift = req.body;
+    var query ="INSERT INTO turno(id_cajero,fecha,caja_inicial,sucursal) VALUES ($1 ,now(),$2,$3) RETURNING *";
+    var params = [ newShift.id_cajero, newShift.caja_inicial, newShift.sucursal ];
+    if (!newShift|| !newShift.id_cajero || !newShift.caja_inicial || !newShift.sucursal ) 
       {
-        newProduct = {  "success": false,
-                        "message": "Missing values from product body.",
+        newShift = {  "success": false,
+                        "message": "Missing values from shift body.",
                         "rows": {}
                       };
-        res.json(newProduct);
+        res.json(newShift);
         return;
       }
-    else{
-      if (!newProduct.barcode) {
-        query = query.replace("barcode,","").replace(",$6","");
-        params.splice(2,1);
-        if (!newProduct.plu) {
-          query = query.replace("plu,","").replace(",$5","");
-          params.splice(0,1);
-        }
-      }
-      else
-      {
-        if (!newProduct.plu) {
-          query = query.replace("plu,","").replace(",$6","");
-          params.splice(0,1);
-        };
-      }
-      
-    }
     db.query(
         query
       , params
-      , function(newProduct){
-          res.json(newProduct);
+      , function(newShift){
+          res.json(newShift);
       }
     );    
   },
@@ -109,4 +91,4 @@ var products = {
 };
 
  
-module.exports = products;
+module.exports = shifts;
